@@ -8,12 +8,27 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Get the base URL from the environment or use the repository name for GitHub Pages
+const getBasename = () => {
+  // Extract the repository name from the URL path
+  const path = window.location.pathname;
+  const pathSegments = path.split('/');
+  
+  // If we're on GitHub Pages (the path has more than one segment)
+  if (pathSegments.length > 2) {
+    return '/' + pathSegments[1]; // Return the repository name with leading slash
+  }
+  
+  // Otherwise, use root
+  return '/';
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={getBasename()}>
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
