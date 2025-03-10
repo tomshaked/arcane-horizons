@@ -33,6 +33,12 @@ const TeamSection = () => {
       role: 'Research Assistant',
       bio: 'Simon is passionate about dynamic architectural systems.',
       image: 'https://storage.googleapis.com/arca-lab/team-1.jpg' // Reusing image as placeholder
+    },
+    {
+      name: 'Ori Dvir',
+      role: 'MSc Student',
+      bio: 'With a strong background in architecture and technology, my research examines the relationship between design tools, planning methodologies, and the final expression of architectural projects. This study explores how the selection of tools—both for conceptual development and execution—shapes architectural evolution and contributes to broader shifts in the built environment. With expertise in both conventional and experimental architectural software, including graphic design, 3D modeling, and parametric tools, this research aims to provide insights into the connection between technological choices and architectural expression.',
+      image: 'https://storage.googleapis.com/arca-lab/team-2.jpg' // Reusing image as placeholder
     }
   ];
 
