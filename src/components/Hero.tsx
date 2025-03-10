@@ -30,7 +30,7 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Video */}
+      {/* Background Video with Fallback Image */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-background to-background/20 mix-blend-multiply pointer-events-none z-10"></div>
         <video 
@@ -43,6 +43,8 @@ const Hero = () => {
           <source src="https://assets.mixkit.co/videos/preview/mixkit-digital-network-connection-loop-animation-11587-large.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        {/* Fallback image if video fails to load */}
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1541728472741-03e45a58cf88?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80')] bg-cover bg-center opacity-20 z-[-1]"></div>
         <div className="hero-gradient z-20"></div>
       </div>
       
