@@ -2,9 +2,12 @@
 import { useState, useEffect } from "react";
 import Container from "./ui/container";
 import { cn } from "@/lib/utils";
+import { Moon, Sun } from "lucide-react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,11 +21,29 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrolled]);
 
+  useEffect(() => {
+    // Get initial theme from document
+    const currentTheme = document.documentElement.dataset.theme as "light" | "dark" || "dark";
+    setTheme(currentTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = newTheme;
+    setTheme(newTheme);
+  };
+
   const navLinks = [
     { name: "About", href: "#about" },
     { name: "Research", href: "#research" },
+    { name: "Team", href: "#team" },
+    { name: "Publications", href: "#publications" },
     { name: "Contact", href: "#contact" },
   ];
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <header
@@ -34,7 +55,7 @@ const Navbar = () => {
       <Container className="flex items-center justify-between">
         <a
           href="#"
-          className="text-lg font-medium transition-opacity hover:opacity-80"
+          className="text-lg font-medium transition-opacity hover:opacity-80 font-title"
         >
           ARCA Laboratory
         </a>
@@ -44,7 +65,7 @@ const Navbar = () => {
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
+                  className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground font-title"
                 >
                   {link.name}
                 </a>
@@ -52,10 +73,54 @@ const Navbar = () => {
             ))}
           </ul>
         </nav>
-        <div className="md:hidden">
+        <div className="flex items-center space-x-4">
           <button
-            className="p-2 text-foreground/80 hover:text-foreground transition-colors"
-            aria-label="Toggle Menu"
+            onClick={toggleTheme}
+            className="p-2 text-foreground/80 hover:text-foreground transition-colors rounded-full hover:bg-foreground/10"
+            aria-label="Toggle Theme"
+          >
+            {theme === "dark" ? (
+              <Sun className="w-5 h-5" />
+            ) : (
+              <Moon className="w-5 h-5" />
+            )}
+          </button>
+          <div className="md:hidden">
+            <button
+              className="p-2 text-foreground/80 hover:text-foreground transition-colors"
+              onClick={toggleMenu}
+              aria-label="Toggle Menu"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </Container>
+      
+      {/* Mobile Menu */}
+      <div 
+        className={cn(
+          "fixed inset-0 bg-background/95 backdrop-blur-sm z-40 md:hidden transition-all duration-300",
+          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        )}
+      >
+        <div className="flex flex-col items-center justify-center h-full">
+          <button 
+            onClick={toggleMenu}
+            className="absolute top-6 right-6 p-2 text-foreground/80 hover:text-foreground transition-colors"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -68,12 +133,24 @@ const Navbar = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
+                d="M6 18L18 6M6 6l12 12"
               />
             </svg>
           </button>
+          <nav className="flex flex-col items-center space-y-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-xl font-medium text-foreground/80 transition-colors hover:text-foreground font-title"
+                onClick={toggleMenu}
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
         </div>
-      </Container>
+      </div>
     </header>
   );
 };

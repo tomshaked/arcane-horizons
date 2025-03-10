@@ -60,7 +60,9 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+        title: ['"Helvetica Neue"', 'Helvetica', 'sans-serif'],
+        body: ['Arial', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
