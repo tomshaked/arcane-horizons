@@ -7,22 +7,22 @@ const ResearchSection = () => {
     {
       title: 'Collective Construction Robots',
       description: 'Developing systems for coordinated structure assembly by multiple robotic agents working together effectively.',
-      image: 'https://storage.googleapis.com/arca-lab/research-1.jpg'
+      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475'
     },
     {
       title: 'On-site Adaptive Fabrication',
       description: 'Creating robotic tools that use real-time sensory feedback to adapt to changing conditions during construction.',
-      image: 'https://storage.googleapis.com/arca-lab/research-2.jpg'
+      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1'
     },
     {
       title: 'Autonomous Construction Robotics',
       description: 'Building autonomous robotic systems capable of navigating and operating in unstructured construction environments.',
-      image: 'https://storage.googleapis.com/arca-lab/research-3.jpg'
+      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7'
     },
     {
       title: 'Human-Robot Collaboration',
       description: 'Designing interfaces and systems that enable effective teamwork between human workers and robotic assistants.',
-      image: 'https://storage.googleapis.com/arca-lab/research-1.jpg'
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085'
     }
   ];
 

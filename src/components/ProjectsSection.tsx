@@ -9,7 +9,7 @@ const ProjectsSection = () => {
     {
       title: "Collective Robotic Site Preparation",
       description: "We develop tools and techniques for multi-robot collaboration aimed at automating construction site preparation tasks. Our frameworks enable aerial-ground robot coordination, with UAVs providing mapping and localization to guide UGVs in earthmoving operations.",
-      image: "https://storage.googleapis.com/arca-lab/project-1.jpg",
+      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
       highlights: [
         "Real-time computer vision for UAV-UGV coordination",
         "Shepherd toolkit for high-level motion planning",
@@ -19,7 +19,7 @@ const ProjectsSection = () => {
     {
       title: "Eco-Friendly Robotic Additive Manufacturing",
       description: "Our lab explores sustainable construction using locally sourced materials through robotic additive manufacturing. This approach reduces transportation needs and tailors buildings to their environmental context while addressing the challenges of irregular natural materials.",
-      image: "https://storage.googleapis.com/arca-lab/project-2.jpg",
+      image: "https://images.unsplash.com/photo-1473091534298-04dcbce3278c",
       highlights: [
         "Optimized earthen mixtures for robotic printing",
         "Multimode techniques combining robotic and manual processes",
@@ -29,7 +29,7 @@ const ProjectsSection = () => {
     {
       title: "Human-Robot Building Craft Transfer",
       description: "We develop methods to digitally preserve traditional building crafts by transferring artisanal skills to robotic systems. Through motion capture and analysis of skilled craftspeople, we encode tacit knowledge into adaptive fabrication protocols for industrial robots.",
-      image: "https://storage.googleapis.com/arca-lab/project-3.jpg",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
       highlights: [
         "Motion tracking of traditional stonework techniques",
         "Translation of human gestures to robotic toolpaths",
