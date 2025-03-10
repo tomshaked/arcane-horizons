@@ -37,7 +37,7 @@ const TeamSection = () => {
     {
       name: 'Ori Dvir',
       role: 'MSc Student',
-      bio: 'With a strong background in architecture and technology, my research examines the relationship between design tools, planning methodologies, and the final expression of architectural projects. This study explores how the selection of tools—both for conceptual development and execution—shapes architectural evolution and contributes to broader shifts in the built environment. With expertise in both conventional and experimental architectural software, including graphic design, 3D modeling, and parametric tools, this research aims to provide insights into the connection between technological choices and architectural expression.',
+      bio: 'Ori investigates the evolution of architectural expression through the impact of design tools and planning methodologies.',
       image: 'https://storage.googleapis.com/arca-lab/team-2.jpg' // Reusing image as placeholder
     }
   ];
