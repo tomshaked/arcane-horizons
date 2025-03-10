@@ -5,28 +5,34 @@ import Section from './Section';
 const TeamSection = () => {
   const teamMembers = [
     {
-      name: 'Dr. Sarah Chen',
-      role: 'Laboratory Director',
-      bio: 'Leading expert in reinforcement learning with over 15 years of experience in autonomous robotics systems.',
+      name: 'Tom Shaked',
+      role: 'Founder & PI',
+      bio: 'Dr. Shaked leads our research endeavors in construction robotics.',
       image: 'https://storage.googleapis.com/arca-lab/team-1.jpg'
     },
     {
-      name: 'Dr. James Rodriguez',
-      role: 'Principal Investigator',
-      bio: 'Specializes in computer vision and deep learning approaches for robotic perception.',
+      name: 'Roni Hillel',
+      role: 'PhD Student',
+      bio: 'Roni is passionate about robotics and has a strong academic record in engineering.',
       image: 'https://storage.googleapis.com/arca-lab/team-2.jpg'
     },
     {
-      name: 'Dr. Mei Wong',
-      role: 'Research Scientist',
-      bio: 'Expert in multi-agent systems and distributed AI for coordinated robotic tasks.',
+      name: 'Nave Segev',
+      role: 'MSc Student',
+      bio: 'Nave is an experienced architect with expertise in Building Information Modeling (BIM).',
       image: 'https://storage.googleapis.com/arca-lab/team-3.jpg'
     },
     {
-      name: 'Dr. Alex Patel',
-      role: 'Postdoctoral Researcher',
-      bio: 'Focuses on human-robot interaction and intuitive control systems for collaborative robots.',
+      name: 'Ofer Finkelstein',
+      role: 'MSc Student',
+      bio: 'Ofer is a civil engineer with a passion for sustainable construction and material innovation.',
       image: 'https://storage.googleapis.com/arca-lab/team-4.jpg'
+    },
+    {
+      name: 'Simon Fishkin',
+      role: 'Research Assistant',
+      bio: 'Simon is passionate about dynamic architectural systems.',
+      image: 'https://storage.googleapis.com/arca-lab/team-1.jpg' // Reusing image as placeholder
     }
   ];
 
@@ -39,7 +45,7 @@ const TeamSection = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {teamMembers.map((member, index) => (
           <div
             key={index}
