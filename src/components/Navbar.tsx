@@ -22,15 +22,21 @@ const Navbar = () => {
   }, [scrolled]);
 
   useEffect(() => {
-    // Get initial theme from document
-    const currentTheme = document.documentElement.dataset.theme as "light" | "dark" || "dark";
-    setTheme(currentTheme);
+    // Get initial theme from document or system preference
+    const storedTheme = localStorage.getItem("theme") as "light" | "dark";
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    
+    // Set initial theme
+    const initialTheme = storedTheme || (prefersDark ? "dark" : "light");
+    setTheme(initialTheme);
+    document.documentElement.dataset.theme = initialTheme;
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
-    document.documentElement.dataset.theme = newTheme;
     setTheme(newTheme);
+    document.documentElement.dataset.theme = newTheme;
+    localStorage.setItem("theme", newTheme);
   };
 
   const navLinks = [
@@ -110,10 +116,10 @@ const Navbar = () => {
         </div>
       </Container>
       
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Fixed semi-transparent background */}
       <div 
         className={cn(
-          "fixed inset-0 bg-background/95 backdrop-blur-sm z-40 md:hidden transition-all duration-300",
+          "fixed inset-0 glass-panel z-40 md:hidden transition-all duration-300",
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
       >

@@ -11,20 +11,13 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   useEffect(() => {
-    // Check if prefers-color-scheme is dark
+    // Check for saved theme preference or use system preference
+    const savedTheme = localStorage.getItem("theme");
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     
-    // Apply automatic theme based on user preference
-    document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
-    
-    // Listen for changes in color scheme preference
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const handleChange = (e: MediaQueryListEvent) => {
-      document.documentElement.dataset.theme = e.matches ? "dark" : "light";
-    };
-    
-    mediaQuery.addEventListener("change", handleChange);
-    return () => mediaQuery.removeEventListener("change", handleChange);
+    // Set theme based on saved preference or system preference
+    const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
+    document.documentElement.dataset.theme = initialTheme;
   }, []);
 
   return (
