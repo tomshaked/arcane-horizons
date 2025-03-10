@@ -2,23 +2,39 @@
 import React from 'react';
 import Section from './Section';
 import Button from './Button';
+import { ArrowRight } from 'lucide-react';
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Adaptive Manipulation Robot",
-      description: "A robotic arm platform with advanced ML capabilities that can learn to manipulate novel objects with minimal training.",
-      image: "https://storage.googleapis.com/arca-lab/project-1.jpg"
+      title: "Collective Robotic Site Preparation",
+      description: "We develop tools and techniques for multi-robot collaboration aimed at automating construction site preparation tasks. Our frameworks enable aerial-ground robot coordination, with UAVs providing mapping and localization to guide UGVs in earthmoving operations.",
+      image: "https://storage.googleapis.com/arca-lab/project-1.jpg",
+      highlights: [
+        "Real-time computer vision for UAV-UGV coordination",
+        "Shepherd toolkit for high-level motion planning",
+        "Autonomous outdoor construction robotics"
+      ]
     },
     {
-      title: "Multi-Robot Coordination System",
-      description: "Framework enabling teams of heterogeneous robots to coordinate complex tasks in dynamic environments.",
-      image: "https://storage.googleapis.com/arca-lab/project-2.jpg"
+      title: "Eco-Friendly Robotic Additive Manufacturing",
+      description: "Our lab explores sustainable construction using locally sourced materials through robotic additive manufacturing. This approach reduces transportation needs and tailors buildings to their environmental context while addressing the challenges of irregular natural materials.",
+      image: "https://storage.googleapis.com/arca-lab/project-2.jpg",
+      highlights: [
+        "Optimized earthen mixtures for robotic printing",
+        "Multimode techniques combining robotic and manual processes",
+        "Applications from desert soil to lunar regolith"
+      ]
     },
     {
-      title: "Autonomous Navigation in Unstructured Terrain",
-      description: "Robot navigation system using reinforcement learning to traverse complex, unstructured environments safely.",
-      image: "https://storage.googleapis.com/arca-lab/project-3.jpg"
+      title: "Human-Robot Building Craft Transfer",
+      description: "We develop methods to digitally preserve traditional building crafts by transferring artisanal skills to robotic systems. Through motion capture and analysis of skilled craftspeople, we encode tacit knowledge into adaptive fabrication protocols for industrial robots.",
+      image: "https://storage.googleapis.com/arca-lab/project-3.jpg",
+      highlights: [
+        "Motion tracking of traditional stonework techniques",
+        "Translation of human gestures to robotic toolpaths",
+        "Adaptive fabrication based on material feedback"
+      ]
     }
   ];
 
@@ -41,6 +57,18 @@ const ProjectsSection = () => {
             <div className="flex-1">
               <h3 className="font-display text-2xl md:text-3xl font-bold mb-4 text-primary">{project.title}</h3>
               <p className="text-foreground/80 mb-6">{project.description}</p>
+              
+              {project.highlights && (
+                <ul className="mb-6 space-y-2">
+                  {project.highlights.map((highlight, i) => (
+                    <li key={i} className="flex items-start">
+                      <ArrowRight className="h-5 w-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              
               <Button variant="outline">Learn More</Button>
             </div>
             <div className="flex-1 overflow-hidden rounded-lg group">
