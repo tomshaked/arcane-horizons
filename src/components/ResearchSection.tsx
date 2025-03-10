@@ -5,38 +5,52 @@ import Section from './Section';
 const ResearchSection = () => {
   const researchAreas = [
     {
-      title: 'Reinforcement Learning for Robotics',
-      description: 'Developing advanced RL algorithms that enable robotic systems to learn complex tasks through interaction with their environment.',
+      title: 'Collective Construction Robots',
+      description: 'Developing systems for coordinated structure assembly by multiple robotic agents working together effectively.',
       image: 'https://storage.googleapis.com/arca-lab/research-1.jpg'
     },
     {
-      title: 'Computer Vision & Perception',
-      description: 'Creating robust visual perception systems that allow robots to understand and navigate complex, dynamic environments.',
+      title: 'On-site Adaptive Fabrication',
+      description: 'Creating robotic tools that use real-time sensory feedback to adapt to changing conditions during construction.',
       image: 'https://storage.googleapis.com/arca-lab/research-2.jpg'
     },
     {
-      title: 'Multi-Agent Coordination',
-      description: 'Investigating frameworks for multiple robots to collaborate effectively on complex tasks requiring coordination.',
+      title: 'Autonomous Construction Robotics',
+      description: 'Building autonomous robotic systems capable of navigating and operating in unstructured construction environments.',
       image: 'https://storage.googleapis.com/arca-lab/research-3.jpg'
+    },
+    {
+      title: 'Human-Robot Collaboration',
+      description: 'Designing interfaces and systems that enable effective teamwork between human workers and robotic assistants.',
+      image: 'https://storage.googleapis.com/arca-lab/research-1.jpg'
     }
   ];
 
   return (
     <Section id="research" className="bg-secondary/30" withDivider dividerPosition="top">
       <div className="mb-16 text-center">
-        <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 animate-fade-in">Research Focus</h2>
+        <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 animate-fade-in">ARCA Research Lab</h2>
+        <p className="text-foreground/70 max-w-3xl mx-auto animate-fade-in mb-6">
+          We specialize in advancing robotics for construction and architecture to enhance productivity, safety, and sustainability in the built environment.
+        </p>
         <p className="text-foreground/70 max-w-3xl mx-auto animate-fade-in">
-          Our laboratory conducts pioneering research at the intersection of artificial intelligence, 
-          robotics, and autonomous systems.
+          Our interdisciplinary team comprises experts in robotics, engineering, and architecture, dedicated to translating robotic innovations into practical solutions.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="mb-16">
+        <h3 className="font-display text-2xl md:text-3xl font-bold mb-6 text-center animate-fade-in">Research Focus</h3>
+        <p className="text-foreground/70 max-w-3xl mx-auto text-center animate-fade-in mb-12">
+          Our research centers on creating innovative computational tools and robotic technologies for design, simulation, and fabrication:
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
         {researchAreas.map((area, index) => (
           <div
             key={index}
             className="group glass-panel rounded-lg overflow-hidden transition-all hover:translate-y-[-8px] hover:shadow-lg hover:shadow-primary/10 animate-fade-in"
-            style={{ animationDelay: `${0.2 + index * 0.2}s` }}
+            style={{ animationDelay: `${0.2 + index * 0.1}s` }}
           >
             <div className="aspect-video overflow-hidden">
               <div 
@@ -50,6 +64,12 @@ const ResearchSection = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-16 text-center animate-fade-in">
+        <p className="text-foreground/70 max-w-3xl mx-auto">
+          To learn more about our latest research and explore collaboration opportunities, please feel free to get in touch. Let's shape the future together.
+        </p>
       </div>
     </Section>
   );
