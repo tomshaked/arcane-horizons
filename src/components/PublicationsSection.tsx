@@ -5,39 +5,39 @@ import Section from './Section';
 const PublicationsSection = () => {
   const publications = [
     {
-      title: "Construction Robotics - Past, Now, and Future",
-      authors: "Shaked, T.",
-      journal: "Proceedings of the ISARC - International Symposium on Automation and Robotics in Construction",
+      title: "Earth-Shaping with Heterogeneous Robotic Teams: From Sim to Real",
+      authors: "Oliva, F., Shaked, T., Bar-Sinai, K.L., Degani, A.",
+      journal: "Springer",
+      year: 2024,
+      link: "https://www.researchgate.net/publication/384344853_Earth-Shaping_with_Heterogeneous_Robotic_Teams_From_Sim_to_Real"
+    },
+    {
+      title: "Exploring Robotic Fabrication Using Stimulated Soil",
+      authors: "Hillel, R., Shaked, T., Tsesarsky, M., Sprecher, A.",
+      journal: "Proceedings of the International Conference on Education and Research in Computer Aided Architectural Design in Europe",
+      year: 2024,
+      link: "https://www.researchgate.net/publication/383999997_Exploring_Robotic_Fabrication_Using_Stimulated_Soil"
+    },
+    {
+      title: "Stimulated Soil for Continuous Shell Structures",
+      authors: "Hillel, R., Shaked, T., Tsesarsky, M., Sprecher, A.",
+      journal: "The International Association for Shell and Spatial Structures (IASS)",
+      year: 2024,
+      link: "https://www.researchgate.net/publication/385131103_Stimulated_Soil_for_Continuous_Shell_Structures"
+    },
+    {
+      title: "OS-BREEZE: Oil Spills Boundary Red Emission Zone Estimation Using Unmanned Surface Vehicles",
+      authors: "Elmakis, O., Polinov, S., Shaked, T., Degani, A.",
+      journal: "Sensors",
+      year: 2024,
+      link: "https://www.researchgate.net/publication/377614175_OS-BREEZE_Oil_Spills_Boundary_Red_Emission_Zone_Estimation_Using_Unmanned_Surface_Vehicles"
+    },
+    {
+      title: "Toward Acoustic Landscapes: A Digital Design Workflow for Embedding Noise Reduction in Ground-forming",
+      authors: "Bar-Sinai, K.L., Shaked, T., Fettahoglu Oezgen, E.S., Boucsein, B.",
+      journal: "Digital Landscape Architecture Conference",
       year: 2023,
-      link: "https://www.researchgate.net/publication/372864638_Construction_Robotics_-_Past_Now_and_Future"
-    },
-    {
-      title: "Remote Control of Heavy Articulated Machines: Experimental Evaluation of Force Feedback Control vs Conventional Remote Control",
-      authors: "Shaked, T., Birnboim, A., Park, T., Aharony, N., Elhajj, I., Hoffman, G., and Zacksenhouse, M.",
-      journal: "Proceedings of the ISARC - International Symposium on Automation and Robotics in Construction",
-      year: 2023,
-      link: "https://www.researchgate.net/publication/372864671_Remote_Control_of_Heavy_Articulated_Machines_Experimental_Evaluation_of_Force_Feedback_Control_vs_Conventional_Remote_Control"
-    },
-    {
-      title: "Evaluating Different Interaction Modalities for Teleoperation of Excavators in VR",
-      authors: "Shaked, T., Birnboim, A., Park, T., and Zacksenhouse, M.",
-      journal: "Proceedings of the Human Factors and Ergonomics Society Annual Meeting",
-      year: 2022,
-      link: "https://www.researchgate.net/publication/363785208_Evaluating_Different_Interaction_Modalities_for_Teleoperation_of_Excavators_in_VR"
-    },
-    {
-      title: "Augmented Perception for Excavator Remote Control",
-      authors: "Shaked, T., Park, T., Aluma, R., Birnboim, A., and Zacksenhouse, M.",
-      journal: "Proceedings of the ISARC - International Symposium on Automation and Robotics in Construction",
-      year: 2022,
-      link: "https://www.researchgate.net/publication/362294518_Augmented_Perception_for_Excavator_Remote_Control"
-    },
-    {
-      title: "Evaluation of Unimodal Visual Feedback in Force Feedback Bilateral Teleoperation of an Excavator Arm",
-      authors: "Birnboim, A., Shaked, T., and Zacksenhouse, M.",
-      journal: "Proceedings of the ISARC - International Symposium on Automation and Robotics in Construction",
-      year: 2021,
-      link: "https://www.researchgate.net/publication/354352857_Evaluation_of_Unimodal_Visual_Feedback_in_Force_Feedback_Bilateral_Teleoperation_of_an_Excavator_Arm"
+      link: "https://www.researchgate.net/publication/370980617_Toward_Acoustic_Landscapes_A_Digital_Design_Workflow_for_Embedding_Noise_Reduction_in_Ground-forming"
     }
   ];
 
