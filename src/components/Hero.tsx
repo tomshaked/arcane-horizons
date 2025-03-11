@@ -14,7 +14,7 @@ const Hero = () => {
           className="object-cover w-full h-full"
         >
           <source
-            src="/labfolio-landing-page/assets/videos/labfolio-hero-short.mp4"
+            src="/arcane-horizons/assets/videos/labfolio-hero-short.mp4"
             type="video/mp4"
           />
         </video>
