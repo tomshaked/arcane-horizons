@@ -8,37 +8,37 @@ const TeamSection = () => {
       name: 'Tom Shaked',
       role: 'Founder & PI',
       bio: 'Dr. Shaked leads our research endeavors in construction robotics.',
-      image: '/arcane-horizons/assets/images/team/tom-shaked'
+      image: '/arcane-horizons/assets/images/team/tom-shaked.jpg'
     },
     {
       name: 'Roni Hillel',
       role: 'PhD Student',
       bio: 'Roni is passionate about robotics and has a strong academic record in engineering.',
-      image: '/arcane-horizons/assets/images/team/roni-hillel'
+      image: '/arcane-horizons/assets/images/team/roni-hillel.jpg'
     },
     {
       name: 'Nave Segev',
       role: 'MSc Student',
       bio: 'Nave is an experienced architect with expertise in Building Information Modeling (BIM).',
-      image: '/arcane-horizons/assets/images/team/nave-segev'
+      image: '/arcane-horizons/assets/images/team/nave-segev.jpg'
     },
     {
       name: 'Ofer Finkelstein',
       role: 'MSc Student',
       bio: 'Ofer is a civil engineer with a passion for sustainable construction and material innovation.',
-      image: '/arcane-horizons/assets/images/team/ofer-finkelstein'
+      image: '/arcane-horizons/assets/images/team/ofer-finkelstein.jpg'
     },
     {
       name: 'Ori Dvir',
       role: 'MSc Student',
       bio: 'Ori investigates the evolution of architectural expression through the impact of design tools and planning methodologies.',
-      image: '/arcane-horizons/assets/images/team/ori-dvir'
+      image: '/arcane-horizons/assets/images/team/ori-dvir.jpg'
     },
     {
       name: 'Simon Fishkin',
       role: 'Research Assistant',
       bio: 'Simon is passionate about dynamic architectural systems.',
-      image: '/arcane-horizons/assets/images/team/simon-fishkin'
+      image: '/arcane-horizons/assets/images/team/simon-fishkin.jpg'
     }
   ];
 
