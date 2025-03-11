@@ -14,7 +14,7 @@ const Hero = () => {
           className="object-cover w-full h-full"
         >
           <source
-            src="/arcane-horizons/assets/videos/hero.mp4"
+            src="/arcane-horizons/assets/videos/arca-hero.mp4"
             type="video/mp4"
           />
         </video>
