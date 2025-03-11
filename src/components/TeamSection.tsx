@@ -8,37 +8,37 @@ const TeamSection = () => {
       name: 'Tom Shaked',
       role: 'Founder & PI',
       bio: 'Dr. Shaked leads our research endeavors in construction robotics.',
-      image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c'
+      image: '/arcane-horizons/assets/images/team/tom-shaked'
     },
     {
       name: 'Roni Hillel',
       role: 'PhD Student',
       bio: 'Roni is passionate about robotics and has a strong academic record in engineering.',
-      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7'
+      image: '/arcane-horizons/assets/images/team/roni-hillel'
     },
     {
       name: 'Nave Segev',
       role: 'MSc Student',
       bio: 'Nave is an experienced architect with expertise in Building Information Modeling (BIM).',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b'
+      image: '/arcane-horizons/assets/images/team/nave-segev'
     },
     {
       name: 'Ofer Finkelstein',
       role: 'MSc Student',
       bio: 'Ofer is a civil engineer with a passion for sustainable construction and material innovation.',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d'
-    },
-    {
-      name: 'Simon Fishkin',
-      role: 'Research Assistant',
-      bio: 'Simon is passionate about dynamic architectural systems.',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085'
+      image: '/arcane-horizons/assets/images/team/ofer-finkelstein'
     },
     {
       name: 'Ori Dvir',
       role: 'MSc Student',
       bio: 'Ori investigates the evolution of architectural expression through the impact of design tools and planning methodologies.',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6'
+      image: '/arcane-horizons/assets/images/team/ori-dvir'
+    },
+    {
+      name: 'Simon Fishkin',
+      role: 'Research Assistant',
+      bio: 'Simon is passionate about dynamic architectural systems.',
+      image: '/arcane-horizons/assets/images/team/simon-fishkin'
     }
   ];
 
