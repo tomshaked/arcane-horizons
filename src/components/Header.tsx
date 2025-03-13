@@ -13,6 +13,9 @@ const Header = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
+    // Initial check in case page is loaded scrolled
+    handleScroll();
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -31,7 +34,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/90 backdrop-blur-md py-3 shadow-md' : 'py-6 bg-transparent'
+        isScrolled ? 'bg-background/90 backdrop-blur-md py-3 shadow-md' : 'bg-background/80 backdrop-blur-sm py-6'
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-8">
@@ -64,7 +67,7 @@ const Header = () => {
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 top-0 z-40 bg-black md:hidden">
-          <div className="fixed top-0 left-0 right-0 flex justify-between items-center p-6">
+          <div className="fixed top-0 left-0 right-0 flex justify-between items-center p-6 bg-background/90 backdrop-blur-md">
             <a href="#" className="flex items-center space-x-2">
               <span className="text-xl font-display font-bold tracking-tight text-white">ARCA</span>
               <span className="text-xl font-display font-normal tracking-tight text-white">LABORATORY</span>
