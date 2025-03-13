@@ -36,8 +36,8 @@ const Header = () => {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-8">
         <a href="#" className="flex items-center space-x-2">
-          <span className="text-xl font-display font-bold tracking-tight">ARCA</span>
-          <span className="text-xl font-display font-normal tracking-tight">LABORATORY</span>
+          <span className="text-2xl font-display font-bold tracking-tight">ARCA</span>
+          <span className="text-2xl font-display font-normal tracking-tight">LABORATORY</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -66,8 +66,8 @@ const Header = () => {
         <div className="fixed inset-0 top-0 z-40 bg-black md:hidden">
           <div className="fixed top-0 left-0 right-0 flex justify-between items-center p-6">
             <a href="#" className="flex items-center space-x-2">
-              <span className="text-xl font-display font-bold tracking-tight text-white">ARCA</span>
-              <span className="text-xl font-display font-normal tracking-tight text-white">LABORATORY</span>
+              <span className="text-2xl font-display font-bold tracking-tight text-white">ARCA</span>
+              <span className="text-2xl font-display font-normal tracking-tight text-white">LABORATORY</span>
             </a>
             <button
               className="text-white"
@@ -111,7 +111,7 @@ const NavLinks = ({ mobile, onClick }: NavLinksProps) => {
         <a
           key={link.name}
           href={link.href}
-          className={`text-${mobile ? 'xl' : 'base'} font-medium ${mobile ? 'text-white' : 'text-foreground/80'} hover:text-primary transition-colors`}
+          className={`text-${mobile ? '2xl' : 'lg'} font-medium ${mobile ? 'text-white' : 'text-foreground/80'} hover:text-primary transition-colors`}
           onClick={onClick}
         >
           {link.name}
