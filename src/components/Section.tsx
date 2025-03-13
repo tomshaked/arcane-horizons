@@ -27,7 +27,7 @@ const Section = ({
         className
       )}
     >
-      <div className={cn('mx-auto px-6 md:px-8', { 'max-w-7xl': !fullWidth, 'w-full p-0': fullWidth })}>
+      <div className={cn('mx-auto px-6 md:px-8', { 'max-w-7xl': !fullWidth })}>
         {children}
       </div>
     </section>
