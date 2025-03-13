@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Section from './Section';
+import { AspectRatio } from './ui/aspect-ratio';
 
 const ResearchSection = () => {
   const researchAreas = [{
@@ -49,20 +50,32 @@ const ResearchSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {researchAreas.map((area, index) => <div key={index} className="group glass-panel rounded-lg overflow-hidden transition-all hover:translate-y-[-8px] hover:shadow-lg hover:shadow-primary/10 animate-fade-in" style={{
-          animationDelay: `${0.2 + index * 0.1}s`
-        }}>
-              <div className="aspect-video overflow-hidden">
-                <div className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style={{
-              backgroundImage: `url(${area.image})`
-            }} />
+        <div className="space-y-16">
+          {researchAreas.map((area, index) => (
+            <div 
+              key={index} 
+              className="relative rounded-lg overflow-hidden animate-fade-in" 
+              style={{ animationDelay: `${0.2 + index * 0.1}s` }}
+            >
+              <div className="absolute inset-0 w-full h-full">
+                <div 
+                  className="w-full h-full bg-cover bg-center" 
+                  style={{ 
+                    backgroundImage: `url(${area.image})`,
+                    backgroundBlendMode: 'overlay',
+                    backgroundColor: 'rgba(0,0,0,0.7)'
+                  }} 
+                />
               </div>
-              <div className="p-6">
-                <h3 className="font-display text-xl font-semibold mb-2 text-primary">{area.title}</h3>
-                <p className="text-foreground/70">{area.description}</p>
+              <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 p-8 md:p-12">
+                <div className="text-left">
+                  <h3 className="font-display text-2xl md:text-3xl font-semibold mb-4 text-white">{area.title}</h3>
+                  <p className="text-white/90 text-lg md:text-xl">{area.description}</p>
+                </div>
+                <div></div> {/* Empty div to maintain grid layout */}
               </div>
-            </div>)}
+            </div>
+          ))}
         </div>
 
         <div className="mt-16 text-center animate-fade-in">
