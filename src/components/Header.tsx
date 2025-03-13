@@ -63,21 +63,21 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 top-0 z-40 bg-black text-white md:hidden">
-          <div className="flex justify-between items-center p-6">
+        <div className="fixed inset-0 top-0 z-40 bg-black md:hidden">
+          <div className="fixed top-0 left-0 right-0 flex justify-between items-center p-6">
             <a href="#" className="flex items-center space-x-2">
-              <span className="text-xl font-display font-bold tracking-tight">ARCA</span>
-              <span className="text-xl font-display font-normal tracking-tight">LABORATORY</span>
+              <span className="text-xl font-display font-bold tracking-tight text-white">ARCA</span>
+              <span className="text-xl font-display font-normal tracking-tight text-white">LABORATORY</span>
             </a>
             <button
-              className="text-foreground"
+              className="text-white"
               onClick={() => setIsMobileMenuOpen(false)}
               aria-label="Close menu"
             >
               <X size={24} />
             </button>
           </div>
-          <nav className="flex flex-col items-center justify-center h-[calc(100%-80px)] space-y-8 p-8 animate-fade-in">
+          <nav className="flex flex-col items-center justify-center h-screen space-y-8 p-8 text-white">
             <NavLinks mobile onClick={() => setIsMobileMenuOpen(false)} />
             {/* Link the contact button to the contact section */}
             <a href="#contact">
@@ -111,7 +111,7 @@ const NavLinks = ({ mobile, onClick }: NavLinksProps) => {
         <a
           key={link.name}
           href={link.href}
-          className={`text-${mobile ? 'xl' : 'base'} font-medium text-foreground/80 hover:text-primary transition-colors`}
+          className={`text-${mobile ? 'xl' : 'base'} font-medium ${mobile ? 'text-white' : 'text-foreground/80'} hover:text-primary transition-colors`}
           onClick={onClick}
         >
           {link.name}
