@@ -1,5 +1,7 @@
+
 import React from 'react';
 import Section from './Section';
+
 const ResearchSection = () => {
   const researchAreas = [{
     title: 'Collective Construction Robots',
@@ -18,16 +20,17 @@ const ResearchSection = () => {
     description: 'Designing interfaces and systems that enable effective teamwork between human workers and robotic assistants.',
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085'
   }];
+
   return <>
-      <Section id="mission" className="py-28 md:py-40" fullWidth>
+      <Section id="mission" className="py-28 md:py-40">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
-          <div className="md:col-span-6 lg:col-span-5 md:ml-8 lg:ml-16 xl:ml-24">
+          <div className="md:col-span-6 lg:col-span-5">
             <h2 className="font-display text-4xl md:text-5xl mb-4 animate-fade-in leading-tight lg:text-4xl font-normal">Our Mission</h2>
             <p className="text-foreground/70 text-xl animate-fade-in font-semibold md:text-6xl">
               Advancing robotics for construction and architecture
             </p>
           </div>
-          <div className="md:col-span-6 lg:col-span-6 lg:pr-16 xl:pr-24">
+          <div className="md:col-span-6 lg:col-span-6">
             <p className="text-foreground/70 mb-6 text-2xl">
               We specialize in enhancing productivity, safety, and sustainability in the built environment through innovative robotic solutions.
             </p>
@@ -74,4 +77,5 @@ const ResearchSection = () => {
       </Section>
     </>;
 };
+
 export default ResearchSection;
