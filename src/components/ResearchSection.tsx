@@ -42,7 +42,7 @@ const ResearchSection = () => {
         </div>
       </Section>
 
-      <Section id="research" className="bg-secondary/30 p-0" withDivider dividerPosition="top" fullWidth>
+      <Section id="research" className="bg-secondary/30 p-0" fullWidth>
         <div className="space-y-0">
           {researchAreas.map((area, index) => (
             <div 

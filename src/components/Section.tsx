@@ -24,10 +24,6 @@ const Section = ({
       id={id}
       className={cn(
         'relative py-20 md:py-32',
-        {
-          'section-divider mt-[-80px] pt-[120px]': withDivider && dividerPosition === 'top',
-          'pb-[120px]': withDivider && dividerPosition === 'bottom',
-        },
         className
       )}
     >
