@@ -9,11 +9,11 @@ const Footer = () => {
           <div className="md:col-span-2">
             <h2 className="text-xl font-display font-bold mb-4">ARCA LABORATORY</h2>
             <p className="text-foreground/70 max-w-sm">
-              Advancing the frontier of autonomous robotic systems through cutting-edge AI research.
+              Advancing Robotics for Construction and Architecture.
             </p>
             
             <div className="mt-6 flex space-x-4">
-              <a href="#" className="text-foreground/70 hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/company/101662726/" className="text-foreground/70 hover:text-primary transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                   <rect x="2" y="9" width="4" height="12"></rect>
@@ -54,10 +54,11 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">Contact</h3>
             <ul className="space-y-2 text-foreground/70">
-              <li>123 University Avenue</li>
-              <li>Cambridge, MA 02139</li>
-              <li>contact@arcalaboratory.com</li>
-              <li>+1 (617) 555-1234</li>
+              <li>Building 55, School of Architecture</li>
+              <li>Ariel University</li>
+              <li>65 Ramat HaGolan St, Ariel, Israel</li>
+              <li>Email: <a href="mailto:tomsha@ariel.ac.il">tomsha@ariel.ac.il</a></li>
+              <li>Phone: <a href="tel:+97239066242">+972 (3) 906-6242</a></li>
             </ul>
           </div>
         </div>
