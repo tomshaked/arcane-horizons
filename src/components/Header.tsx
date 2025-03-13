@@ -63,7 +63,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 top-0 z-40 bg-white dark:bg-background md:hidden shadow-lg">
+        <div className="fixed inset-0 top-0 z-40 bg-background dark:bg-background md:hidden shadow-lg">
           <div className="flex justify-between items-center p-6 border-b">
             <a href="#" className="flex items-center space-x-2">
               <span className="text-xl font-display font-bold tracking-tight">ARCA</span>
