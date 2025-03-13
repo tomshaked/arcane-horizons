@@ -42,10 +42,6 @@ const ResearchSection = () => {
       </Section>
 
       <Section id="research" className="bg-secondary/30" withDivider dividerPosition="top">
-        <div className="mb-16 text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 animate-fade-in">ARCA Research Lab</h2>
-        </div>
-
         <div className="mb-16">
           <h3 className="font-display text-2xl md:text-3xl font-bold mb-6 text-center animate-fade-in">Research Focus</h3>
           <p className="text-foreground/70 max-w-3xl mx-auto text-center animate-fade-in mb-12">
