@@ -64,7 +64,7 @@ const Header = () => {
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 top-0 z-40 bg-black md:hidden">
-          <div className="fixed top-0 left-0 right-0 flex justify-between items-center p-6">
+          <div className="fixed top-0 left-0 right-0 flex justify-between items-center p-6 bg-black">
             <a href="#" className="flex items-center space-x-2">
               <span className="text-xl font-display font-bold tracking-tight text-white">ARCA</span>
               <span className="text-xl font-display font-normal tracking-tight text-white">LABORATORY</span>
@@ -77,7 +77,7 @@ const Header = () => {
               <X size={24} />
             </button>
           </div>
-          <nav className="flex flex-col items-center justify-center h-screen space-y-8 p-8 text-white">
+          <nav className="fixed inset-0 top-20 flex flex-col items-center justify-center bg-black space-y-8 p-8 text-white">
             <NavLinks mobile onClick={() => setIsMobileMenuOpen(false)} />
             {/* Link the contact button to the contact section */}
             <a href="#contact">
