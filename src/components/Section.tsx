@@ -9,6 +9,7 @@ interface SectionProps {
   withDivider?: boolean;
   dividerPosition?: 'top' | 'bottom';
   fullWidth?: boolean;
+  noPadding?: boolean;
 }
 
 const Section = ({
@@ -18,6 +19,7 @@ const Section = ({
   withDivider = false,
   dividerPosition = 'top',
   fullWidth = false,
+  noPadding = false,
 }: SectionProps) => {
   return (
     <section
@@ -27,7 +29,13 @@ const Section = ({
         className
       )}
     >
-      <div className={cn('mx-auto px-6 md:px-8', { 'max-w-7xl': !fullWidth })}>
+      <div className={cn(
+        'mx-auto', 
+        { 
+          'px-6 md:px-8': !noPadding,
+          'max-w-7xl': !fullWidth 
+        }
+      )}>
         {children}
       </div>
     </section>
