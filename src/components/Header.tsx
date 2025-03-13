@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
@@ -23,8 +24,8 @@ const Header = () => {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-8">
         <a href="#" className="flex items-center space-x-2">
-          <span className="text-xl font-display font-bold tracking-tight">ARCA</span>
-          <span className="text-xl font-display font-normal tracking-tight">LABORATORY</span>
+          <span className="text-xl font-display font-bold tracking-tight text-black">ARCA</span>
+          <span className="text-xl font-display font-normal tracking-tight text-black">LABORATORY</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -85,7 +86,7 @@ const NavLinks = ({ mobile, onClick }: NavLinksProps) => {
         <a
           key={link.name}
           href={link.href}
-          className={`text-${mobile ? 'lg' : 'sm'} font-medium text-foreground/80 hover:text-primary transition-colors`}
+          className={`text-${mobile ? 'lg' : 'sm'} font-medium text-foreground/80 hover:underline transition-all`}
           onClick={onClick}
         >
           {link.name}

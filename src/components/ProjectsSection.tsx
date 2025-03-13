@@ -41,8 +41,8 @@ const ProjectsSection = () => {
   return (
     <Section id="projects" className="bg-background">
       <div className="mb-16 text-center">
-        <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 animate-fade-in">Featured Projects</h2>
-        <p className="text-foreground/70 max-w-3xl mx-auto animate-fade-in">
+        <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 animate-fade-in text-foreground">Featured Projects</h2>
+        <p className="text-foreground/80 max-w-3xl mx-auto animate-fade-in">
           Exploring the boundaries of what's possible in robotics and AI through our innovative research projects.
         </p>
       </div>
@@ -55,15 +55,15 @@ const ProjectsSection = () => {
             style={{ animationDelay: `${0.2 + index * 0.3}s` }}
           >
             <div className="flex-1">
-              <h3 className="font-display text-2xl md:text-3xl font-bold mb-4 text-primary">{project.title}</h3>
+              <h3 className="font-display text-2xl md:text-3xl font-bold mb-4 text-foreground">{project.title}</h3>
               <p className="text-foreground/80 mb-6">{project.description}</p>
               
               {project.highlights && (
                 <ul className="mb-6 space-y-2">
                   {project.highlights.map((highlight, i) => (
                     <li key={i} className="flex items-start">
-                      <ArrowRight className="h-5 w-5 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                      <span>{highlight}</span>
+                      <ArrowRight className="h-5 w-5 text-foreground mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-foreground/90">{highlight}</span>
                     </li>
                   ))}
                 </ul>

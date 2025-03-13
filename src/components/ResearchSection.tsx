@@ -27,22 +27,22 @@ const ResearchSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
           <div className="md:col-span-6 lg:col-span-5">
             <h2 className="font-display text-4xl md:text-5xl mb-4 animate-fade-in leading-tight lg:text-4xl font-normal">Our Mission</h2>
-            <p className="text-foreground/70 text-xl animate-fade-in font-semibold md:text-6xl">
+            <p className="text-foreground/80 text-xl animate-fade-in font-semibold md:text-6xl">
               Advancing robotics for construction and architecture
             </p>
           </div>
           <div className="md:col-span-6 lg:col-span-6">
-            <p className="text-foreground/70 mb-6 text-2xl">
+            <p className="text-foreground/80 mb-6 text-2xl">
               We specialize in enhancing productivity, safety, and sustainability in the built environment through innovative robotic solutions.
             </p>
-            <p className="text-foreground/70 text-2xl">
+            <p className="text-foreground/80 text-2xl">
               Our interdisciplinary team comprises experts in robotics, engineering, and architecture, dedicated to translating innovations into practical solutions.
             </p>
           </div>
         </div>
       </Section>
 
-      <Section id="research" className="bg-secondary/30 p-0" fullWidth noPadding>
+      <Section id="research" className="bg-secondary/30 py-0" fullWidth noPadding>
         <div className="space-y-0">
           {researchAreas.map((area, index) => (
             <div 
@@ -73,7 +73,7 @@ const ResearchSection = () => {
         </div>
 
         <div className="py-16 text-center animate-fade-in">
-          <p className="text-foreground/70 max-w-3xl mx-auto">
+          <p className="text-foreground/80 max-w-3xl mx-auto">
             To learn more about our latest research and explore collaboration opportunities, please feel free to get in touch. Let's shape the future together.
           </p>
         </div>

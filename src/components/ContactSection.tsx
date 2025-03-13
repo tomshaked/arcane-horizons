@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Section from './Section';
 import Button from './Button';
@@ -6,8 +7,8 @@ const ContactSection = () => {
   return (
     <Section id="contact" className="bg-secondary/30" withDivider>
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 animate-fade-in">Get in Touch</h2>
-        <p className="text-foreground/70 mb-8 animate-fade-in">
+        <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 animate-fade-in text-foreground">Get in Touch</h2>
+        <p className="text-foreground/80 mb-8 animate-fade-in">
           Interested in our research or potential collaborations? We'd love to hear from you.
         </p>
         

@@ -45,8 +45,8 @@ const TeamSection = () => {
   return (
     <Section id="team" className="bg-background">
       <div className="mb-16 text-center">
-        <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 animate-fade-in">Our Team</h2>
-        <p className="text-foreground/70 max-w-3xl mx-auto animate-fade-in">
+        <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 animate-fade-in text-foreground">Our Team</h2>
+        <p className="text-foreground/80 max-w-3xl mx-auto animate-fade-in">
           Bringing together experts in artificial intelligence, robotics, and engineering to push the boundaries of autonomous systems.
         </p>
       </div>
@@ -65,9 +65,9 @@ const TeamSection = () => {
               />
             </div>
             <div className="p-6">
-              <h3 className="font-display text-xl font-semibold mb-1 text-primary">{member.name}</h3>
+              <h3 className="font-display text-xl font-semibold mb-1 text-foreground">{member.name}</h3>
               <p className="text-foreground/90 font-medium text-sm mb-3">{member.role}</p>
-              <p className="text-foreground/70 text-sm">{member.bio}</p>
+              <p className="text-foreground/80 text-sm">{member.bio}</p>
             </div>
           </div>
         ))}
