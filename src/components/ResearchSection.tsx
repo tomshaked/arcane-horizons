@@ -7,23 +7,23 @@ const ResearchSection = () => {
   const researchAreas = [{
     title: 'Collective Construction Robots',
     description: 'Developing systems for coordinated structure assembly by multiple robotic agents working together effectively.',
-    image: '/arcane-horizons/assets/images/research/bb_img11.jpg'
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475'
   }, {
     title: 'On-site Adaptive Fabrication',
     description: 'Creating robotic tools that use real-time sensory feedback to adapt to changing conditions during construction.',
-    image: '/arcane-horizons/assets/images/research/Img8535.jpg'
+    image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1'
   }, {
     title: 'Autonomous Construction Robotics',
     description: 'Building autonomous robotic systems capable of navigating and operating in unstructured construction environments.',
-    image: '/arcane-horizons/assets/images/research/5b.jpg'
+    image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7'
   }, {
     title: 'Human-Robot Collaboration',
     description: 'Designing interfaces and systems that enable effective teamwork between human workers and robotic assistants.',
-    image: '/arcane-horizons/assets/images/research/Yotam-21.jpg'
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085'
   }];
 
   return <>
-      <Section id="mission" className="py-28">
+      <Section id="mission" className="py-28 md:py-40">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
           <div className="md:col-span-6 lg:col-span-5">
             <h2 className="font-display text-4xl md:text-5xl mb-4 animate-fade-in leading-tight lg:text-4xl font-normal">Our Mission</h2>
