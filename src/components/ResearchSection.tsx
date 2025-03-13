@@ -42,7 +42,7 @@ const ResearchSection = () => {
         </div>
       </Section>
 
-      <Section id="research" className="bg-secondary/30 py-0" fullWidth noPadding>
+      <Section id="research" className="bg-secondary/30 p-0" fullWidth noPadding>
         <div className="space-y-0">
           {researchAreas.map((area, index) => (
             <div 
