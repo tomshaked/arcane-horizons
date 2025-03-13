@@ -30,10 +30,14 @@ const ResearchSection = () => {
     <Section id="research" className="bg-secondary/30" withDivider dividerPosition="top">
       <div className="mb-16 text-center">
         <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 animate-fade-in">ARCA Research Lab</h2>
-        <p className="text-foreground/70 max-w-3xl mx-auto animate-fade-in mb-6">
+      </div>
+
+      <div className="mb-16 max-w-3xl mx-auto p-8 glass-panel rounded-lg animate-fade-in">
+        <h3 className="font-display text-2xl font-semibold mb-4 text-primary">Our Mission</h3>
+        <p className="text-foreground/70 mb-4">
           We specialize in advancing robotics for construction and architecture to enhance productivity, safety, and sustainability in the built environment.
         </p>
-        <p className="text-foreground/70 max-w-3xl mx-auto animate-fade-in">
+        <p className="text-foreground/70">
           Our interdisciplinary team comprises experts in robotics, engineering, and architecture, dedicated to translating robotic innovations into practical solutions.
         </p>
       </div>
