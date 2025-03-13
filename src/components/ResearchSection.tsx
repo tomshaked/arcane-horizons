@@ -23,7 +23,7 @@ const ResearchSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
           <div className="md:col-span-6 lg:col-span-5 md:ml-8 lg:ml-16 xl:ml-24">
             <h2 className="font-display text-4xl md:text-5xl mb-4 animate-fade-in leading-tight lg:text-4xl font-normal">Our Mission</h2>
-            <p className="text-foreground/70 text-xl animate-fade-in font-bold md:text-6xl">
+            <p className="text-foreground/70 text-xl animate-fade-in font-semibold md:text-6xl">
               Advancing robotics for construction and architecture
             </p>
           </div>
