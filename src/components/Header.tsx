@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
@@ -14,6 +15,18 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Prevent scrolling when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <header
@@ -50,8 +63,21 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 top-[60px] z-40 bg-background/95 backdrop-blur-sm md:hidden">
-          <nav className="flex flex-col items-center justify-center h-full space-y-8 p-8 animate-fade-in">
+        <div className="fixed inset-0 top-0 z-40 bg-white dark:bg-background md:hidden shadow-lg">
+          <div className="flex justify-between items-center p-6 border-b">
+            <a href="#" className="flex items-center space-x-2">
+              <span className="text-xl font-display font-bold tracking-tight">ARCA</span>
+              <span className="text-xl font-display font-normal tracking-tight">LABORATORY</span>
+            </a>
+            <button
+              className="text-foreground"
+              onClick={() => setIsMobileMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              <X size={24} />
+            </button>
+          </div>
+          <nav className="flex flex-col items-center justify-center h-[calc(100%-80px)] space-y-8 p-8 animate-fade-in">
             <NavLinks mobile onClick={() => setIsMobileMenuOpen(false)} />
             {/* Link the contact button to the contact section */}
             <a href="#contact">
@@ -85,7 +111,7 @@ const NavLinks = ({ mobile, onClick }: NavLinksProps) => {
         <a
           key={link.name}
           href={link.href}
-          className={`text-${mobile ? 'lg' : 'sm'} font-medium text-foreground/80 hover:text-primary transition-colors`}
+          className={`text-${mobile ? 'xl' : 'base'} font-medium text-foreground/80 hover:text-primary transition-colors`}
           onClick={onClick}
         >
           {link.name}
