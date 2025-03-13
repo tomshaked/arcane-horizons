@@ -7,11 +7,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Check scroll position on mount and when scrolling
   useEffect(() => {
-    // Initial check for page load with scroll already happened
-    setIsScrolled(window.scrollY > 10);
-    
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
@@ -35,9 +31,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-background/90 backdrop-blur-md py-3 shadow-md' 
-          : 'bg-background/80 backdrop-blur-sm py-6'
+        isScrolled ? 'bg-background/90 backdrop-blur-md py-3 shadow-md' : 'py-6 bg-transparent'
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-8">
@@ -69,21 +63,21 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 top-0 z-40 bg-background/95 backdrop-blur-md md:hidden">
+        <div className="fixed inset-0 top-0 z-40 bg-black md:hidden">
           <div className="fixed top-0 left-0 right-0 flex justify-between items-center p-6">
             <a href="#" className="flex items-center space-x-2">
-              <span className="text-xl font-display font-bold tracking-tight text-foreground">ARCA</span>
-              <span className="text-xl font-display font-normal tracking-tight text-foreground">LABORATORY</span>
+              <span className="text-xl font-display font-bold tracking-tight text-white">ARCA</span>
+              <span className="text-xl font-display font-normal tracking-tight text-white">LABORATORY</span>
             </a>
             <button
-              className="text-foreground"
+              className="text-white"
               onClick={() => setIsMobileMenuOpen(false)}
               aria-label="Close menu"
             >
               <X size={24} />
             </button>
           </div>
-          <nav className="flex flex-col items-center justify-center h-screen space-y-8 p-8">
+          <nav className="flex flex-col items-center justify-center h-screen space-y-8 p-8 text-white">
             <NavLinks mobile onClick={() => setIsMobileMenuOpen(false)} />
             {/* Link the contact button to the contact section */}
             <a href="#contact">
@@ -117,7 +111,7 @@ const NavLinks = ({ mobile, onClick }: NavLinksProps) => {
         <a
           key={link.name}
           href={link.href}
-          className={`text-${mobile ? 'xl' : 'base'} font-medium ${mobile ? 'text-foreground' : 'text-foreground/80'} hover:text-primary transition-colors`}
+          className={`text-${mobile ? 'xl' : 'base'} font-medium ${mobile ? 'text-white' : 'text-foreground/80'} hover:text-primary transition-colors`}
           onClick={onClick}
         >
           {link.name}
