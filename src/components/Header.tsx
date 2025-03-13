@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
@@ -52,7 +51,7 @@ const Header = () => {
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 top-[60px] z-40 bg-background/95 backdrop-blur-sm md:hidden">
-          <nav className="flex flex-col items-center justify-center h-full space-y-8 p-8 animate-fade-in bg-white shadow-lg">
+          <nav className="flex flex-col items-center justify-center h-full space-y-8 p-8 animate-fade-in">
             <NavLinks mobile onClick={() => setIsMobileMenuOpen(false)} />
             {/* Link the contact button to the contact section */}
             <a href="#contact">
@@ -86,7 +85,7 @@ const NavLinks = ({ mobile, onClick }: NavLinksProps) => {
         <a
           key={link.name}
           href={link.href}
-          className={`${mobile ? 'text-xl' : 'text-base'} font-medium hover:underline text-foreground transition-colors`}
+          className={`text-${mobile ? 'lg' : 'sm'} font-medium text-foreground/80 hover:text-primary transition-colors`}
           onClick={onClick}
         >
           {link.name}
