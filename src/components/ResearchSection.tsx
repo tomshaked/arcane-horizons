@@ -7,19 +7,19 @@ const ResearchSection = () => {
   const researchAreas = [{
     title: 'Collective Construction Robots',
     description: 'Developing systems for coordinated structure assembly by multiple robotic agents working together effectively.',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475'
+    image: '/arcane-horizons/assets/images/research/bb_img11.jpg'
   }, {
     title: 'On-site Adaptive Fabrication',
     description: 'Creating robotic tools that use real-time sensory feedback to adapt to changing conditions during construction.',
-    image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1'
+    image: '/arcane-horizons/assets/images/research/Img8535.jpg'
   }, {
     title: 'Autonomous Construction Robotics',
     description: 'Building autonomous robotic systems capable of navigating and operating in unstructured construction environments.',
-    image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7'
+    image: '/arcane-horizons/assets/images/research/5b.jpg'
   }, {
     title: 'Human-Robot Collaboration',
     description: 'Designing interfaces and systems that enable effective teamwork between human workers and robotic assistants.',
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085'
+    image: '/arcane-horizons/assets/images/research/Yotam-21.jpg'
   }];
 
   return <>
