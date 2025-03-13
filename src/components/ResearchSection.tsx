@@ -28,10 +28,10 @@ const ResearchSection = () => {
             </p>
           </div>
           <div className="md:col-span-6 lg:col-span-6 lg:pr-16 xl:pr-24">
-            <p className="text-foreground/70 mb-6 text-lg">
+            <p className="text-foreground/70 mb-6 text-2xl">
               We specialize in enhancing productivity, safety, and sustainability in the built environment through innovative robotic solutions.
             </p>
-            <p className="text-foreground/70 text-lg">
+            <p className="text-foreground/70 text-2xl">
               Our interdisciplinary team comprises experts in robotics, engineering, and architecture, dedicated to translating innovations into practical solutions.
             </p>
           </div>
