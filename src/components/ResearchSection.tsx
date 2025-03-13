@@ -23,7 +23,7 @@ const ResearchSection = () => {
   }];
 
   return <>
-      <Section id="mission" className="py-28 md:py-40 pb-0 md:pb-0">
+      <Section id="mission" className="py-28 md:py-40">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
           <div className="md:col-span-6 lg:col-span-5">
             <h2 className="font-display text-4xl md:text-5xl mb-4 animate-fade-in leading-tight lg:text-4xl font-normal">Our Mission</h2>
@@ -42,7 +42,7 @@ const ResearchSection = () => {
         </div>
       </Section>
 
-      <Section id="research" className="bg-secondary/30 p-0 pt-0 mt-0" fullWidth>
+      <Section id="research" className="bg-secondary/30 p-0" fullWidth>
         <div className="space-y-0">
           {researchAreas.map((area, index) => (
             <div 
