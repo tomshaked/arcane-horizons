@@ -42,15 +42,15 @@ const ResearchSection = () => {
         </div>
       </Section>
 
-      <Section id="research" className="bg-secondary/30 p-0" fullWidth>
-        <div className="space-y-0">
+      <Section id="research" className="bg-secondary/30 p-0 py-0" fullWidth>
+        <div className="space-y-0 w-full">
           {researchAreas.map((area, index) => (
             <div 
               key={index} 
               className="relative h-screen w-full overflow-hidden animate-fade-in" 
               style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             >
-              <div className="absolute inset-0 w-full h-full">
+              <div className="absolute inset-0 w-screen h-full left-0 right-0">
                 <div 
                   className="w-full h-full bg-cover bg-center" 
                   style={{ 
