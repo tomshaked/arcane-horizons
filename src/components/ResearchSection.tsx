@@ -23,15 +23,13 @@ const ResearchSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
           <div className="md:col-span-6 lg:col-span-5 md:ml-8 lg:ml-16 xl:ml-24">
             <h2 className="font-display text-4xl md:text-5xl mb-4 animate-fade-in leading-tight lg:text-4xl font-normal">Our Mission</h2>
-            <p className="text-foreground/70 text-xl animate-fade-in font-semibold md:text-6xl">
-              Advancing robotics for construction and architecture
-            </p>
+            <p className="text-foreground/70 text-xl animate-fade-in font-medium md:text-4xl">Advancing knowledge, innovation, and sustainability within the built environment.</p>
           </div>
           <div className="md:col-span-6 lg:col-span-6 lg:pr-16 xl:pr-24">
-            <p className="text-foreground/70 mb-6 text-lg">
+            <p className="text-foreground/70 mb-6 text-2xl">
               We specialize in enhancing productivity, safety, and sustainability in the built environment through innovative robotic solutions.
             </p>
-            <p className="text-foreground/70 text-lg">
+            <p className="text-foreground/70 text-2xl">
               Our interdisciplinary team comprises experts in robotics, engineering, and architecture, dedicated to translating innovations into practical solutions.
             </p>
           </div>
