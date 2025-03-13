@@ -42,19 +42,12 @@ const ResearchSection = () => {
         </div>
       </Section>
 
-      <Section id="research" className="bg-secondary/30" withDivider dividerPosition="top">
-        <div className="mb-16">
-          <h3 className="font-display text-2xl md:text-3xl font-bold mb-6 text-center animate-fade-in">Research Focus</h3>
-          <p className="text-foreground/70 max-w-3xl mx-auto text-center animate-fade-in mb-12">
-            Our research centers on creating innovative computational tools and robotic technologies for design, simulation, and fabrication:
-          </p>
-        </div>
-
-        <div className="space-y-16">
+      <Section id="research" className="bg-secondary/30 p-0" withDivider dividerPosition="top" fullWidth>
+        <div className="space-y-0">
           {researchAreas.map((area, index) => (
             <div 
               key={index} 
-              className="relative rounded-lg overflow-hidden animate-fade-in" 
+              className="relative h-screen w-full overflow-hidden animate-fade-in" 
               style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             >
               <div className="absolute inset-0 w-full h-full">
@@ -67,18 +60,19 @@ const ResearchSection = () => {
                   }} 
                 />
               </div>
-              <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 p-8 md:p-12">
-                <div className="text-left">
-                  <h3 className="font-display text-2xl md:text-3xl font-semibold mb-4 text-white">{area.title}</h3>
-                  <p className="text-white/90 text-lg md:text-xl">{area.description}</p>
+              <div className="relative z-10 h-full flex items-center">
+                <div className="container mx-auto px-6 md:px-8">
+                  <div className="max-w-xl text-left">
+                    <h3 className="font-display text-3xl md:text-5xl font-semibold mb-6 text-white">{area.title}</h3>
+                    <p className="text-white/90 text-xl md:text-2xl">{area.description}</p>
+                  </div>
                 </div>
-                <div></div> {/* Empty div to maintain grid layout */}
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 text-center animate-fade-in">
+        <div className="py-16 text-center animate-fade-in">
           <p className="text-foreground/70 max-w-3xl mx-auto">
             To learn more about our latest research and explore collaboration opportunities, please feel free to get in touch. Let's shape the future together.
           </p>
