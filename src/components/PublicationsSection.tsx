@@ -44,8 +44,8 @@ const PublicationsSection = () => {
   return (
     <Section id="publications" className="bg-secondary/30" withDivider>
       <div className="mb-16 text-center">
-        <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 animate-fade-in text-foreground">Recent Publications</h2>
-        <p className="text-foreground/80 max-w-3xl mx-auto animate-fade-in">
+        <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 animate-fade-in">Recent Publications</h2>
+        <p className="text-foreground/70 max-w-3xl mx-auto animate-fade-in">
           Our research has been published in top-tier conferences and journals in robotics, construction automation, and human-machine interaction.
         </p>
       </div>
@@ -57,9 +57,9 @@ const PublicationsSection = () => {
             className="glass-panel p-6 rounded-lg transition-all hover:translate-x-1 group animate-fade-in"
             style={{ animationDelay: `${0.2 + index * 0.1}s` }}
           >
-            <h3 className="font-display text-lg font-medium mb-2 text-foreground group-hover:text-foreground/90">{pub.title}</h3>
+            <h3 className="font-display text-lg font-medium mb-2 text-primary group-hover:text-primary/90">{pub.title}</h3>
             <p className="text-foreground/80 text-sm mb-1">{pub.authors}</p>
-            <p className="text-foreground/70 text-sm mb-2">
+            <p className="text-foreground/60 text-sm mb-2">
               <span>{pub.journal}</span>
               <span className="mx-2">•</span>
               <span>{pub.year}</span>
@@ -68,7 +68,7 @@ const PublicationsSection = () => {
               href={pub.link} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-foreground/80 text-sm hover:underline inline-flex items-center gap-1"
+              className="text-primary/80 text-sm hover:text-primary hover:underline inline-flex items-center gap-1"
             >
               View publication
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
