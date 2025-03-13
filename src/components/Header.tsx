@@ -1,8 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
-import { ThemeToggle } from './ThemeToggle';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,7 +30,6 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <NavLinks />
-          <ThemeToggle />
           {/* Link the contact button to the contact section */}
           <a href="#contact">
             <Button variant="outline" size="sm">
@@ -42,16 +39,13 @@ const Header = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="flex items-center space-x-4 md:hidden">
-          <ThemeToggle />
-          <button
-            className="text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
+        <button
+          className="md:hidden text-foreground"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
 
       {/* Mobile Navigation */}
