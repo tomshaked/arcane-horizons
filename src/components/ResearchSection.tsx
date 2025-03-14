@@ -75,11 +75,11 @@ const ResearchSection = () => {
       </Section>
 
       <Section id="research" className="bg-secondary/30 p-0" fullWidth noPadding>
-        <div className="space-y-0">
+        <div className="space-y-0 m-0 p-0">
           {researchAreas.map((area, index) => (
             <div 
               key={index} 
-              className="relative h-screen w-full overflow-hidden scroll-reveal" 
+              className="relative h-screen w-full overflow-hidden scroll-reveal m-0 p-0" 
             >
               <div className="absolute inset-0 w-full h-full">
                 <div 
