@@ -31,21 +31,21 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/90 py-3 shadow-md' : 'py-6 bg-transparent'
+        isScrolled ? 'bg-white/90 text-black py-3 shadow-md' : 'py-6 bg-transparent text-white'
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-8">
-        <a href="#" className="flex items-center space-x-2">
+        <a href="#" className="flex items-center space-x-2 no-underline">
           <span className="text-xl font-display font-bold tracking-tight">ARCA</span>
           <span className="text-xl font-display font-normal tracking-tight">LABORATORY</span>
         </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <NavLinks />
+          <NavLinks isScrolled={isScrolled} />
           {/* Link the contact button to the contact section */}
-          <a href="#contact">
-            <Button variant="outline" size="sm">
+          <a href="#contact" className="no-underline">
+            <Button variant={isScrolled ? "outline" : "primary"} size="sm">
               Contact
             </Button>
           </a>
@@ -53,7 +53,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-foreground"
+          className="md:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -63,24 +63,24 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 top-0 z-40 bg-black md:hidden">
-          <div className="fixed top-0 left-0 right-0 flex justify-between items-center p-6">
-            <a href="#" className="flex items-center space-x-2">
-              <span className="text-xl font-display font-bold tracking-tight text-white">ARCA</span>
-              <span className="text-xl font-display font-normal tracking-tight text-white">LABORATORY</span>
+        <div className="fixed inset-0 top-0 z-40 bg-white md:hidden">
+          <div className="fixed top-0 left-0 right-0 flex justify-between items-center p-6 text-black">
+            <a href="#" className="flex items-center space-x-2 no-underline">
+              <span className="text-xl font-display font-bold tracking-tight">ARCA</span>
+              <span className="text-xl font-display font-normal tracking-tight">LABORATORY</span>
             </a>
             <button
-              className="text-white"
+              className="text-black"
               onClick={() => setIsMobileMenuOpen(false)}
               aria-label="Close menu"
             >
               <X size={24} />
             </button>
           </div>
-          <nav className="flex flex-col items-center justify-center h-screen space-y-8 p-8 text-white">
+          <nav className="flex flex-col items-center justify-center h-screen space-y-8 p-8 text-black">
             <NavLinks mobile onClick={() => setIsMobileMenuOpen(false)} />
             {/* Link the contact button to the contact section */}
-            <a href="#contact">
+            <a href="#contact" className="no-underline">
               <Button variant="outline" onClick={() => setIsMobileMenuOpen(false)}>
                 Contact
               </Button>
@@ -94,10 +94,11 @@ const Header = () => {
 
 interface NavLinksProps {
   mobile?: boolean;
+  isScrolled?: boolean;
   onClick?: () => void;
 }
 
-const NavLinks = ({ mobile, onClick }: NavLinksProps) => {
+const NavLinks = ({ mobile, isScrolled, onClick }: NavLinksProps) => {
   const links = [
     { name: 'Research', href: '#research' },
     { name: 'Team', href: '#team' },
@@ -111,7 +112,9 @@ const NavLinks = ({ mobile, onClick }: NavLinksProps) => {
         <a
           key={link.name}
           href={link.href}
-          className={`text-${mobile ? 'xl' : 'base'} font-medium ${mobile ? 'text-white' : 'text-foreground/80'} hover:text-primary transition-colors`}
+          className={`text-${mobile ? 'xl' : 'base'} font-medium no-underline hover:underline ${
+            mobile || isScrolled ? 'text-black' : 'text-white'
+          } hover:text-primary transition-colors`}
           onClick={onClick}
         >
           {link.name}
