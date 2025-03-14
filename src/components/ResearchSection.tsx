@@ -38,7 +38,7 @@ const ResearchSection = () => {
         // Add animation classes when element is visible
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-fade-in');
-          entry.target.style.opacity = '1';
+          (entry.target as HTMLElement).style.opacity = '1';
         }
       });
     }, observerOptions);
@@ -47,7 +47,7 @@ const ResearchSection = () => {
     const scrollElements = document.querySelectorAll('.scroll-reveal');
     scrollElements.forEach(el => {
       // Set initial opacity
-      el.style.opacity = '0';
+      (el as HTMLElement).style.opacity = '0';
       observer.observe(el);
     });
 
