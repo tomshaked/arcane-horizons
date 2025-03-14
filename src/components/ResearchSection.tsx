@@ -23,7 +23,7 @@ const ResearchSection = () => {
   }];
 
   return <>
-      <Section id="mission" className="py-28 md:py-40">
+      <Section id="mission" className="py-28">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
           <div className="md:col-span-6 lg:col-span-5">
             <h2 className="font-display text-4xl md:text-5xl mb-4 animate-fade-in leading-tight lg:text-4xl font-normal">Our Mission</h2>
@@ -61,7 +61,7 @@ const ResearchSection = () => {
                 />
               </div>
               <div className="relative z-10 h-full flex items-center">
-                <div className="container mx-auto px-6 md:px-8">
+                <div className="container mx-auto px-6 md:px-8 max-w-[80rem]">
                   <div className="max-w-xl text-left">
                     <h3 className="font-display text-3xl md:text-5xl font-semibold mb-6 text-white">{area.title}</h3>
                     <p className="text-white/90 text-xl md:text-2xl">{area.description}</p>
