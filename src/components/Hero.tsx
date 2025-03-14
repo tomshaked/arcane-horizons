@@ -15,7 +15,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 flex items-center justify-center h-full px-6 md:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl leading-tight md:leading-tight tracking-tight mb-6 text-white font-medium lg:text-7xl">Architectural Robotics &amp; Construction Automation</h1>
+          <h1 className="text-4xl md:text-5xl leading-tight md:leading-tight tracking-tight mb-6 text-white font-semibold lg:text-7xl">Architectural Robotics &amp; Construction Automation</h1>
           {/* <p className="text-white/80 text-lg md:text-xl max-w-3xl mx-auto mb-10">
             Our mission is to advance knowledge, innovation, and sustainability within the built environment.
            </p> */}
