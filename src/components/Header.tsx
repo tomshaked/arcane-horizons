@@ -112,9 +112,9 @@ const NavLinks = ({ mobile, isScrolled, onClick }: NavLinksProps) => {
         <a
           key={link.name}
           href={link.href}
-          className={`text-${mobile ? 'xl' : 'base'} font-medium no-underline ${
+          className={`text-${mobile ? 'xl' : 'base'} font-medium no-underline hover:underline ${
             mobile || isScrolled ? 'text-black' : 'text-white'
-          }`}
+          } hover:${mobile || isScrolled ? 'text-black/80' : 'text-white/80'} transition-colors`}
           onClick={onClick}
         >
           {link.name}
