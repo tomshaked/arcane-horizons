@@ -55,7 +55,7 @@ const TeamSection = () => {
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="glass-panel rounded-lg overflow-hidden transition-all hover:translate-y-[-8px] group animate-fade-in"
+            className="glass-panel overflow-hidden transition-all hover:translate-y-[-8px] group animate-fade-in"
             style={{ animationDelay: `${0.2 + index * 0.15}s` }}
           >
             <div className="aspect-square overflow-hidden">

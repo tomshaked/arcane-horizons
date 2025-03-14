@@ -54,7 +54,7 @@ const PublicationsSection = () => {
         {publications.map((pub, index) => (
           <div 
             key={index} 
-            className="glass-panel p-6 rounded-lg transition-all hover:translate-x-1 group animate-fade-in"
+            className="glass-panel p-6 transition-all hover:translate-x-1 group animate-fade-in"
             style={{ animationDelay: `${0.2 + index * 0.1}s` }}
           >
             <h3 className="font-display text-lg font-medium mb-2 text-primary group-hover:text-primary/90">{pub.title}</h3>
