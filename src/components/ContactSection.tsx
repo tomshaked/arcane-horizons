@@ -12,7 +12,7 @@ const ContactSection = () => {
           Interested in our research or potential collaborations? We'd love to hear from you.
         </p>
         
-        <div className="glass-panel p-8 md:p-12 rounded-lg animate-fade-in shadow-md">
+        <div className="glass-panel p-8 md:p-12 animate-fade-in shadow-md">
           {/* Form integrated with Formspree */}
           <form
             action="https://formspree.io/f/mdkenreg" // Your Formspree form endpoint
@@ -26,7 +26,7 @@ const ContactSection = () => {
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full px-4 py-2 bg-white border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-black/40"
+                  className="w-full px-4 py-2 bg-white border border-border focus:outline-none focus:ring-2 focus:ring-black/40"
                   required
                 />
               </div>
@@ -36,7 +36,7 @@ const ContactSection = () => {
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full px-4 py-2 bg-white border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-black/40"
+                  className="w-full px-4 py-2 bg-white border border-border focus:outline-none focus:ring-2 focus:ring-black/40"
                   required
                 />
               </div>
@@ -48,7 +48,7 @@ const ContactSection = () => {
                 type="text"
                 id="subject"
                 name="subject"
-                className="w-full px-4 py-2 bg-white border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-black/40"
+                className="w-full px-4 py-2 bg-white border border-border focus:outline-none focus:ring-2 focus:ring-black/40"
               />
             </div>
             
@@ -58,7 +58,7 @@ const ContactSection = () => {
                 id="message"
                 name="message"
                 rows={4}
-                className="w-full px-4 py-2 bg-white border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-black/40"
+                className="w-full px-4 py-2 bg-white border border-border focus:outline-none focus:ring-2 focus:ring-black/40"
                 required
               ></textarea>
             </div>
