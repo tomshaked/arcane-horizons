@@ -26,7 +26,8 @@ const Section = ({
     <section
       id={id}
       className={cn(
-        'relative py-20 md:py-32 border-b border-border/20',
+        'relative border-b border-border/20',
+        !noPadding && 'py-20 md:py-32',
         className
       )}
     >
