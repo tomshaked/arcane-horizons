@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 0%;
 
-    --primary: 210 100% 50%;
+    --primary: 0 0% 0%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 96%;
@@ -33,7 +33,7 @@
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 210 100% 50%;
+    --ring: 0 0% 0%;
 
     --radius: 0.5rem;
   }
@@ -86,9 +86,15 @@
     background: hsl(var(--primary));
   }
   
-  /* Make all links have underline */
+  /* Make all links have underline and proper contrast */
   a {
-    @apply underline underline-offset-2 hover:text-primary transition-colors;
+    @apply underline underline-offset-2 hover:text-black transition-colors;
+  }
+  
+  /* Dark background links should be white */
+  .bg-black a, [class*="bg-primary"] a, [style*="background-color: black"] a,
+  [style*="background-image"] a, [class*="bg-cover"] a {
+    @apply text-white hover:text-white/80;
   }
   
   /* Except for links in navigation */
@@ -103,6 +109,16 @@
   }
   
   footer a {
-    @apply text-white/70 hover:text-primary transition-colors;
+    @apply text-white/70 hover:text-white transition-colors;
+  }
+  
+  /* Ensure dark background sections have white text */
+  .bg-black, [class*="bg-primary"], [style*="background-color: black"] {
+    @apply text-white;
+  }
+  
+  /* Ensure sections with background images have white text */
+  [style*="background-image"], [class*="bg-cover"] {
+    @apply text-white;
   }
 }

@@ -1,5 +1,7 @@
+
 import React from 'react';
 import Button from './Button';
+
 const Hero = () => {
   return <div className="relative h-screen w-full overflow-hidden">
       {/* Full-page Video Background */}
@@ -22,11 +24,11 @@ const Hero = () => {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             {/* Link buttons wrapped in <a> tags */}
-            <a href="#research">
+            <a href="#research" className="no-underline">
               <Button size="lg">Explore Research</Button>
             </a>
-            <a href="#contact">
-              <Button variant="outline" size="lg">Join Our Team</Button>
+            <a href="#contact" className="no-underline">
+              <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10">Join Our Team</Button>
             </a>
           </div>
         </div>
@@ -40,4 +42,5 @@ const Hero = () => {
       </div>
     </div>;
 };
+
 export default Hero;
