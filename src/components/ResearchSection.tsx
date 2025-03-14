@@ -62,7 +62,7 @@ const ResearchSection = () => {
               </div>
               <div className="relative z-10 h-full flex items-center">
                 <div className="container mx-auto px-6 md:px-8">
-                  <div className="max-w-xl text-left max-w-[80rem] mx-auto">
+                  <div className="max-w-xl text-left">
                     <h3 className="font-display text-3xl md:text-5xl font-semibold mb-6 text-white">{area.title}</h3>
                     <p className="text-white/90 text-xl md:text-2xl">{area.description}</p>
                   </div>
