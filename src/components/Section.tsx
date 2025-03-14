@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { Separator } from "@/components/ui/separator";
 
 interface SectionProps {
   id?: string;
@@ -25,7 +26,7 @@ const Section = ({
     <section
       id={id}
       className={cn(
-        'relative py-20 md:py-32',
+        'relative py-20 md:py-32 border-b border-border/20',
         className
       )}
     >

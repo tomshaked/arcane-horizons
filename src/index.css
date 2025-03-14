@@ -96,4 +96,13 @@
   footer a {
     @apply no-underline hover:underline;
   }
+  
+  /* Footer styling */
+  footer {
+    @apply border-t-0;
+  }
+  
+  footer a {
+    @apply text-white/70 hover:text-primary transition-colors;
+  }
 }
