@@ -94,13 +94,13 @@
   /* Dark background links should be white */
   .bg-black a, [class*="bg-primary"] a, [style*="background-color: black"] a,
   [style*="background-image"] a, [class*="bg-cover"] a {
-    @apply text-white hover:text-white/80;
+    @apply text-white;
   }
   
   /* Except for links in navigation */
   header a, 
   footer a {
-    @apply no-underline hover:underline;
+    @apply no-underline;
   }
   
   /* Footer styling */
