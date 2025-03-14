@@ -22,12 +22,19 @@ const Index = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-fade-in');
+          entry.target.style.opacity = '1';
           observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
 
-    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    // Get all elements with animate-on-scroll or scroll-reveal class
+    const scrollElements = document.querySelectorAll('.animate-on-scroll, .scroll-reveal');
+    scrollElements.forEach(el => {
+      // Set initial opacity if not already set
+      if (!el.style.opacity) {
+        el.style.opacity = '0';
+      }
       observer.observe(el);
     });
 
