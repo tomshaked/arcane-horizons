@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Roboto', 'sans-serif'],
-				display: ['Roboto', 'sans-serif'],
+				sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+				display: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
