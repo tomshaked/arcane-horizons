@@ -1,6 +1,8 @@
 
 import React from 'react';
 import Section from './Section';
+import { Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+import { Toggle } from './ui/toggle';
 
 const TeamSection = () => {
   const teamMembers = [
@@ -8,37 +10,62 @@ const TeamSection = () => {
       name: 'Tom Shaked',
       role: 'Founder & PI',
       bio: 'Dr. Shaked leads our research endeavors in construction robotics.',
-      image: '/arcane-horizons/assets/images/team/tom-shaked.jpg'
+      image: '/arcane-horizons/assets/images/team/tom-shaked.jpg',
+      socialLinks: [
+        { icon: Linkedin, url: 'https://linkedin.com/in/' },
+        { icon: Twitter, url: 'https://twitter.com/' },
+        { icon: Github, url: 'https://github.com/' }
+      ]
     },
     {
       name: 'Roni Hillel',
       role: 'PhD Student',
       bio: 'Roni is passionate about robotics and has a strong academic record in engineering.',
-      image: '/arcane-horizons/assets/images/team/roni-hillel.jpg'
+      image: '/arcane-horizons/assets/images/team/roni-hillel.jpg',
+      socialLinks: [
+        { icon: Linkedin, url: 'https://linkedin.com/in/' },
+        { icon: Github, url: 'https://github.com/' }
+      ]
     },
     {
       name: 'Nave Segev',
       role: 'MSc Student',
       bio: 'Nave is an experienced architect with expertise in Building Information Modeling (BIM).',
-      image: '/arcane-horizons/assets/images/team/nave-segev.jpg'
+      image: '/arcane-horizons/assets/images/team/nave-segev.jpg',
+      socialLinks: [
+        { icon: Linkedin, url: 'https://linkedin.com/in/' },
+        { icon: Twitter, url: 'https://twitter.com/' }
+      ]
     },
     {
       name: 'Ofer Finkelstein',
       role: 'MSc Student',
       bio: 'Ofer is a civil engineer with a passion for sustainable construction and material innovation.',
-      image: '/arcane-horizons/assets/images/team/ofer-finkelstein.jpg'
+      image: '/arcane-horizons/assets/images/team/ofer-finkelstein.jpg',
+      socialLinks: [
+        { icon: Linkedin, url: 'https://linkedin.com/in/' },
+        { icon: Github, url: 'https://github.com/' }
+      ]
     },
     {
       name: 'Ori Dvir',
       role: 'MSc Student',
       bio: 'Ori investigates the evolution of architectural expression through the impact of design tools and planning methodologies.',
-      image: '/arcane-horizons/assets/images/team/ori-dvir.jpg'
+      image: '/arcane-horizons/assets/images/team/ori-dvir.jpg',
+      socialLinks: [
+        { icon: Linkedin, url: 'https://linkedin.com/in/' }
+      ]
     },
     {
       name: 'Simon Fishkin',
       role: 'Research Assistant',
       bio: 'Simon is passionate about dynamic architectural systems.',
-      image: '/arcane-horizons/assets/images/team/simon-fishkin.jpg'
+      image: '/arcane-horizons/assets/images/team/simon-fishkin.jpg',
+      socialLinks: [
+        { icon: Linkedin, url: 'https://linkedin.com/in/' },
+        { icon: Github, url: 'https://github.com/' },
+        { icon: Twitter, url: 'https://twitter.com/' }
+      ]
     }
   ];
 
@@ -67,7 +94,28 @@ const TeamSection = () => {
             <div className="p-6">
               <h3 className="font-display text-xl font-semibold mb-1 text-primary">{member.name}</h3>
               <p className="text-foreground/90 font-medium text-sm mb-3">{member.role}</p>
-              <p className="text-foreground/70 text-sm">{member.bio}</p>
+              <p className="text-foreground/70 text-sm mb-4">{member.bio}</p>
+              
+              {/* Social Links */}
+              <div className="flex gap-2 mt-2">
+                {member.socialLinks.map((link, i) => (
+                  <a 
+                    key={i} 
+                    href={link.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <Toggle 
+                      variant="outline" 
+                      size="sm" 
+                      className="hover:bg-primary/10 p-1 border-0"
+                    >
+                      <link.icon size={16} className="text-primary" />
+                    </Toggle>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         ))}
