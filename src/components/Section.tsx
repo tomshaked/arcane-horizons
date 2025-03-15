@@ -26,14 +26,11 @@ const Section = ({
     <section
       id={id}
       className={cn(
-        'relative border-b border-gray-300', // Changed from border-border/20 to border-gray-300 for better visibility
+        'relative border-b border-border/20',
         !noPadding && 'py-20 md:py-32',
         className
       )}
     >
-      {withDivider && dividerPosition === 'top' && (
-        <Separator className="absolute top-0 w-full h-px bg-gray-300" /> // Added visible separator
-      )}
       <div className={cn(
         'mx-auto', 
         { 
@@ -43,9 +40,6 @@ const Section = ({
       )}>
         {children}
       </div>
-      {withDivider && dividerPosition === 'bottom' && (
-        <Separator className="absolute bottom-0 w-full h-px bg-gray-300" /> // Added visible separator
-      )}
     </section>
   );
 };

@@ -31,7 +31,7 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 80%; /* Changed from 90% to 80% for better visibility */
+    --border: 0 0% 90%;
     --input: 0 0% 90%;
     --ring: 0 0% 0%;
 
@@ -56,7 +56,7 @@
   .glass-panel {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 0, 0, 0.15); /* Increased border opacity from 0.1 to 0.15 */
+    border: 1px solid rgba(0, 0, 0, 0.1);
   }
   
   .text-balance {
@@ -120,15 +120,5 @@
   /* Ensure sections with background images have white text */
   [style*="background-image"], [class*="bg-cover"] {
     @apply text-white;
-  }
-  
-  /* Enhanced section borders for better visibility */
-  section {
-    @apply border-gray-300;
-  }
-  
-  /* Card borders enhanced */
-  .card, .glass-panel {
-    @apply border border-gray-300;
   }
 }
