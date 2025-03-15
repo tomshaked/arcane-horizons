@@ -2,6 +2,8 @@
 import React, { useEffect, useRef } from 'react';
 import Section from './Section';
 import { AspectRatio } from './ui/aspect-ratio';
+import { Button } from './ui/button';
+import { ArrowRight } from 'lucide-react';
 
 const ResearchSection = () => {
   const researchAreas = [{
@@ -95,7 +97,13 @@ const ResearchSection = () => {
                 <div className="container mx-auto px-6 md:px-8 max-w-[80rem]">
                   <div className="max-w-xl text-left">
                     <h3 className="font-display text-3xl md:text-5xl font-semibold mb-6 text-white scroll-reveal">{area.title}</h3>
-                    <p className="text-white/90 text-xl md:text-2xl scroll-reveal">{area.description}</p>
+                    <p className="text-white/90 text-xl md:text-2xl scroll-reveal mb-6">{area.description}</p>
+                    <a 
+                      href="#" 
+                      className="inline-flex items-center text-white hover:text-white/80 text-lg scroll-reveal group"
+                    >
+                      Learn more about {area.title} <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </a>
                   </div>
                 </div>
               </div>
