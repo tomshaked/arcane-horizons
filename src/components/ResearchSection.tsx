@@ -12,30 +12,30 @@ const ResearchSection = () => {
     image: '/arcane-horizons/assets/images/research/UAV-UGV_Collaboration.jpg',
     link: '/research/uav-ugv-collaboration'
   }, {
-    title: 'Textile-Based Manufacturing',
-    description: 'Developing digital tools for robotic textile fabrication, integrating parametric design, simulation, and automation. Research focuses on structured knits, computational patterning, and bridging digital workflows with fabrication for architecture and industrial design.',
-    image: '/arcane-horizons/assets/images/research/Computational_Textile_Design.jpg',
-    link: '/research/textile-based-manufacturing'
+    title: 'Additive Manufacturing with Local Soil',
+    description: 'Exploring robotic 3D printing with native soil, integrating material processing, robotic deposition, and structural performance analysis. Research focuses on sustainable, site-adaptive fabrication methods for architecture and planetary applications.',
+    image: '/arcane-horizons/assets/images/research/Robotic_Soil_3D_Printing.jpg',
+    link: '/research/additive-manufacturing-with-local-soil'
   }, {
     title: 'Performative Ground Forming',
     description: 'Exploring robotic ground shaping for environmental performance, integrating acoustic analysis with landscape design. Research develops noise-reducing terrain features through simulation and real-world testing, optimizing robotic construction for urban soundscapes and infrastructure.',
     image: '/arcane-horizons/assets/images/research/Acoustic_Terrain_Forming.jpg',
     link: '/research/performative-ground-forming'
   }, {
-    title: 'Robotic Stone Carving',
-    description: 'Developing robotic workflows for adaptive stone carving, integrating digital design, automated toolpath planning, and material constraints. Research enables precise robotic stonework, combining automation with craftsmanship for construction and artistic applications.',
-    image: '/arcane-horizons/assets/images/research/Digital_Stone_Carving_Analysis.jpg',
-    link: '/research/robotic-stone-carving'
-  }, {
     title: 'Robotic Earthmoving',
     description: 'Investigating autonomous ground shaping for construction and landscape applications. Research includes robotic aggregate manipulation, terrain modeling, and noise-mitigating ground-forming techniques. This work explores scalable, adaptive robotic land modification in urban, rural, and extraterrestrial contexts, integrating digital simulation and execution tools.',
     image: '/arcane-horizons/assets/images/research/Robotic_Earthmoving_Processes.jpg',
     link: '/research/robotic-earthmoving'
   }, {
-    title: 'Additive Manufacturing with Local Soil',
-    description: 'Exploring robotic 3D printing with native soil, integrating material processing, robotic deposition, and structural performance analysis. Research focuses on sustainable, site-adaptive fabrication methods for architecture and planetary applications.',
-    image: '/arcane-horizons/assets/images/research/Robotic_Soil_3D_Printing.jpg',
-    link: '/research/additive-manufacturing-with-local-soil'
+    title: 'Textile Design to Manufacturing',
+    description: 'Developing digital tools for robotic textile fabrication, integrating parametric design, simulation, and automation. Research focuses on structured knits, computational patterning, and bridging digital workflows with fabrication for architecture and industrial design.',
+    image: '/arcane-horizons/assets/images/research/Computational_Textile_Design.jpg',
+    link: '/research/textile-design-to-manufacturing'
+  }, {
+    title: 'Robotic Stone Carving',
+    description: 'Developing robotic workflows for adaptive stone carving, integrating digital design, automated toolpath planning, and material constraints. Research enables precise robotic stonework, combining automation with craftsmanship for construction and artistic applications.',
+    image: '/arcane-horizons/assets/images/research/Digital_Stone_Carving_Analysis.jpg',
+    link: '/research/robotic-stone-carving'
   }];
 
   // Create refs for each scrollable element

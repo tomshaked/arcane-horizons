@@ -53,29 +53,50 @@ const researchProjects: ResearchProject[] = [
     ]
   },
   {
-    id: 'textile-based-manufacturing',
-    title: 'Textile-Based Manufacturing',
-    description: 'Developing digital tools for robotic textile fabrication, integrating parametric design, simulation, and automation.',
+    id: 'additive-manufacturing-with-local-soil',
+    title: 'Additive Manufacturing with Local Soil',
+    description: 'Exploring robotic 3D printing with native soil, integrating material processing, robotic deposition, and structural performance analysis.',
     longDescription: [
-      'Our research focuses on developing digital tools for robotic textile fabrication, integrating parametric design, simulation, and automation.',
-      'We explore structured knits, computational patterning, and bridge digital workflows with fabrication for architecture and industrial design applications.',
-      'Our methods enable novel approaches to textile manufacturing through computational design tools that span from digital conception to robotic production.'
+      'Our research explores robotic 3D printing with native soil, integrating material processing, robotic deposition, and structural performance analysis.',
+      'We focus on sustainable, site-adaptive fabrication methods for architecture and planetary applications, using locally available materials.',
+      'This work spans from earth-moving and terrain shaping to advanced soil-based 3D printing for construction applications.'
     ],
-    image: '/arcane-horizons/assets/images/research/Computational_Textile_Design.jpg',
+    image: '/arcane-horizons/assets/images/research/Robotic_Soil_3D_Printing.jpg',
     publications: [
       {
-        title: 'KNITIT: A Computational Tool for Design, Simulation, and Fabrication of Multiple Structured Knits',
-        authors: 'Amit Karmon, Yael Sterman, Tom Shaked, Eyal Sheffer, Shany Nir',
-        year: 2018,
-        source: 'ACM Symposium on Computational Fabrication',
-        link: 'https://www.researchgate.net/publication/325887522_KNITIT_a_computational_tool_for_design_simulation_and_fabrication_of_multiple_structured_knits'
+        title: 'Robotic Tools, Native Matter: Workflow and Methods for Geomaterial Reconstitution Using Additive Manufacturing',
+        authors: 'Keren Lee Bar-Sinai, Tom Shaked, Amir Sprecher',
+        year: 2021,
+        source: 'Architectural Science Review',
+        link: 'https://www.researchgate.net/publication/351693438_Robotic_tools_native_matter_workflow_and_methods_for_geomaterial_reconstitution_using_additive_manufacturing'
       },
       {
-        title: 'Tool for Design and Fabrication of Knitted Components',
-        authors: 'Amit Karmon, Shany Nir, Tom Shaked, Eyal Sheffer, Yael Sterman',
+        title: 'Stimulated Soil for Continuous Shell Structures',
+        authors: 'Roni Hillel, Tom Shaked, Michael Tsesarsky, Amir Sprecher',
         year: 2024,
-        source: 'US Patents 11,421,355 & 11,913,149 (2022, 2024)',
-        link: 'https://www.researchgate.net/publication/346095991_Tool_for_design_and_fabrication_of_knitted_components'
+        source: 'IASS',
+        link: 'https://www.researchgate.net/publication/372541875_Stimulated_Soil_for_Continuous_Shell_Structures'
+      },
+      {
+        title: 'Exploring Robotic Fabrication Using Stimulated Soil',
+        authors: 'Roni Hillel, Tom Shaked, Michael Tsesarsky, Amir Sprecher',
+        year: 2024,
+        source: 'International Conference on Education and Research in Computer-Aided Architectural Design',
+        link: 'https://www.researchgate.net/publication/373574522_Exploring_Robotic_Fabrication_Using_Stimulated_Soil'
+      },
+      {
+        title: 'Aggregate-Forming Planner for Autonomous Earth-Moving',
+        authors: 'Tom Shaked, Keren Lee Bar-Sinai, A. Meles-Braverman, Oren Elmakis, Amir Degani',
+        year: 2023,
+        source: 'IEEE Access',
+        link: 'https://www.researchgate.net/publication/374930162_Aggregate-Forming_Planner_for_Autonomous_Earth-moving'
+      },
+      {
+        title: 'Earth-Shaping with Heterogeneous Robotic Teams: From Sim to Real',
+        authors: 'Tom Shaked, Amir Degani',
+        year: 2023,
+        source: 'Conference on Robotics and Simulation',
+        link: 'https://www.researchgate.net/publication/374859573_Earth-Shaping_with_Heterogeneous_Robotic_Teams_From_Sim_to_Real'
       }
     ]
   },
@@ -109,34 +130,7 @@ const researchProjects: ResearchProject[] = [
         authors: 'Keren Lee Bar-Sinai, Tom Shaked, Amir Sprecher',
         year: 2019,
         source: 'ACADIA',
-        link: 'https://www.researchgate.net/publication/370735851_Informing_Grounds_Robotic_Sand-Forming_Simulating_Remote_Autonomous_Lunar_Groundscaping'
-      }
-    ]
-  },
-  {
-    id: 'robotic-stone-carving',
-    title: 'Robotic Stone Carving',
-    description: 'Developing robotic workflows for adaptive stone carving, integrating digital design, automated toolpath planning, and material constraints.',
-    longDescription: [
-      'Our research focuses on developing robotic workflows for adaptive stone carving, integrating digital design, automated toolpath planning, and material constraints.',
-      'We enable precise robotic stonework, combining automation with craftsmanship for construction and artistic applications.',
-      'Our methods facilitate on-site robotic fabrication and middleware for integrating robots in traditional craft contexts while preserving material integrity.'
-    ],
-    image: '/arcane-horizons/assets/images/research/Digital_Stone_Carving_Analysis.jpg',
-    publications: [
-      {
-        title: 'Adaptive Robotic Stone Carving: Method, Tools, and Experiments',
-        authors: 'Tom Shaked, Keren Lee Bar-Sinai, Amir Sprecher',
-        year: 2021,
-        source: 'Automation in Construction',
-        link: 'https://www.researchgate.net/publication/370735851_Adaptive_Robotic_Stone_Carving_Method_Tools_and_Experiments'
-      },
-      {
-        title: 'Craft to Site: Middleware for In Situ Robotic Stonework',
-        authors: 'Tom Shaked, Keren Lee Bar-Sinai, Amir Sprecher',
-        year: 2020,
-        source: 'Construction Robotics',
-        link: 'https://www.researchgate.net/publication/370735851_Craft_to_Site_Middleware_for_In_Situ_Robotic_Stonework'
+        link: 'https://www.researchgate.net/publication/337945482_Informing_Grounds_A_Theoretical_Framework_and_Iterative_Process_for_Robotic_Groundscaping_of_Remote_Sites'
       }
     ]
   },
@@ -175,50 +169,56 @@ const researchProjects: ResearchProject[] = [
     ]
   },
   {
-    id: 'additive-manufacturing-with-local-soil',
-    title: 'Additive Manufacturing with Local Soil',
-    description: 'Exploring robotic 3D printing with native soil, integrating material processing, robotic deposition, and structural performance analysis.',
+    id: 'textile-design-to-manufacturing',
+    title: 'Textile Design to Manufacturing',
+    description: 'Developing digital tools for robotic textile fabrication, integrating parametric design, simulation, and automation.',
     longDescription: [
-      'Our research explores robotic 3D printing with native soil, integrating material processing, robotic deposition, and structural performance analysis.',
-      'We focus on sustainable, site-adaptive fabrication methods for architecture and planetary applications, using locally available materials.',
-      'This work spans from earth-moving and terrain shaping to advanced soil-based 3D printing for construction applications.'
+      'Our research focuses on developing digital tools for robotic textile fabrication, integrating parametric design, simulation, and automation.',
+      'We explore structured knits, computational patterning, and bridge digital workflows with fabrication for architecture and industrial design applications.',
+      'Our methods enable novel approaches to textile manufacturing through computational design tools that span from digital conception to robotic production.'
     ],
-    image: '/arcane-horizons/assets/images/research/Robotic_Soil_3D_Printing.jpg',
+    image: '/arcane-horizons/assets/images/research/Computational_Textile_Design.jpg',
     publications: [
       {
-        title: 'Robotic Tools, Native Matter: Workflow and Methods for Geomaterial Reconstitution Using Additive Manufacturing',
-        authors: 'Keren Lee Bar-Sinai, Tom Shaked, Amir Sprecher',
+        title: 'KNITIT: A Computational Tool for Design, Simulation, and Fabrication of Multiple Structured Knits',
+        authors: 'Amit Karmon, Yael Sterman, Tom Shaked, Eyal Sheffer, Shany Nir',
+        year: 2018,
+        source: 'ACM Symposium on Computational Fabrication',
+        link: 'https://www.researchgate.net/publication/325887522_KNITIT_a_computational_tool_for_design_simulation_and_fabrication_of_multiple_structured_knits'
+      },
+      {
+        title: 'Tool for Design and Fabrication of Knitted Components',
+        authors: 'Amit Karmon, Shany Nir, Tom Shaked, Eyal Sheffer, Yael Sterman',
+        year: 2024,
+        source: 'US Patents 11,421,355 & 11,913,149 (2022, 2024)',
+        link: 'https://www.researchgate.net/publication/346095991_Tool_for_design_and_fabrication_of_knitted_components'
+      }
+    ]
+  },
+  {
+    id: 'robotic-stone-carving',
+    title: 'Robotic Stone Carving',
+    description: 'Developing robotic workflows for adaptive stone carving, integrating digital design, automated toolpath planning, and material constraints.',
+    longDescription: [
+      'Our research focuses on developing robotic workflows for adaptive stone carving, integrating digital design, automated toolpath planning, and material constraints.',
+      'We enable precise robotic stonework, combining automation with craftsmanship for construction and artistic applications.',
+      'Our methods facilitate on-site robotic fabrication and middleware for integrating robots in traditional craft contexts while preserving material integrity.'
+    ],
+    image: '/arcane-horizons/assets/images/research/Digital_Stone_Carving_Analysis.jpg',
+    publications: [
+      {
+        title: 'Adaptive Robotic Stone Carving: Method, Tools, and Experiments',
+        authors: 'Tom Shaked, Keren Lee Bar-Sinai, Amir Sprecher',
         year: 2021,
-        source: 'Architectural Science Review',
-        link: 'https://www.researchgate.net/publication/370735851_Robotic_Tools_Native_Matter_Workflow_and_Methods_for_Geomaterial_Reconstitution_Using_Additive_Manufacturing'
+        source: 'Automation in Construction',
+        link: 'https://www.researchgate.net/publication/350093193_Adaptive_robotic_stone_carving_Method_tools_and_experiments'
       },
       {
-        title: 'Stimulated Soil for Continuous Shell Structures',
-        authors: 'Roni Hillel, Tom Shaked, Michael Tsesarsky, Amir Sprecher',
-        year: 2024,
-        source: 'IASS',
-        link: 'https://www.researchgate.net/publication/370735851_Stimulated_Soil_for_Continuous_Shell_Structures'
-      },
-      {
-        title: 'Exploring Robotic Fabrication Using Stimulated Soil',
-        authors: 'Roni Hillel, Tom Shaked, Michael Tsesarsky, Amir Sprecher',
-        year: 2024,
-        source: 'International Conference on Education and Research in Computer-Aided Architectural Design',
-        link: 'https://www.researchgate.net/publication/370735851_Exploring_Robotic_Fabrication_Using_Stimulated_Soil'
-      },
-      {
-        title: 'Aggregate-Forming Planner for Autonomous Earth-Moving',
-        authors: 'Tom Shaked, Keren Lee Bar-Sinai, A. Meles-Braverman, Oren Elmakis, Amir Degani',
-        year: 2023,
-        source: 'IEEE Access',
-        link: 'https://www.researchgate.net/publication/370735851_Aggregate-Forming_Planner_for_Autonomous_Earth-Moving'
-      },
-      {
-        title: 'Earth-Shaping with Heterogeneous Robotic Teams: From Sim to Real',
-        authors: 'Tom Shaked, Amir Degani',
-        year: 2023,
-        source: 'Conference on Robotics and Simulation',
-        link: 'https://www.researchgate.net/publication/370735851_Earth-Shaping_with_Heterogeneous_Robotic_Teams_From_Sim_to_Real'
+        title: 'Craft to Site: Middleware for In Situ Robotic Stonework',
+        authors: 'Tom Shaked, Keren Lee Bar-Sinai, Amir Sprecher',
+        year: 2020,
+        source: 'Construction Robotics',
+        link: 'https://www.researchgate.net/publication/347513761_Craft_to_site_middleware_for_in_situ_robotic_stonework'
       }
     ]
   }
