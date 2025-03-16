@@ -40,8 +40,8 @@ const Header = () => {
       }
     } else {
       // Otherwise, navigate to the home page with the section hash
-      // Using window.location instead of navigate to force a full reload
-      window.location.href = `/#${sectionId}`;
+      // Using navigate instead of window.location to prevent full page reload
+      navigate(`/#${sectionId}`);
     }
     // Close mobile menu if it's open
     if (isMobileMenuOpen) {
