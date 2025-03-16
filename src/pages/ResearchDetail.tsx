@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Section from '@/components/Section';
@@ -192,7 +192,8 @@ const researchProjects: ResearchProject[] = [
 ];
 
 const ResearchDetail = () => {
-  const { projectId } = useParams<{ projectId: string }>();
+  const location = useLocation();
+  const projectId = location.pathname.split('/research/')[1];
   const project = researchProjects.find(p => p.id === projectId);
 
   if (!project) {
