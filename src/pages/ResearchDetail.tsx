@@ -1,6 +1,6 @@
 
 import React, { useLayoutEffect } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Section from '@/components/Section';
@@ -12,7 +12,7 @@ import ResearchDetailContent from '@/components/research/ResearchDetailContent';
 const ResearchDetail = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const projectId = location.pathname.split('/research/')[1];
+  const { projectId } = useParams<{ projectId: string }>();
   const project = researchProjects.find(p => p.id === projectId);
 
   // Always scroll to top when navigating to a research detail page
@@ -50,6 +50,7 @@ const ResearchDetail = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Header />
       <ResearchDetailHeader 
+        key={project.id} // Add key prop to force re-render when project changes
         imageSrc={project.image} 
         videoSrc={project.videoSrc} 
       />

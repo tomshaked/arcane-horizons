@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 interface ResearchDetailHeaderProps {
   imageSrc: string;
@@ -7,13 +7,35 @@ interface ResearchDetailHeaderProps {
 }
 
 const ResearchDetailHeader: React.FC<ResearchDetailHeaderProps> = ({ imageSrc, videoSrc }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Reset video when props change
+  useEffect(() => {
+    if (videoRef.current && videoSrc) {
+      // Reset the video element by updating its src and reloading
+      videoRef.current.src = videoSrc;
+      videoRef.current.load();
+      videoRef.current.play().catch(err => {
+        console.log('Video autoplay failed:', err);
+      });
+    }
+  }, [videoSrc]);
+
   return (
     <div className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0 w-full h-full">
         {videoSrc ? (
           // Video background with overlay
           <>
-            <video autoPlay muted loop playsInline className="object-cover w-full h-full">
+            <video 
+              ref={videoRef}
+              autoPlay 
+              muted 
+              loop 
+              playsInline 
+              className="object-cover w-full h-full"
+              key={videoSrc} // Add key prop based on videoSrc to force re-render
+            >
               <source src={videoSrc} type="video/mp4" />
               {/* Fallback to image if video fails */}
               <div 
