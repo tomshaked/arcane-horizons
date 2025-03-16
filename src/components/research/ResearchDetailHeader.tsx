@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { ChevronDown } from 'lucide-react';
 
 interface ResearchDetailHeaderProps {
   imageSrc: string;
@@ -41,9 +40,11 @@ const ResearchDetailHeader: React.FC<ResearchDetailHeaderProps> = ({ imageSrc, v
         )}
       </div>
       
-      {/* Scroll Down Indicator - Same as in Hero component */}
+      {/* Scroll Down Indicator - Using the same SVG as in Hero component */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce opacity-70 text-white">
-        <ChevronDown size={24} />
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </div>
     </div>
   );
