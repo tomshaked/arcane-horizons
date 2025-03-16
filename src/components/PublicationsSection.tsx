@@ -6,8 +6,8 @@ const PublicationsSection = () => {
   const publications = [
     {
       title: "Earth-Shaping with Heterogeneous Robotic Teams: From Sim to Real",
-      authors: "Tom Shaked, Amir Degani",
-      journal: "Springer",
+      authors: "Federico Oliva, Tom Shaked, Karen-Lee Bar-Sinai, Omer Shalev, Oren Elmakis, Ari Meles-Braverman, Amir Degani",
+      journal: "Climbing and Walking Robots Conference, Springer",
       year: 2024,
       link: "https://www.researchgate.net/publication/384344853_Earth-Shaping_with_Heterogeneous_Robotic_Teams_From_Sim_to_Real"
     },

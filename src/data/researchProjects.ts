@@ -34,6 +34,13 @@ export const researchProjects: ResearchProject[] = [
     image: '/arcane-horizons/assets/images/research/Robotic_Earthmoving_Processes.jpg',
     publications: [
       {
+        title: 'Earth-Shaping with Heterogeneous Robotic Teams: From Sim to Real',
+        authors: 'Federico Oliva, Tom Shaked, Karen-Lee Bar-Sinai, Omer Shalev, Oren Elmakis, Ari Meles-Braverman, Amir Degani',
+        year: 2024,
+        source: 'Climbing and Walking Robots Conference, Springer',
+        link: 'https://www.researchgate.net/publication/384344853_Earth-Shaping_with_Heterogeneous_Robotic_Teams_From_Sim_to_Real'
+      },
+      {
         title: 'Aggregate-Forming Planner for Autonomous Earth-Moving',
         authors: 'Tom Shaked, Karen Lee Bar-Sinai, Ari Meles-Braverman, Oren Elmakis, Amir Degani',
         year: 2023,
@@ -69,6 +76,13 @@ export const researchProjects: ResearchProject[] = [
     videoSrc: '', // Empty string for no video
     image: '/arcane-horizons/assets/images/research/UAV-UGV_Collaboration.jpg',
     publications: [
+      {
+        title: 'Earth-Shaping with Heterogeneous Robotic Teams: From Sim to Real',
+        authors: 'Federico Oliva, Tom Shaked, Karen-Lee Bar-Sinai, Omer Shalev, Oren Elmakis, Ari Meles-Braverman, Amir Degani',
+        year: 2024,
+        source: 'Climbing and Walking Robots Conference, Springer',
+        link: 'https://www.researchgate.net/publication/384344853_Earth-Shaping_with_Heterogeneous_Robotic_Teams_From_Sim_to_Real'
+      },
       {
         title: 'Vision-Based UAV-UGV Collaboration for Autonomous Construction Site Preparation',
         authors: 'Oren Elmakis, Tom Shaked, Amir Degani',
