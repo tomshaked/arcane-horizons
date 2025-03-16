@@ -17,7 +17,7 @@ const RelatedResearch: React.FC<RelatedResearchProps> = ({ relatedProjects }) =>
       <h3 className="font-display text-2xl mb-8">Related Research</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {relatedProjects.map((project) => (
-          <Card key={project.id} className="overflow-hidden bg-card/50 hover:bg-card/80 transition-colors border-border/50">
+          <Card key={project.id} className="overflow-hidden bg-card/50 hover:bg-card/80 transition-colors border-border/50 rounded-none">
             <div className="aspect-video bg-cover bg-center" style={{ backgroundImage: `url(${project.image})` }} />
             <CardContent className="p-6">
               <h4 className="font-display text-xl font-medium mb-2">{project.title}</h4>
@@ -26,7 +26,7 @@ const RelatedResearch: React.FC<RelatedResearchProps> = ({ relatedProjects }) =>
                 to={`/research/${project.id}`}
                 className="inline-flex items-center text-primary hover:text-primary/80 text-sm group"
               >
-                Learn more <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
+                Learn more <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </CardContent>
           </Card>
