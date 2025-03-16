@@ -30,7 +30,7 @@ export const researchProjects: ResearchProject[] = [
       'We develop methods for robotic aggregate manipulation, terrain modeling, and noise-mitigating ground-forming techniques.',
       'This work explores scalable, adaptive robotic land modification in urban, rural, and extraterrestrial contexts, integrating digital simulation and execution tools.'
     ],
-    videoSrc: '/arcane-horizons/assets/videos/labfolio-hero-short.mp4',
+    videoSrc: '/arcane-horizons/assets/videos/Robotic_Earthmoving_Processes.mp4',
     image: '/arcane-horizons/assets/images/research/Robotic_Earthmoving_Processes.jpg',
     publications: [
       {
