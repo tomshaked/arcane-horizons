@@ -42,14 +42,14 @@ export const researchProjects: ResearchProject[] = [
       },
       {
         title: 'Informing Grounds: A Theoretical Framework and Iterative Process for Robotic Groundscaping of Remote Sites',
-        authors: 'Karen Lee Bar-Sinai, Tom Shaked, Amir Sprecher',
+        authors: 'Karen Lee Bar-Sinai, Tom Shaked, Aaron Sprecher',
         year: 2019,
         source: 'ACADIA',
         link: 'https://www.researchgate.net/publication/337945482_Informing_Grounds_A_Theoretical_Framework_and_Iterative_Process_for_Robotic_Groundscaping_of_Remote_Sites'
       },
       {
         title: 'Toward Acoustic Landscapes: A Digital Design Workflow for Embedding Noise Reduction in Ground-Forming',
-        authors: 'Karen Lee Bar-Sinai, Tom Shaked, ES Fettahoglu, J. Krimm, E. Pestriakova',
+        authors: 'Karen Lee Bar-Sinai, Tom Shaked, Elif Simge Fettahoglu, Jochen Krimm, Ekaterina Pestriakova',
         year: 2023,
         source: 'Journal of Digital Landscape Architecture',
         link: 'https://www.researchgate.net/publication/370980617_Toward_Acoustic_Landscapes_A_Digital_Design_Workflow_for_Embedding_Noise_Reduction_in_Ground-forming'
@@ -78,7 +78,7 @@ export const researchProjects: ResearchProject[] = [
       },
       {
         title: 'BREEZE—Boundary Red Emission Zone Estimation Using Unmanned Aerial Vehicles',
-        authors: 'Oren Elmakis, Tom Shaked, Beni Fishbain, Amir Degani',
+        authors: 'Oren Elmakis, Tom Shaked, Barak Fishbain, Amir Degani',
         year: 2022,
         source: 'Sensors',
         link: 'https://www.researchgate.net/publication/362207406_BREEZE-Boundary_Red_Emission_Zone_Estimation_Using_Unmanned_Aerial_Vehicles'
@@ -100,28 +100,28 @@ export const researchProjects: ResearchProject[] = [
     publications: [
       {
         title: 'Robotic Tools, Native Matter: Workflow and Methods for Geomaterial Reconstitution Using Additive Manufacturing',
-        authors: 'Keren Lee Bar-Sinai, Tom Shaked, Amir Sprecher',
+        authors: 'Karen Lee Bar-Sinai, Tom Shaked, Aaron Sprecher',
         year: 2021,
         source: 'Architectural Science Review',
         link: 'https://www.researchgate.net/publication/349989665_Robotic_tools_native_matter_workflow_and_methods_for_geomaterial_reconstitution_using_additive_manufacturing'
       },
       {
         title: 'Stimulated Soil for Continuous Shell Structures',
-        authors: 'Roni Hillel, Tom Shaked, Michael Tsesarsky, Amir Sprecher',
+        authors: 'Roni Hillel, Tom Shaked, Michael Tsesarsky, Aaron Sprecher',
         year: 2024,
         source: 'IASS',
         link: 'https://www.researchgate.net/publication/385131103_Stimulated_Soil_for_Continuous_Shell_Structures'
       },
       {
         title: 'Exploring Robotic Fabrication Using Stimulated Soil',
-        authors: 'Roni Hillel, Tom Shaked, Michael Tsesarsky, Amir Sprecher',
+        authors: 'Roni Hillel, Tom Shaked, Michael Tsesarsky, Aaron Sprecher',
         year: 2024,
         source: 'International Conference on Education and Research in Computer-Aided Architectural Design',
         link: 'https://www.researchgate.net/publication/383999997_Exploring_Robotic_Fabrication_Using_Stimulated_Soil'
       },
       {
         title: 'Aggregate-Forming Planner for Autonomous Earth-Moving',
-        authors: 'Tom Shaked, Keren Lee Bar-Sinai, A. Meles-Braverman, Oren Elmakis, Amir Degani',
+        authors: 'Tom Shaked, Karen Lee Bar-Sinai, Ari Meles-Braverman, Oren Elmakis, Amir Degani',
         year: 2023,
         source: 'IEEE Access',
         link: 'https://www.researchgate.net/publication/374930162_Aggregate-Forming_Planner_for_Autonomous_Earth-moving'
@@ -150,21 +150,21 @@ export const researchProjects: ResearchProject[] = [
     publications: [
       {
         title: 'Toward Acoustic Landscapes: A Digital Design Workflow for Embedding Noise Reduction in Ground-Forming',
-        authors: 'Keren Lee Bar-Sinai, Tom Shaked, ES Fettahoglu, J. Krimm, E. Pestriakova',
+        authors: 'Karen Lee Bar-Sinai, Tom Shaked, Elif Simge Fettahoglu, Jochen Krimm, Ekaterina Pestriakova',
         year: 2023,
         source: 'Journal of Digital Landscape Architecture',
         link: 'https://www.researchgate.net/publication/370980617_Toward_Acoustic_Landscapes_A_Digital_Design_Workflow_for_Embedding_Noise_Reduction_in_Ground-forming'
       },
       {
         title: 'Embedding Acoustic Analysis in Landscape Architecture Design Processes: A Case Study of Munich Airport',
-        authors: 'Keren Lee Bar-Sinai, Tom Shaked, ES Fettahoglu, J. Krimm, B. Boucsein',
+        authors: 'Karen Lee Bar-Sinai, Tom Shaked, Elif Simge Fettahoglu, Jochen Krimm, Benedikt Boucsein',
         year: 2023,
         source: 'Buildings',
         link: 'https://www.researchgate.net/publication/366878235_Embedding_Acoustic_Analysis_in_Landscape_Architecture_Design_Processes_A_Case_Study_of_Munich_Airport'
       },
       {
         title: 'Informing Grounds: Robotic Sand-Forming Simulating Remote Autonomous Lunar Groundscaping',
-        authors: 'Keren Lee Bar-Sinai, Tom Shaked, Amir Sprecher',
+        authors: 'Karen Lee Bar-Sinai, Tom Shaked, Aaron Sprecher',
         year: 2019,
         source: 'ACADIA',
         link: 'https://www.researchgate.net/publication/337945482_Informing_Grounds_A_Theoretical_Framework_and_Iterative_Process_for_Robotic_Groundscaping_of_Remote_Sites'
@@ -186,14 +186,14 @@ export const researchProjects: ResearchProject[] = [
     publications: [
       {
         title: 'Adaptive Robotic Stone Carving: Method, Tools, and Experiments',
-        authors: 'Tom Shaked, Keren Lee Bar-Sinai, Amir Sprecher',
+        authors: 'Tom Shaked, Karen Lee Bar-Sinai, Aaron Sprecher',
         year: 2021,
         source: 'Automation in Construction',
         link: 'https://www.researchgate.net/publication/352681602_Adaptive_robotic_stone_carving_Method_tools_and_experiments'
       },
       {
         title: 'Craft to Site: Middleware for In Situ Robotic Stonework',
-        authors: 'Tom Shaked, Keren Lee Bar-Sinai, Amir Sprecher',
+        authors: 'Tom Shaked, Karen Lee Bar-Sinai, Aaron Sprecher',
         year: 2020,
         source: 'Construction Robotics',
         link: 'https://www.researchgate.net/publication/345455092_Craft_to_site_Middleware_for_in_situ_robotic_stonework'
