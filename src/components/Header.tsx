@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
@@ -47,6 +48,22 @@ const Header = () => {
       setIsMobileMenuOpen(false);
     }
   };
+  
+  // Function to handle logo click
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    // If already on homepage, refresh the view by scrolling to top
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // If on another page, navigate to homepage
+      navigate('/');
+    }
+    // Close mobile menu if it's open
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+  };
 
   return (
     <header
@@ -55,10 +72,10 @@ const Header = () => {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-8">
-        <Link to="/" className="flex items-center space-x-2 no-underline">
+        <a href="/" onClick={handleLogoClick} className="flex items-center space-x-2 no-underline">
           <span className="text-xl font-display font-bold tracking-tight">ARCA</span>
           <span className="text-xl font-display font-normal tracking-tight">LABORATORY</span>
-        </Link>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
@@ -89,10 +106,10 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="fixed inset-0 top-0 z-40 bg-white md:hidden">
           <div className="fixed top-0 left-0 right-0 flex justify-between items-center p-6 text-black">
-            <Link to="/" className="flex items-center space-x-2 no-underline">
+            <a href="/" onClick={handleLogoClick} className="flex items-center space-x-2 no-underline">
               <span className="text-xl font-display font-bold tracking-tight">ARCA</span>
               <span className="text-xl font-display font-normal tracking-tight">LABORATORY</span>
-            </Link>
+            </a>
             <button
               className="text-black"
               onClick={() => setIsMobileMenuOpen(false)}
