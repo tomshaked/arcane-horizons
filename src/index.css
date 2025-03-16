@@ -37,36 +37,6 @@
 
     --radius: 0.5rem;
   }
-
-  .dark {
-    --background: 226 19% 14%;
-    --foreground: 0 0% 100%;
-
-    --card: 226 19% 14%;
-    --card-foreground: 0 0% 100%;
-
-    --popover: 226 19% 14%;
-    --popover-foreground: 0 0% 100%;
-
-    --primary: 0 0% 100%;
-    --primary-foreground: 226 19% 14%;
-
-    --secondary: 225 6% 13%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 225 6% 13%;
-    --muted-foreground: 0 0% 63%;
-
-    --accent: 225 6% 13%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 225 6% 13%;
-    --input: 225 6% 13%;
-    --ring: 0 0% 83.9%;
-  }
 }
 
 @layer base {
@@ -84,7 +54,9 @@
   /* Removed the section-divider class that was creating the diagonal effect */
   
   .glass-panel {
-    @apply bg-white/85 backdrop-blur-[10px] border border-black/10 dark:bg-black/30 dark:border-white/10;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
   }
   
   .text-balance {
@@ -102,21 +74,21 @@
   }
   
   ::-webkit-scrollbar-track {
-    @apply bg-background dark:bg-[#1A1F2C];
+    background: hsl(var(--background));
   }
   
   ::-webkit-scrollbar-thumb {
-    @apply bg-muted dark:bg-white/20;
+    background: hsl(var(--muted));
     border-radius: 3px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-primary dark:bg-white/40;
+    background: hsl(var(--primary));
   }
   
   /* Make all links have underline and proper contrast */
   a {
-    @apply underline underline-offset-2 hover:text-black transition-colors dark:hover:text-white;
+    @apply underline underline-offset-2 hover:text-black transition-colors;
   }
   
   /* Dark background links should be white */
