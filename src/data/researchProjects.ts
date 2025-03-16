@@ -49,7 +49,7 @@ export const researchProjects: ResearchProject[] = [
       },
       {
         title: 'Toward Acoustic Landscapes: A Digital Design Workflow for Embedding Noise Reduction in Ground-Forming',
-        authors: 'Karen Lee Bar-Sinai, Tom Shaked, Elif Simge Fettahoglu, Jochen Krimm, Ekaterina Pestriakova',
+        authors: 'Karen Lee Bar-Sinai, Tom Shaked, Elif Simge Fettahoglu, Jochen Krimm, Ekaterina Pestriakova, Liubov Kniazeva, Sharon Friedberg, Benedikt Boucsein',
         year: 2023,
         source: 'Journal of Digital Landscape Architecture',
         link: 'https://www.researchgate.net/publication/370980617_Toward_Acoustic_Landscapes_A_Digital_Design_Workflow_for_Embedding_Noise_Reduction_in_Ground-forming'
@@ -150,7 +150,7 @@ export const researchProjects: ResearchProject[] = [
     publications: [
       {
         title: 'Toward Acoustic Landscapes: A Digital Design Workflow for Embedding Noise Reduction in Ground-Forming',
-        authors: 'Karen Lee Bar-Sinai, Tom Shaked, Elif Simge Fettahoglu, Jochen Krimm, Ekaterina Pestriakova',
+        authors: 'Karen Lee Bar-Sinai, Tom Shaked, Elif Simge Fettahoglu, Jochen Krimm, Ekaterina Pestriakova, Liubov Kniazeva, Sharon Friedberg, Benedikt Boucsein',
         year: 2023,
         source: 'Journal of Digital Landscape Architecture',
         link: 'https://www.researchgate.net/publication/370980617_Toward_Acoustic_Landscapes_A_Digital_Design_Workflow_for_Embedding_Noise_Reduction_in_Ground-forming'
