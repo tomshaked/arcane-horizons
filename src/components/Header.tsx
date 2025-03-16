@@ -1,12 +1,13 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,6 +30,24 @@ const Header = () => {
     };
   }, [isMobileMenuOpen]);
 
+  // Function to handle section navigation
+  const navigateToSection = (sectionId: string) => {
+    // If we're already on the home page, just scroll to the section
+    if (location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Otherwise, navigate to the home page and then to the section
+      navigate(`/#${sectionId}`);
+    }
+    // Close mobile menu if it's open
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -43,13 +62,17 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <NavLinks isScrolled={isScrolled} />
-          {/* Link the contact button to the contact section */}
-          <a href="#contact" className="no-underline">
-            <Button variant={isScrolled ? "outline" : "primary"} size="sm" className={!isScrolled ? "bg-white text-black hover:bg-white/90" : ""}>
-              Contact
-            </Button>
-          </a>
+          <NavLinks isScrolled={isScrolled} onNavigate={navigateToSection} />
+          <button 
+            onClick={() => navigateToSection('contact')}
+            className={`inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 px-3 py-2 ${
+              isScrolled 
+                ? 'border border-input bg-background hover:bg-accent hover:text-accent-foreground' 
+                : 'bg-white text-black hover:bg-white/90'
+            }`}
+          >
+            Contact
+          </button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -79,13 +102,13 @@ const Header = () => {
             </button>
           </div>
           <nav className="flex flex-col items-center justify-center h-screen space-y-8 p-8 text-black">
-            <NavLinks mobile onClick={() => setIsMobileMenuOpen(false)} />
-            {/* Link the contact button to the contact section */}
-            <a href="#contact" className="no-underline">
-              <Button variant="outline" onClick={() => setIsMobileMenuOpen(false)}>
-                Contact
-              </Button>
-            </a>
+            <NavLinks mobile onNavigate={navigateToSection} />
+            <button 
+              onClick={() => navigateToSection('contact')}
+              className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 border border-input bg-background hover:bg-accent hover:text-accent-foreground"
+            >
+              Contact
+            </button>
           </nav>
         </div>
       )}
@@ -96,30 +119,29 @@ const Header = () => {
 interface NavLinksProps {
   mobile?: boolean;
   isScrolled?: boolean;
-  onClick?: () => void;
+  onNavigate: (sectionId: string) => void;
 }
 
-const NavLinks = ({ mobile, isScrolled, onClick }: NavLinksProps) => {
+const NavLinks = ({ mobile, isScrolled, onNavigate }: NavLinksProps) => {
   const links = [
-    { name: 'Research', href: '#research' },
-    { name: 'Team', href: '#team' },
-    { name: 'Publications', href: '#publications' },
-    { name: 'Projects', href: '#projects' },
+    { name: 'Research', sectionId: 'research' },
+    { name: 'Team', sectionId: 'team' },
+    { name: 'Publications', sectionId: 'publications' },
+    { name: 'Projects', sectionId: 'projects' },
   ];
 
   return (
     <>
       {links.map((link) => (
-        <a
+        <button
           key={link.name}
-          href={link.href}
+          onClick={() => onNavigate(link.sectionId)}
           className={`text-${mobile ? 'xl' : 'base'} font-medium no-underline hover:underline ${
             mobile || isScrolled ? 'text-black' : 'text-white'
-          } hover:${mobile || isScrolled ? 'text-black/80' : 'text-white/80'} transition-colors`}
-          onClick={onClick}
+          } hover:${mobile || isScrolled ? 'text-black/80' : 'text-white/80'} transition-colors bg-transparent border-none p-0`}
         >
           {link.name}
-        </a>
+        </button>
       ))}
     </>
   );
