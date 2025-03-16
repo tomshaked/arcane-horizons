@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -16,12 +16,12 @@ const ResearchDetail = () => {
   const project = researchProjects.find(p => p.id === projectId);
 
   // Always scroll to top when navigating to a research detail page
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, [projectId]);
 
   // Handle browser back navigation to ensure we don't get a 404
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!project) {
       // If project not found, navigate to homepage or research section
       navigate('/#research', { replace: true });

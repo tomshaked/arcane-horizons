@@ -8,7 +8,7 @@ interface ResearchDetailHeaderProps {
 
 const ResearchDetailHeader: React.FC<ResearchDetailHeaderProps> = ({ imageSrc, videoSrc }) => {
   return (
-    <div className="relative h-[40vh] md:h-[50vh] w-full overflow-hidden">
+    <div className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0 w-full h-full">
         {videoSrc ? (
           // Video background with overlay
