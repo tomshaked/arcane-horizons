@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -33,12 +32,8 @@ const App = () => (
       <BrowserRouter basename={getBasename()}>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/research/robotic-earthmoving" element={<ResearchDetail />} />
-          <Route path="/research/uav-ugv-collaboration" element={<ResearchDetail />} />
-          <Route path="/research/additive-manufacturing-with-local-soil" element={<ResearchDetail />} />
-          <Route path="/research/performative-ground-forming" element={<ResearchDetail />} />
-          <Route path="/research/robotic-stone-carving" element={<ResearchDetail />} />
-          <Route path="/research/textile-design-to-manufacturing" element={<ResearchDetail />} />
+          {/* Use a more general route for research that will work with browser back navigation */}
+          <Route path="/research/:projectId" element={<ResearchDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

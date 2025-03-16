@@ -1,6 +1,6 @@
 
-import React, { useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Section from '@/components/Section';
@@ -11,17 +11,22 @@ import ResearchDetailContent from '@/components/research/ResearchDetailContent';
 
 const ResearchDetail = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const projectId = location.pathname.split('/research/')[1];
   const project = researchProjects.find(p => p.id === projectId);
-  const prevProjectIdRef = useRef<string | null>(null);
 
-  // Only scroll to top when navigating between different research projects
+  // Always scroll to top when navigating to a research detail page
   useEffect(() => {
-    if (prevProjectIdRef.current && prevProjectIdRef.current !== projectId) {
-      window.scrollTo(0, 0);
-    }
-    prevProjectIdRef.current = projectId;
+    window.scrollTo(0, 0);
   }, [projectId]);
+
+  // Handle browser back navigation to ensure we don't get a 404
+  useEffect(() => {
+    if (!project) {
+      // If project not found, navigate to homepage or research section
+      navigate('/#research', { replace: true });
+    }
+  }, [project, navigate]);
 
   if (!project) {
     return (
