@@ -4,24 +4,39 @@ import Section from './Section';
 import { AspectRatio } from './ui/aspect-ratio';
 import { Button } from './ui/button';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ResearchSection = () => {
   const researchAreas = [{
-    title: 'Collective Construction Robots',
-    description: 'Developing systems for coordinated structure assembly by multiple robotic agents working together effectively.',
-    image: '/arcane-horizons/assets/images/research/bb_img11.jpg'
+    title: 'Robotic Stone Carving',
+    description: 'Developing robotic workflows for adaptive stone fabrication, integrating computational design, robotic precision, and material constraints.',
+    image: '/arcane-horizons/assets/images/research/chisel_stroke_analysis1.jpg',
+    link: '/research/robotic-stone-carving'
   }, {
-    title: 'On-site Adaptive Fabrication',
-    description: 'Creating robotic tools that use real-time sensory feedback to adapt to changing conditions during construction.',
-    image: '/arcane-horizons/assets/images/research/Img8535.jpg'
+    title: 'Robotic Earthmoving',
+    description: 'Investigating autonomous ground shaping for construction and landscape applications, including robotic aggregate manipulation and digital planning for terrain modeling.',
+    image: '/arcane-horizons/assets/images/research/img18.jpg',
+    link: '/research/robotic-earthmoving'
   }, {
-    title: 'Autonomous Construction Robotics',
-    description: 'Building autonomous robotic systems capable of navigating and operating in unstructured construction environments.',
-    image: '/arcane-horizons/assets/images/research/5b.jpg'
+    title: 'Human-Robot Fabrication',
+    description: 'Exploring collaborative robotic workflows that embed human expertise in material-aware fabrication for adaptive, context-responsive construction.',
+    image: '/arcane-horizons/assets/images/research/5b.jpg',
+    link: '/research/human-robot-fabrication'
   }, {
-    title: 'Human-Robot Collaboration',
-    description: 'Designing interfaces and systems that enable effective teamwork between human workers and robotic assistants.',
-    image: '/arcane-horizons/assets/images/research/Yotam-21.jpg'
+    title: 'UAV-UGV Construction',
+    description: 'Developing autonomous multi-robot systems for construction site preparation, combining aerial (UAV) and ground (UGV) robots with vision-based coordination.',
+    image: '/arcane-horizons/assets/images/research/Yotam-21.jpg',
+    link: '/research/uav-ugv-construction'
+  }, {
+    title: 'Computational Fabrication',
+    description: 'Designing digital tools for robotic and computational fabrication, with applications in textile-based construction and additive manufacturing.',
+    image: '/arcane-horizons/assets/images/research/Img8535.jpg',
+    link: '/research/computational-fabrication'
+  }, {
+    title: 'Acoustic Ground Design',
+    description: 'Integrating robotic terrain shaping with noise mitigation to develop optimized, performative land formations that reduce urban noise.',
+    image: '/arcane-horizons/assets/images/research/bb_img11.jpg',
+    link: '/research/acoustic-ground-design'
   }];
 
   // Create refs for each scrollable element
@@ -98,12 +113,12 @@ const ResearchSection = () => {
                   <div className="max-w-xl text-left">
                     <h3 className="font-display text-3xl md:text-5xl font-semibold mb-6 text-white scroll-reveal">{area.title}</h3>
                     <p className="text-white/90 text-xl md:text-2xl scroll-reveal mb-6">{area.description}</p>
-                    <a 
-                      href="#" 
+                    <Link
+                      to={area.link}
                       className="inline-flex items-center text-white hover:text-white/80 text-lg scroll-reveal group"
                     >
                       Learn more about {area.title} <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
