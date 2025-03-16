@@ -197,6 +197,13 @@ export const researchProjects: ResearchProject[] = [
         year: 2020,
         source: 'Construction Robotics',
         link: 'https://www.researchgate.net/publication/345455092_Craft_to_site_Middleware_for_in_situ_robotic_stonework'
+      },
+      {
+        title: 'Device and method for adaptive robotic stone surfacing',
+        authors: 'Sprecher, Aaron and Shaked, Tom',
+        year: 2022,
+        source: 'US Patent App. 17/393,622',
+        link: 'https://patents.google.com/patent/US20220040884A1/en'
       }
     ],
     relatedResearch: ['additive-manufacturing-with-local-soil', 'textile-design-to-manufacturing']
