@@ -35,7 +35,11 @@ const ResearchDetail = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <ResearchDetailHeader title={project.title} imageSrc={project.image} />
+      <ResearchDetailHeader 
+        title={project.title} 
+        imageSrc={project.image} 
+        videoSrc={project.videoSrc} 
+      />
       <ResearchDetailContent project={project} />
       <Footer />
     </div>
