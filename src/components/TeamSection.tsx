@@ -58,7 +58,7 @@ const TeamSection = () => {
         </p>
       </div>
 
-      <div className="px-4 sm:px-8 md:px-12 lg:px-16">
+      <div className="px-4 sm:px-6 md:px-8 lg:px-10 relative">
         <Carousel
           opts={{
             align: "start",
@@ -68,7 +68,7 @@ const TeamSection = () => {
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {teamMembers.map((member, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 sm:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="pl-2 md:pl-4 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
                 <div
                   className="glass-panel overflow-hidden transition-all hover:translate-y-[-8px] group animate-fade-in h-full"
                   style={{ animationDelay: `${0.2 + index * 0.15}s` }}
@@ -88,10 +88,8 @@ const TeamSection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="flex justify-center mt-6">
-            <CarouselPrevious className="relative static left-0 right-auto translate-y-0 mr-2" />
-            <CarouselNext className="relative static left-0 right-auto translate-y-0 ml-2" />
-          </div>
+          <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 sm:-translate-x-0 z-10" />
+          <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 sm:translate-x-0 z-10" />
         </Carousel>
       </div>
     </Section>
