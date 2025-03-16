@@ -12,12 +12,16 @@ const queryClient = new QueryClient();
 
 // Get the base URL from the environment or use the repository name for GitHub Pages
 const getBasename = () => {
-  // Extract the repository name from the URL path
-  const path = window.location.pathname;
-  const pathSegments = path.split('/');
+  // For local development, use root path
+  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    return '/';
+  }
   
-  // If we're on GitHub Pages (the path has more than one segment)
-  if (pathSegments.length > 2) {
+  // For GitHub Pages deployment
+  const pathSegments = window.location.pathname.split('/');
+  
+  // If we're on GitHub Pages (the path has a repository name as the first segment)
+  if (pathSegments.length > 1 && pathSegments[1] !== '') {
     return '/' + pathSegments[1]; // Return the repository name with leading slash
   }
   
