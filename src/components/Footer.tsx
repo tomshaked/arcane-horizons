@@ -1,7 +1,14 @@
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const navigateToSection = (sectionId: string) => {
+    navigate(`/#${sectionId}`);
+  };
+
   return (
     <footer className="bg-black text-white py-12 md:py-16 px-6 md:px-8">
       <div className="max-w-7xl mx-auto">
@@ -38,11 +45,11 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4 text-white">Navigation</h3>
             <ul className="space-y-2">
-              <li><a href="#research" className="text-white/70 hover:text-primary transition-colors">Research</a></li>
-              <li><a href="#team" className="text-white/70 hover:text-primary transition-colors">Team</a></li>
-              <li><a href="#publications" className="text-white/70 hover:text-primary transition-colors">Publications</a></li>
-              <li><a href="#projects" className="text-white/70 hover:text-primary transition-colors">Projects</a></li>
-              <li><a href="#contact" className="text-white/70 hover:text-primary transition-colors">Contact</a></li>
+              <li><button onClick={() => navigateToSection('research')} className="text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer">Research</button></li>
+              <li><button onClick={() => navigateToSection('team')} className="text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer">Team</button></li>
+              <li><button onClick={() => navigateToSection('publications')} className="text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer">Publications</button></li>
+              <li><button onClick={() => navigateToSection('projects')} className="text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer">Projects</button></li>
+              <li><button onClick={() => navigateToSection('contact')} className="text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer">Contact</button></li>
             </ul>
           </div>
           

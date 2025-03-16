@@ -1,8 +1,15 @@
 
 import React from 'react';
 import Button from './Button';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const navigateToSection = (sectionId: string) => {
+    navigate(`/#${sectionId}`);
+  };
+
   return <div className="relative h-screen w-full overflow-hidden">
       {/* Full-page Video Background */}
       <div className="absolute inset-0 z-0">
@@ -20,13 +27,13 @@ const Hero = () => {
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight md:leading-tight tracking-tight mb-6 text-white">Architectural Robotics &amp; Construction Automation</h1>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            {/* Link buttons wrapped in <a> tags */}
-            <a href="#research" className="no-underline">
-              <Button size="lg">Explore Research</Button>
-            </a>
-            <a href="#contact" className="no-underline">
-              <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10">Join Our Team</Button>
-            </a>
+            {/* Button links using React Router navigation */}
+            <div className="no-underline">
+              <Button size="lg" onClick={() => navigateToSection('research')}>Explore Research</Button>
+            </div>
+            <div className="no-underline">
+              <Button variant="outline" size="lg" onClick={() => navigateToSection('contact')} className="border-white/20 text-white hover:bg-white/10">Join Our Team</Button>
+            </div>
           </div>
         </div>
       </div>
