@@ -103,21 +103,21 @@ export const researchProjects: ResearchProject[] = [
         authors: 'Keren Lee Bar-Sinai, Tom Shaked, Amir Sprecher',
         year: 2021,
         source: 'Architectural Science Review',
-        link: 'https://www.researchgate.net/publication/370735851_Robotic_Tools_Native_Matter_Workflow_and_Methods_for_Geomaterial_Reconstitution_Using_Additive_Manufacturing'
+        link: 'https://www.researchgate.net/publication/349989665_Robotic_tools_native_matter_workflow_and_methods_for_geomaterial_reconstitution_using_additive_manufacturing'
       },
       {
         title: 'Stimulated Soil for Continuous Shell Structures',
         authors: 'Roni Hillel, Tom Shaked, Michael Tsesarsky, Amir Sprecher',
         year: 2024,
         source: 'IASS',
-        link: 'https://www.researchgate.net/publication/370735851_Stimulated_Soil_for_Continuous_Shell_Structures'
+        link: 'https://www.researchgate.net/publication/385131103_Stimulated_Soil_for_Continuous_Shell_Structures'
       },
       {
         title: 'Exploring Robotic Fabrication Using Stimulated Soil',
         authors: 'Roni Hillel, Tom Shaked, Michael Tsesarsky, Amir Sprecher',
         year: 2024,
         source: 'International Conference on Education and Research in Computer-Aided Architectural Design',
-        link: 'https://www.researchgate.net/publication/370735851_Exploring_Robotic_Fabrication_Using_Stimulated_Soil'
+        link: 'https://www.researchgate.net/publication/383999997_Exploring_Robotic_Fabrication_Using_Stimulated_Soil'
       },
       {
         title: 'Aggregate-Forming Planner for Autonomous Earth-Moving',
@@ -131,7 +131,7 @@ export const researchProjects: ResearchProject[] = [
         authors: 'Tom Shaked, Amir Degani',
         year: 2023,
         source: 'Conference on Robotics and Simulation',
-        link: 'https://www.researchgate.net/publication/370735851_Earth-Shaping_with_Heterogeneous_Robotic_Teams_From_Sim_to_Real'
+        link: 'https://www.researchgate.net/publication/384344853_Earth-Shaping_with_Heterogeneous_Robotic_Teams_From_Sim_to_Real'
       }
     ],
     relatedResearch: ['robotic-earthmoving', 'performative-ground-forming', 'robotic-stone-carving']
@@ -160,7 +160,7 @@ export const researchProjects: ResearchProject[] = [
         authors: 'Keren Lee Bar-Sinai, Tom Shaked, ES Fettahoglu, J. Krimm, B. Boucsein',
         year: 2023,
         source: 'Buildings',
-        link: 'https://www.researchgate.net/publication/370735851_Embedding_Acoustic_Analysis_in_Landscape_Architecture_Design_Processes_A_Case_Study_of_Munich_Airport'
+        link: 'https://www.researchgate.net/publication/366878235_Embedding_Acoustic_Analysis_in_Landscape_Architecture_Design_Processes_A_Case_Study_of_Munich_Airport'
       },
       {
         title: 'Informing Grounds: Robotic Sand-Forming Simulating Remote Autonomous Lunar Groundscaping',
@@ -189,14 +189,14 @@ export const researchProjects: ResearchProject[] = [
         authors: 'Tom Shaked, Keren Lee Bar-Sinai, Amir Sprecher',
         year: 2021,
         source: 'Automation in Construction',
-        link: 'https://www.researchgate.net/publication/352283175_Adaptive_robotic_stone_carving_Method_tools_and_experiments'
+        link: 'https://www.researchgate.net/publication/352681602_Adaptive_robotic_stone_carving_Method_tools_and_experiments'
       },
       {
         title: 'Craft to Site: Middleware for In Situ Robotic Stonework',
         authors: 'Tom Shaked, Keren Lee Bar-Sinai, Amir Sprecher',
         year: 2020,
         source: 'Construction Robotics',
-        link: 'https://www.researchgate.net/publication/345151267_Craft_to_Site_middleware_for_in_situ_robotic_stonework'
+        link: 'https://www.researchgate.net/publication/345455092_Craft_to_site_Middleware_for_in_situ_robotic_stonework'
       }
     ],
     relatedResearch: ['additive-manufacturing-with-local-soil', 'textile-design-to-manufacturing']
