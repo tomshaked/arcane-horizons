@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -13,11 +13,15 @@ const ResearchDetail = () => {
   const location = useLocation();
   const projectId = location.pathname.split('/research/')[1];
   const project = researchProjects.find(p => p.id === projectId);
+  const prevProjectIdRef = useRef<string | null>(null);
 
-  // Scroll to top when component mounts
+  // Only scroll to top when navigating between different research projects
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [projectId]); // Re-run when projectId changes to handle navigation between research items
+    if (prevProjectIdRef.current && prevProjectIdRef.current !== projectId) {
+      window.scrollTo(0, 0);
+    }
+    prevProjectIdRef.current = projectId;
+  }, [projectId]);
 
   if (!project) {
     return (

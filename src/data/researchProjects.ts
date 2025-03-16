@@ -15,7 +15,7 @@ export interface ResearchProject {
   description: string;
   longDescription: string[];
   image: string;
-  videoSrc: string; // Optional video source for hero section
+  videoSrc?: string; // Optional video source for hero section
   publications: Publication[];
   relatedResearch: string[]; // IDs of related research projects
 }
@@ -66,6 +66,7 @@ export const researchProjects: ResearchProject[] = [
       'We develop vision-based approaches for surveying, material transport, and site setup, improving efficiency and reducing manual intervention in large-scale operations.',
       'Our systems combine drone-based mapping with autonomous ground vehicles to streamline construction processes and enhance site logistics.'
     ],
+    videoSrc: '', // Empty string for no video
     image: '/arcane-horizons/assets/images/research/UAV-UGV_Collaboration.jpg',
     publications: [
       {
@@ -94,6 +95,7 @@ export const researchProjects: ResearchProject[] = [
       'We focus on sustainable, site-adaptive fabrication methods for architecture and planetary applications, using locally available materials.',
       'This work spans from earth-moving and terrain shaping to advanced soil-based 3D printing for construction applications.'
     ],
+    videoSrc: '', // Empty string for no video
     image: '/arcane-horizons/assets/images/research/Robotic_Soil_3D_Printing.jpg',
     publications: [
       {
@@ -143,6 +145,7 @@ export const researchProjects: ResearchProject[] = [
       'We develop noise-reducing terrain features through simulation and real-world testing, optimizing robotic construction for urban soundscapes and infrastructure.',
       'This work creates new possibilities for responsive landscapes that address environmental challenges while maintaining aesthetic and functional qualities.'
     ],
+    videoSrc: '', // Empty string for no video
     image: '/arcane-horizons/assets/images/research/Acoustic_Terrain_Forming.jpg',
     publications: [
       {
@@ -178,6 +181,7 @@ export const researchProjects: ResearchProject[] = [
       'We enable precise robotic stonework, combining automation with craftsmanship for construction and artistic applications.',
       'Our methods facilitate on-site robotic fabrication and middleware for integrating robots in traditional craft contexts while preserving material integrity.'
     ],
+    videoSrc: '', // Empty string for no video
     image: '/arcane-horizons/assets/images/research/Digital_Stone_Carving_Analysis.jpg',
     publications: [
       {
@@ -206,6 +210,7 @@ export const researchProjects: ResearchProject[] = [
       'We explore structured knits, computational patterning, and bridge digital workflows with fabrication for architecture and industrial design applications.',
       'Our methods enable novel approaches to textile manufacturing through computational design tools that span from digital conception to robotic production.'
     ],
+    videoSrc: '', // Empty string for no video
     image: '/arcane-horizons/assets/images/research/Computational_Textile_Design.jpg',
     publications: [
       {
