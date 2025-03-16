@@ -10,22 +10,21 @@ import ResearchDetail from "./pages/ResearchDetail";
 
 const queryClient = new QueryClient();
 
-// Get the base URL from the environment or use the repository name for GitHub Pages
+// Simpler basename detection that works better with GitHub Pages
 const getBasename = () => {
-  // For local development, use root path
-  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+  // For local development or root domain deployment, use root path
+  if (window.location.hostname === 'localhost' || 
+      window.location.hostname === '127.0.0.1' ||
+      window.location.pathname === '/') {
     return '/';
   }
   
-  // For GitHub Pages deployment
-  const pathSegments = window.location.pathname.split('/');
-  
-  // If we're on GitHub Pages (the path has a repository name as the first segment)
-  if (pathSegments.length > 1 && pathSegments[1] !== '') {
-    return '/' + pathSegments[1]; // Return the repository name with leading slash
+  // Extract the repository name from GitHub Pages URL pattern
+  const pathMatch = window.location.pathname.match(/^\/([^\/]+)/);
+  if (pathMatch) {
+    return `/${pathMatch[1]}`;
   }
   
-  // Otherwise, use root
   return '/';
 };
 
