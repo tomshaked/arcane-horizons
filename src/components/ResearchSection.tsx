@@ -9,7 +9,7 @@ const ResearchSection = () => {
   const researchAreas = [{
     title: 'UAV-UGV Collaboration',
     description: 'Research on integrating aerial (UAV) and ground (UGV) robots for automated construction site preparation. Focuses on vision-based approaches for surveying, material transport, and site setup, improving efficiency and reducing manual intervention in large-scale operations.',
-    image: '/arcane-horizons/assets/images/research/Yotam-21.jpg',
+    image: '/arcane-horizons/assets/images/research/bb_img11.jpg',
     link: '/research/uav-ugv-collaboration'
   }, {
     title: 'Textile-Based Manufacturing',
@@ -19,7 +19,7 @@ const ResearchSection = () => {
   }, {
     title: 'Performative Ground Forming',
     description: 'Exploring robotic ground shaping for environmental performance, integrating acoustic analysis with landscape design. Research develops noise-reducing terrain features through simulation and real-world testing, optimizing robotic construction for urban soundscapes and infrastructure.',
-    image: '/arcane-horizons/assets/images/research/bb_img11.jpg',
+    image: '/arcane-horizons/assets/images/research/WhatsApp Image 2019-12-11 at 15.35.52(1).jpg',
     link: '/research/performative-ground-forming'
   }, {
     title: 'Robotic Stone Carving',
@@ -29,7 +29,7 @@ const ResearchSection = () => {
   }, {
     title: 'Additive Manufacturing with Local Soil',
     description: 'Exploring robotic 3D printing with native soil, integrating material processing, robotic deposition, and structural performance analysis. Research focuses on sustainable, site-adaptive fabrication methods for architecture and planetary applications.',
-    image: '/arcane-horizons/assets/images/research/img18.jpg',
+    image: '/arcane-horizons/assets/images/research/Img8535.jpg',
     link: '/research/additive-manufacturing-with-local-soil'
   }];
 
