@@ -15,7 +15,23 @@ const ResearchDetail = () => {
   const projectId = location.pathname.split('/research/')[1];
   const project = researchProjects.find(p => p.id === projectId);
 
-  // Always scroll to top when navigating to a research detail page
+  // Enhanced scroll to top behavior for all devices
+  useEffect(() => {
+    // Force scroll to top immediately when component mounts
+    window.scrollTo(0, 0);
+    
+    // Add a small delay for mobile devices that might need additional time
+    const timeoutId = setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'instant'
+      });
+    }, 100);
+    
+    return () => clearTimeout(timeoutId);
+  }, []);
+
+  // Also scroll when project changes
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [projectId]);
