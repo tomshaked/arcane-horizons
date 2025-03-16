@@ -14,17 +14,17 @@ const ResearchSection = () => {
   }, {
     title: 'Textile-Based Manufacturing',
     description: 'Developing digital tools for robotic textile fabrication, integrating parametric design, simulation, and automation. Research focuses on structured knits, computational patterning, and bridging digital workflows with fabrication for architecture and industrial design.',
-    image: '/arcane-horizons/assets/images/research/Img8535.jpg',
+    image: '/arcane-horizons/assets/images/research/structure_combinations.jpg',
     link: '/research/textile-based-manufacturing'
   }, {
     title: 'Performative Ground Forming',
     description: 'Exploring robotic ground shaping for environmental performance, integrating acoustic analysis with landscape design. Research develops noise-reducing terrain features through simulation and real-world testing, optimizing robotic construction for urban soundscapes and infrastructure.',
-    image: '/arcane-horizons/assets/images/research/WhatsApp Image 2019-12-11 at 15.35.52(1).jpg',
+    image: '/arcane-horizons/assets/images/research/WhatsApp Image 2019-12-11 at 15.35.52(1).jpeg',
     link: '/research/performative-ground-forming'
   }, {
     title: 'Robotic Stone Carving',
     description: 'Developing robotic workflows for adaptive stone carving, integrating digital design, automated toolpath planning, and material constraints. Research enables precise robotic stonework, combining automation with craftsmanship for construction and artistic applications.',
-    image: '/arcane-horizons/assets/images/research/chisel_stroke_analysis1.jpg',
+    image: '/arcane-horizons/assets/images/research/9.jpg',
     link: '/research/robotic-stone-carving'
   }, {
     title: 'Robotic Earthmoving',
