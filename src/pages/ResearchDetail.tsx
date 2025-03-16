@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -15,20 +15,10 @@ const ResearchDetail = () => {
   const projectId = location.pathname.split('/research/')[1];
   const project = researchProjects.find(p => p.id === projectId);
 
-  // Enhanced scroll to top behavior for all devices
-  useEffect(() => {
-    // Force scroll to top immediately when component mounts
+  // Use useLayoutEffect to set scroll position before browser paint
+  useLayoutEffect(() => {
+    // Set scroll position to top immediately before any rendering occurs
     window.scrollTo(0, 0);
-    
-    // Add a small delay for mobile devices that might need additional time
-    const timeoutId = setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'instant'
-      });
-    }, 100);
-    
-    return () => clearTimeout(timeoutId);
   }, []);
 
   // Also scroll when project changes
