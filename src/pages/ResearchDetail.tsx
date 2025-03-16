@@ -41,14 +41,14 @@ const researchProjects: ResearchProject[] = [
         authors: 'Oren Elmakis, Tom Shaked, Amir Degani',
         year: 2022,
         source: 'IEEE Access',
-        link: 'https://www.researchgate.net/publication/370735851_Os-Breeze_Oil_Spills_Boundary_Red_Emission_Zone_Estimation_Using_Unmanned_Aerial_Vehicles'
+        link: 'https://www.researchgate.net/publication/360192685_Vision-Based_UAV-UGV_Collaboration_for_Autonomous_Construction_Site_Preparation'
       },
       {
         title: 'BREEZE—Boundary Red Emission Zone Estimation Using Unmanned Aerial Vehicles',
         authors: 'Oren Elmakis, Tom Shaked, Beni Fishbain, Amir Degani',
         year: 2022,
         source: 'Sensors',
-        link: 'https://www.researchgate.net/publication/377614175_OS-BREEZE_Oil_Spills_Boundary_Red_Emission_Zone_Estimation_Using_Unmanned_Surface_Vehicles'
+        link: 'https://www.researchgate.net/publication/362207406_BREEZE-Boundary_Red_Emission_Zone_Estimation_Using_Unmanned_Aerial_Vehicles'
       }
     ]
   },
@@ -68,14 +68,14 @@ const researchProjects: ResearchProject[] = [
         authors: 'Amit Karmon, Yael Sterman, Tom Shaked, Eyal Sheffer, Shany Nir',
         year: 2018,
         source: 'ACM Symposium on Computational Fabrication',
-        link: 'https://www.researchgate.net/publication/370735851_KNITIT_A_Computational_Tool_for_Design_Simulation_and_Fabrication_of_Multiple_Structured_Knits'
+        link: 'https://www.researchgate.net/publication/325887522_KNITIT_a_computational_tool_for_design_simulation_and_fabrication_of_multiple_structured_knits'
       },
       {
         title: 'Tool for Design and Fabrication of Knitted Components',
         authors: 'Amit Karmon, Shany Nir, Tom Shaked, Eyal Sheffer, Yael Sterman',
         year: 2024,
         source: 'US Patents 11,421,355 & 11,913,149 (2022, 2024)',
-        link: 'https://www.researchgate.net/publication/370735851_Tool_for_Design_and_Fabrication_of_Knitted_Components'
+        link: 'https://www.researchgate.net/publication/346095991_Tool_for_design_and_fabrication_of_knitted_components'
       }
     ]
   },
@@ -95,7 +95,7 @@ const researchProjects: ResearchProject[] = [
         authors: 'Keren Lee Bar-Sinai, Tom Shaked, ES Fettahoglu, J. Krimm, E. Pestriakova',
         year: 2023,
         source: 'Journal of Digital Landscape Architecture',
-        link: 'https://www.researchgate.net/publication/370735851_Toward_Acoustic_Landscapes_A_Digital_Design_Workflow_for_Embedding_Noise_Reduction_in_Ground-Forming'
+        link: 'https://www.researchgate.net/publication/370980617_Toward_Acoustic_Landscapes_A_Digital_Design_Workflow_for_Embedding_Noise_Reduction_in_Ground-forming'
       },
       {
         title: 'Embedding Acoustic Analysis in Landscape Architecture Design Processes: A Case Study of Munich Airport',
