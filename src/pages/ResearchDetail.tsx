@@ -142,6 +142,40 @@ const researchProjects: ResearchProject[] = [
     ]
   },
   {
+    id: 'robotic-earthmoving',
+    title: 'Robotic Earthmoving',
+    description: 'Investigating autonomous ground shaping for construction and landscape applications. Research includes robotic aggregate manipulation, terrain modeling, and noise-mitigating ground-forming techniques.',
+    longDescription: [
+      'Our research investigates autonomous ground shaping for construction and landscape applications.',
+      'We develop methods for robotic aggregate manipulation, terrain modeling, and noise-mitigating ground-forming techniques.',
+      'This work explores scalable, adaptive robotic land modification in urban, rural, and extraterrestrial contexts, integrating digital simulation and execution tools.'
+    ],
+    image: '/arcane-horizons/assets/images/research/5b.jpg',
+    publications: [
+      {
+        title: 'Aggregate-Forming Planner for Autonomous Earth-Moving',
+        authors: 'Tom Shaked, Karen Lee Bar-Sinai, Ari Meles-Braverman, Oren Elmakis, Amir Degani',
+        year: 2023,
+        source: 'IEEE Access',
+        link: 'https://www.researchgate.net/publication/374930162_Aggregate-Forming_Planner_for_Autonomous_Earth-moving'
+      },
+      {
+        title: 'Informing Grounds: A Theoretical Framework and Iterative Process for Robotic Groundscaping of Remote Sites',
+        authors: 'Karen Lee Bar-Sinai, Tom Shaked, Amir Sprecher',
+        year: 2019,
+        source: 'ACADIA',
+        link: 'https://www.researchgate.net/publication/337945482_Informing_Grounds_A_Theoretical_Framework_and_Iterative_Process_for_Robotic_Groundscaping_of_Remote_Sites'
+      },
+      {
+        title: 'Toward Acoustic Landscapes: A Digital Design Workflow for Embedding Noise Reduction in Ground-Forming',
+        authors: 'Karen Lee Bar-Sinai, Tom Shaked, ES Fettahoglu, J. Krimm, E. Pestriakova',
+        year: 2023,
+        source: 'Journal of Digital Landscape Architecture',
+        link: 'https://www.researchgate.net/publication/370980617_Toward_Acoustic_Landscapes_A_Digital_Design_Workflow_for_Embedding_Noise_Reduction_in_Ground-forming'
+      }
+    ]
+  },
+  {
     id: 'additive-manufacturing-with-local-soil',
     title: 'Additive Manufacturing with Local Soil',
     description: 'Exploring robotic 3D printing with native soil, integrating material processing, robotic deposition, and structural performance analysis.',

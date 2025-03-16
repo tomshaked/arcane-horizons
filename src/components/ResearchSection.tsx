@@ -27,6 +27,11 @@ const ResearchSection = () => {
     image: '/arcane-horizons/assets/images/research/chisel_stroke_analysis1.jpg',
     link: '/research/robotic-stone-carving'
   }, {
+    title: 'Robotic Earthmoving',
+    description: 'Investigating autonomous ground shaping for construction and landscape applications. Research includes robotic aggregate manipulation, terrain modeling, and noise-mitigating ground-forming techniques. This work explores scalable, adaptive robotic land modification in urban, rural, and extraterrestrial contexts, integrating digital simulation and execution tools.',
+    image: '/arcane-horizons/assets/images/research/5b.jpg',
+    link: '/research/robotic-earthmoving'
+  }, {
     title: 'Additive Manufacturing with Local Soil',
     description: 'Exploring robotic 3D printing with native soil, integrating material processing, robotic deposition, and structural performance analysis. Research focuses on sustainable, site-adaptive fabrication methods for architecture and planetary applications.',
     image: '/arcane-horizons/assets/images/research/Img8535.jpg',
