@@ -30,13 +30,13 @@ const ResearchDetail = () => {
 
   if (!project) {
     return (
-      <div className="min-h-screen bg-background text-foreground">
+      <div className="min-h-screen bg-background text-foreground dark:bg-[#1A1F2C] dark:text-white">
         <Header />
         <Section>
           <div className="text-center py-20">
             <h1 className="font-display text-4xl mb-4">Research Project Not Found</h1>
-            <p className="mb-8 text-foreground/70">The research project you're looking for doesn't exist or has been moved.</p>
-            <Link to="/" className="inline-flex items-center text-primary hover:text-primary/80">
+            <p className="mb-8 text-foreground/70 dark:text-white/70">The research project you're looking for doesn't exist or has been moved.</p>
+            <Link to="/" className="inline-flex items-center text-primary hover:text-primary/80 dark:text-white dark:hover:text-white/80">
               <ArrowLeft className="mr-2 h-4 w-4" /> Return to Home
             </Link>
           </div>
@@ -47,7 +47,7 @@ const ResearchDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground dark:bg-[#1A1F2C] dark:text-white">
       <Header />
       <ResearchDetailHeader 
         imageSrc={project.image} 
