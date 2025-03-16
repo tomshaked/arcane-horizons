@@ -21,7 +21,6 @@ export default {
 			fontFamily: {
 				sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
 				display: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
-				machina: ['"Neue Machina"', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

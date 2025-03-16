@@ -17,7 +17,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 flex items-center justify-center h-full px-6 md:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight md:leading-tight tracking-tight mb-6 text-white font-machina">Architectural Robotics &amp; Construction Automation</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight md:leading-tight tracking-tight mb-6 text-white">Architectural Robotics &amp; Construction Automation</h1>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             {/* Link buttons wrapped in <a> tags */}
