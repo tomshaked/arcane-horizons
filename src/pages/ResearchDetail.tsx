@@ -129,14 +129,14 @@ const researchProjects: ResearchProject[] = [
         authors: 'Tom Shaked, Keren Lee Bar-Sinai, Amir Sprecher',
         year: 2021,
         source: 'Automation in Construction',
-        link: 'https://www.researchgate.net/publication/370735851_Adaptive_Robotic_Stone_Carving_Method_Tools_and_Experiments'
+        link: 'https://www.researchgate.net/publication/354170689_Adaptive_Robotic_Stone_Carving_Method_Tools_and_Experiments'
       },
       {
         title: 'Craft to Site: Middleware for In Situ Robotic Stonework',
         authors: 'Tom Shaked, Keren Lee Bar-Sinai, Amir Sprecher',
         year: 2020,
         source: 'Construction Robotics',
-        link: 'https://www.researchgate.net/publication/370735851_Craft_to_Site_Middleware_for_In_Situ_Robotic_Stonework'
+        link: 'https://www.researchgate.net/publication/351583426_Craft_to_site_middleware_for_in_situ_robotic_stonework'
       }
     ]
   },
@@ -322,3 +322,4 @@ const ResearchDetail = () => {
 };
 
 export default ResearchDetail;
+
