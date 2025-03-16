@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
@@ -40,8 +39,9 @@ const Header = () => {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // Otherwise, navigate to the home page and then to the section
-      navigate(`/#${sectionId}`);
+      // Otherwise, navigate to the home page with the section hash
+      // Using window.location instead of navigate to force a full reload
+      window.location.href = `/#${sectionId}`;
     }
     // Close mobile menu if it's open
     if (isMobileMenuOpen) {
