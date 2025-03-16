@@ -95,7 +95,7 @@ export const researchProjects: ResearchProject[] = [
       'We focus on sustainable, site-adaptive fabrication methods for architecture and planetary applications, using locally available materials.',
       'This work spans from earth-moving and terrain shaping to advanced soil-based 3D printing for construction applications.'
     ],
-    videoSrc: '', // Empty string for no video
+    videoSrc: '/arcane-horizons/assets/videos/Robotic_Soil_3D_Printing.mp4',
     image: '/arcane-horizons/assets/images/research/Robotic_Soil_3D_Printing.jpg',
     publications: [
       {
