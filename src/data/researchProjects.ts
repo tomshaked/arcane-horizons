@@ -200,7 +200,7 @@ export const researchProjects: ResearchProject[] = [
       },
       {
         title: 'Device and method for adaptive robotic stone surfacing',
-        authors: 'Sprecher, Aaron and Shaked, Tom',
+        authors: 'Aaron Sprecher, Tom Shaked',
         year: 2022,
         source: 'US Patent App. 17/393,622',
         link: 'https://patents.google.com/patent/US20220040884A1/en'
@@ -222,14 +222,14 @@ export const researchProjects: ResearchProject[] = [
     publications: [
       {
         title: 'KNITIT: A Computational Tool for Design, Simulation, and Fabrication of Multiple Structured Knits',
-        authors: 'Amit Karmon, Yael Sterman, Tom Shaked, Eyal Sheffer, Shany Nir',
+        authors: 'Ayelet Karmon, Yoav Sterman, Tom Shaked, Eyal Sheffer, Shoval Nir',
         year: 2018,
         source: 'ACM Symposium on Computational Fabrication',
         link: 'https://www.researchgate.net/publication/325887522_KNITIT_a_computational_tool_for_design_simulation_and_fabrication_of_multiple_structured_knits'
       },
       {
         title: 'Tool for Design and Fabrication of Knitted Components',
-        authors: 'Amit Karmon, Shany Nir, Tom Shaked, Eyal Sheffer, Yael Sterman',
+        authors: 'Ayelet Karmon, Shoval Nir, Tom Shaked, Eyal Sheffer, Yoav Sterman',
         year: 2024,
         source: 'US Patents 11,421,355 & 11,913,149 (2022, 2024)',
         link: 'https://www.researchgate.net/publication/346095991_Tool_for_design_and_fabrication_of_knitted_components'
