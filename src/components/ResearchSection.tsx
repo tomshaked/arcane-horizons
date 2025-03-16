@@ -1,42 +1,36 @@
 
 import React, { useEffect, useRef } from 'react';
 import Section from './Section';
-import { AspectRatio } from './ui/aspect-ratio';
 import { Button } from './ui/button';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ResearchSection = () => {
   const researchAreas = [{
+    title: 'UAV-UGV Collaboration',
+    description: 'Research on integrating aerial (UAV) and ground (UGV) robots for automated construction site preparation. Focuses on vision-based approaches for surveying, material transport, and site setup, improving efficiency and reducing manual intervention in large-scale operations.',
+    image: '/arcane-horizons/assets/images/research/Yotam-21.jpg',
+    link: '/research/uav-ugv-collaboration'
+  }, {
+    title: 'Textile-Based Manufacturing',
+    description: 'Developing digital tools for robotic textile fabrication, integrating parametric design, simulation, and automation. Research focuses on structured knits, computational patterning, and bridging digital workflows with fabrication for architecture and industrial design.',
+    image: '/arcane-horizons/assets/images/research/Img8535.jpg',
+    link: '/research/textile-based-manufacturing'
+  }, {
+    title: 'Performative Ground Forming',
+    description: 'Exploring robotic ground shaping for environmental performance, integrating acoustic analysis with landscape design. Research develops noise-reducing terrain features through simulation and real-world testing, optimizing robotic construction for urban soundscapes and infrastructure.',
+    image: '/arcane-horizons/assets/images/research/bb_img11.jpg',
+    link: '/research/performative-ground-forming'
+  }, {
     title: 'Robotic Stone Carving',
-    description: 'Developing robotic workflows for adaptive stone fabrication, integrating computational design, robotic precision, and material constraints.',
+    description: 'Developing robotic workflows for adaptive stone carving, integrating digital design, automated toolpath planning, and material constraints. Research enables precise robotic stonework, combining automation with craftsmanship for construction and artistic applications.',
     image: '/arcane-horizons/assets/images/research/chisel_stroke_analysis1.jpg',
     link: '/research/robotic-stone-carving'
   }, {
-    title: 'Robotic Earthmoving',
-    description: 'Investigating autonomous ground shaping for construction and landscape applications, including robotic aggregate manipulation and digital planning for terrain modeling.',
+    title: 'Additive Manufacturing with Local Soil',
+    description: 'Exploring robotic 3D printing with native soil, integrating material processing, robotic deposition, and structural performance analysis. Research focuses on sustainable, site-adaptive fabrication methods for architecture and planetary applications.',
     image: '/arcane-horizons/assets/images/research/img18.jpg',
-    link: '/research/robotic-earthmoving'
-  }, {
-    title: 'Human-Robot Fabrication',
-    description: 'Exploring collaborative robotic workflows that embed human expertise in material-aware fabrication for adaptive, context-responsive construction.',
-    image: '/arcane-horizons/assets/images/research/5b.jpg',
-    link: '/research/human-robot-fabrication'
-  }, {
-    title: 'UAV-UGV Construction',
-    description: 'Developing autonomous multi-robot systems for construction site preparation, combining aerial (UAV) and ground (UGV) robots with vision-based coordination.',
-    image: '/arcane-horizons/assets/images/research/Yotam-21.jpg',
-    link: '/research/uav-ugv-construction'
-  }, {
-    title: 'Computational Fabrication',
-    description: 'Designing digital tools for robotic and computational fabrication, with applications in textile-based construction and additive manufacturing.',
-    image: '/arcane-horizons/assets/images/research/Img8535.jpg',
-    link: '/research/computational-fabrication'
-  }, {
-    title: 'Acoustic Ground Design',
-    description: 'Integrating robotic terrain shaping with noise mitigation to develop optimized, performative land formations that reduce urban noise.',
-    image: '/arcane-horizons/assets/images/research/bb_img11.jpg',
-    link: '/research/acoustic-ground-design'
+    link: '/research/additive-manufacturing-with-local-soil'
   }];
 
   // Create refs for each scrollable element

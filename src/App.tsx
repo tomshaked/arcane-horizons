@@ -33,7 +33,11 @@ const App = () => (
       <BrowserRouter basename={getBasename()}>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/research/:projectId" element={<ResearchDetail />} />
+          <Route path="/research/uav-ugv-collaboration" element={<ResearchDetail />} />
+          <Route path="/research/textile-based-manufacturing" element={<ResearchDetail />} />
+          <Route path="/research/performative-ground-forming" element={<ResearchDetail />} />
+          <Route path="/research/robotic-stone-carving" element={<ResearchDetail />} />
+          <Route path="/research/additive-manufacturing-with-local-soil" element={<ResearchDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

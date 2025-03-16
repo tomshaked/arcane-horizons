@@ -27,153 +27,165 @@ interface ResearchProject {
 
 const researchProjects: ResearchProject[] = [
   {
-    id: 'robotic-stone-carving',
-    title: 'Robotic Stone Carving',
-    description: 'Developing robotic workflows for adaptive stone fabrication, integrating computational design, robotic precision, and material constraints.',
+    id: 'uav-ugv-collaboration',
+    title: 'UAV-UGV Collaboration',
+    description: 'Research on integrating aerial (UAV) and ground (UGV) robots for automated construction site preparation.',
     longDescription: [
-      'Our research focuses on developing robotic workflows for adaptive stone fabrication that integrate computational design, robotic precision, and material constraints.',
-      'We explore on-site robotic carving, middleware for integrating robots in traditional craft, and techniques for automating stonework while preserving design intent and material integrity.',
-      'These methods enable customized, data-driven fabrication for both construction and artistic applications, bridging traditional craftsmanship with advanced robotics.'
-    ],
-    image: '/arcane-horizons/assets/images/research/chisel_stroke_analysis1.jpg',
-    publications: [
-      {
-        title: 'Adaptive robotic stone carving: Method, tools, and experiments',
-        authors: 'Shaked, T., et al.',
-        year: 2021,
-        link: '#'
-      },
-      {
-        title: 'Craft to site: Middleware for in situ robotic stonework',
-        authors: 'Hillel, R., Shaked, T., et al.',
-        year: 2020,
-        link: '#'
-      }
-    ]
-  },
-  {
-    id: 'robotic-earthmoving',
-    title: 'Robotic Earthmoving',
-    description: 'Investigating autonomous ground shaping for construction and landscape applications.',
-    longDescription: [
-      'Our research investigates autonomous ground shaping for construction and landscape applications, including robotic aggregate manipulation, digital planning for terrain modeling, and ground-forming techniques for noise mitigation.',
-      'We explore methods for scalable, adaptive robotic land modification in urban, rural, and extraterrestrial contexts, integrating digital tools for simulation, planning, and execution.',
-      'This work creates new possibilities for intelligent landscape design and construction that responds to environmental, acoustic, and functional requirements.'
-    ],
-    image: '/arcane-horizons/assets/images/research/img18.jpg',
-    publications: [
-      {
-        title: 'Aggregate-forming planner for autonomous earth-moving',
-        authors: 'Shaked, T., Bar-Sinai, K.L., et al.',
-        year: 2023,
-        link: '#'
-      },
-      {
-        title: 'Informing grounds: Robotic sand-forming simulating remote autonomous lunar groundscaping',
-        authors: 'Bar-Sinai, K.L., Shaked, T., et al.',
-        year: 2019,
-        link: '#'
-      },
-      {
-        title: 'Toward Acoustic Landscapes: A Digital Design Workflow for Embedding Noise Reduction in Ground-forming',
-        authors: 'Bar-Sinai, K.L., Shaked, T., Fettahoglu Oezgen, E.S., Boucsein, B.',
-        year: 2023,
-        link: 'https://www.researchgate.net/publication/370980617_Toward_Acoustic_Landscapes_A_Digital_Design_Workflow_for_Embedding_Noise_Reduction_in_Ground-forming'
-      }
-    ]
-  },
-  {
-    id: 'human-robot-fabrication',
-    title: 'Human-Robot Fabrication',
-    description: 'Exploring collaborative robotic workflows that embed human expertise in material-aware fabrication.',
-    longDescription: [
-      'Our research explores collaborative robotic workflows that embed human expertise in material-aware fabrication processes.',
-      'We examine how robots can enhance adaptive, context-responsive construction, integrating human creativity with computational and robotic precision.',
-      'Projects address automation in craft, robotic interventions in traditional materials, and hybrid workflows for designing with emergent material properties, creating new possibilities for architectural expression and construction efficiency.'
-    ],
-    image: '/arcane-horizons/assets/images/research/5b.jpg',
-    publications: [
-      {
-        title: 'Autonomous in craft-embedding human sensibility in architectural robotic fabrication',
-        authors: 'Shaked, T., et al.',
-        year: 2020,
-        link: '#'
-      },
-      {
-        title: 'Robotic tools, native matter: Workflow and methods for geomaterial reconstitution using additive manufacturing',
-        authors: 'Hillel, R., Shaked, T., et al.',
-        year: 2021,
-        link: '#'
-      }
-    ]
-  },
-  {
-    id: 'uav-ugv-construction',
-    title: 'UAV-UGV Construction',
-    description: 'Developing autonomous multi-robot systems for construction site preparation.',
-    longDescription: [
-      'Our research develops autonomous multi-robot systems for construction site preparation, combining aerial (UAV) and ground (UGV) robots.',
-      'We focus on vision-based coordination, task allocation, and environmental adaptation for robotic site preparation in challenging conditions.',
-      'These methods aim to reduce manual labor, optimize logistics, and enhance the adaptability of construction automation in complex environments.'
+      'Our research focuses on integrating aerial (UAV) and ground (UGV) robots for automated construction site preparation.',
+      'We develop vision-based approaches for surveying, material transport, and site setup, improving efficiency and reducing manual intervention in large-scale operations.',
+      'Our systems combine drone-based mapping with autonomous ground vehicles to streamline construction processes and enhance site logistics.'
     ],
     image: '/arcane-horizons/assets/images/research/Yotam-21.jpg',
     publications: [
       {
-        title: 'Vision-based UAV-UGV collaboration for autonomous construction site preparation',
-        authors: 'Segev, N., Shaked, T., et al.',
+        title: 'Vision-Based UAV-UGV Collaboration for Autonomous Construction Site Preparation',
+        authors: 'Oren Elmakis, Tom Shaked, Amir Degani',
         year: 2022,
-        link: '#'
+        source: 'IEEE Access',
+        link: 'https://www.researchgate.net/publication/370735851_Os-Breeze_Oil_Spills_Boundary_Red_Emission_Zone_Estimation_Using_Unmanned_Aerial_Vehicles'
+      },
+      {
+        title: 'BREEZE—Boundary Red Emission Zone Estimation Using Unmanned Aerial Vehicles',
+        authors: 'Oren Elmakis, Tom Shaked, Beni Fishbain, Amir Degani',
+        year: 2022,
+        source: 'Sensors',
+        link: 'https://www.researchgate.net/publication/377614175_OS-BREEZE_Oil_Spills_Boundary_Red_Emission_Zone_Estimation_Using_Unmanned_Surface_Vehicles'
       }
     ]
   },
   {
-    id: 'computational-fabrication',
-    title: 'Computational Fabrication',
-    description: 'Designing digital tools for robotic and computational fabrication.',
+    id: 'textile-based-manufacturing',
+    title: 'Textile-Based Manufacturing',
+    description: 'Developing digital tools for robotic textile fabrication, integrating parametric design, simulation, and automation.',
     longDescription: [
-      'Our research focuses on designing digital tools for robotic and computational fabrication, with applications in textile-based construction, additive manufacturing, and mobile robotic control.',
-      'We investigate simulation-driven workflows, toolpath optimization, and automation strategies that bridge material properties with computational design.',
-      'This work enables advanced robotic fabrication techniques that expand architectural possibilities while maintaining control over material expression and performance.'
+      'Our research focuses on developing digital tools for robotic textile fabrication, integrating parametric design, simulation, and automation.',
+      'We explore structured knits, computational patterning, and bridge digital workflows with fabrication for architecture and industrial design applications.',
+      'Our methods enable novel approaches to textile manufacturing through computational design tools that span from digital conception to robotic production.'
     ],
     image: '/arcane-horizons/assets/images/research/Img8535.jpg',
     publications: [
       {
-        title: 'KNITIT: A computational tool for design, simulation, and fabrication of multiple structured knits',
-        authors: 'Shaked, T., et al.',
+        title: 'KNITIT: A Computational Tool for Design, Simulation, and Fabrication of Multiple Structured Knits',
+        authors: 'Amit Karmon, Yael Sterman, Tom Shaked, Eyal Sheffer, Shany Nir',
         year: 2018,
-        link: '#'
+        source: 'ACM Symposium on Computational Fabrication',
+        link: 'https://www.researchgate.net/publication/370735851_KNITIT_A_Computational_Tool_for_Design_Simulation_and_Fabrication_of_Multiple_Structured_Knits'
       },
       {
-        title: 'Tool for design and fabrication of knitted components',
-        authors: 'Shaked, T., et al.',
+        title: 'Tool for Design and Fabrication of Knitted Components',
+        authors: 'Amit Karmon, Shany Nir, Tom Shaked, Eyal Sheffer, Yael Sterman',
         year: 2024,
-        source: 'US Patents, 2022, 2024',
-        link: '#'
+        source: 'US Patents 11,421,355 & 11,913,149 (2022, 2024)',
+        link: 'https://www.researchgate.net/publication/370735851_Tool_for_Design_and_Fabrication_of_Knitted_Components'
       }
     ]
   },
   {
-    id: 'acoustic-ground-design',
-    title: 'Acoustic Ground Design',
-    description: 'Integrating robotic terrain shaping with noise mitigation strategies.',
+    id: 'performative-ground-forming',
+    title: 'Performative Ground Forming',
+    description: 'Exploring robotic ground shaping for environmental performance, integrating acoustic analysis with landscape design.',
     longDescription: [
-      'Our research integrates robotic terrain shaping with noise mitigation strategies, exploring digital workflows for ground-forming that embed acoustic analysis in landscape architecture.',
-      'We develop optimized, performative land formations to reduce urban noise, combining robotic automation with environmental performance modeling.',
-      'This work aims to enhance urban soundscapes through intelligent landscape design that responds to acoustic requirements while maintaining aesthetic and functional quality.'
+      'Our research explores robotic ground shaping for environmental performance, integrating acoustic analysis with landscape design.',
+      'We develop noise-reducing terrain features through simulation and real-world testing, optimizing robotic construction for urban soundscapes and infrastructure.',
+      'This work creates new possibilities for responsive landscapes that address environmental challenges while maintaining aesthetic and functional qualities.'
     ],
     image: '/arcane-horizons/assets/images/research/bb_img11.jpg',
     publications: [
       {
-        title: 'Embedding Acoustic Analysis in Landscape Architecture Design Processes: A Case Study of Munich Airport',
-        authors: 'Bar-Sinai, K.L., Shaked, T., et al.',
+        title: 'Toward Acoustic Landscapes: A Digital Design Workflow for Embedding Noise Reduction in Ground-Forming',
+        authors: 'Keren Lee Bar-Sinai, Tom Shaked, ES Fettahoglu, J. Krimm, E. Pestriakova',
         year: 2023,
-        link: '#'
+        source: 'Journal of Digital Landscape Architecture',
+        link: 'https://www.researchgate.net/publication/370735851_Toward_Acoustic_Landscapes_A_Digital_Design_Workflow_for_Embedding_Noise_Reduction_in_Ground-Forming'
       },
       {
-        title: 'Toward Acoustic Landscapes: A Digital Design Workflow for Embedding Noise Reduction in Ground-forming',
-        authors: 'Bar-Sinai, K.L., Shaked, T., Fettahoglu Oezgen, E.S., Boucsein, B.',
+        title: 'Embedding Acoustic Analysis in Landscape Architecture Design Processes: A Case Study of Munich Airport',
+        authors: 'Keren Lee Bar-Sinai, Tom Shaked, ES Fettahoglu, J. Krimm, B. Boucsein',
         year: 2023,
-        link: 'https://www.researchgate.net/publication/370980617_Toward_Acoustic_Landscapes_A_Digital_Design_Workflow_for_Embedding_Noise_Reduction_in_Ground-forming'
+        source: 'Buildings',
+        link: 'https://www.researchgate.net/publication/370735851_Embedding_Acoustic_Analysis_in_Landscape_Architecture_Design_Processes_A_Case_Study_of_Munich_Airport'
+      },
+      {
+        title: 'Informing Grounds: Robotic Sand-Forming Simulating Remote Autonomous Lunar Groundscaping',
+        authors: 'Keren Lee Bar-Sinai, Tom Shaked, Amir Sprecher',
+        year: 2019,
+        source: 'ACADIA',
+        link: 'https://www.researchgate.net/publication/370735851_Informing_Grounds_Robotic_Sand-Forming_Simulating_Remote_Autonomous_Lunar_Groundscaping'
+      }
+    ]
+  },
+  {
+    id: 'robotic-stone-carving',
+    title: 'Robotic Stone Carving',
+    description: 'Developing robotic workflows for adaptive stone carving, integrating digital design, automated toolpath planning, and material constraints.',
+    longDescription: [
+      'Our research focuses on developing robotic workflows for adaptive stone carving, integrating digital design, automated toolpath planning, and material constraints.',
+      'We enable precise robotic stonework, combining automation with craftsmanship for construction and artistic applications.',
+      'Our methods facilitate on-site robotic fabrication and middleware for integrating robots in traditional craft contexts while preserving material integrity.'
+    ],
+    image: '/arcane-horizons/assets/images/research/chisel_stroke_analysis1.jpg',
+    publications: [
+      {
+        title: 'Adaptive Robotic Stone Carving: Method, Tools, and Experiments',
+        authors: 'Tom Shaked, Keren Lee Bar-Sinai, Amir Sprecher',
+        year: 2021,
+        source: 'Automation in Construction',
+        link: 'https://www.researchgate.net/publication/370735851_Adaptive_Robotic_Stone_Carving_Method_Tools_and_Experiments'
+      },
+      {
+        title: 'Craft to Site: Middleware for In Situ Robotic Stonework',
+        authors: 'Tom Shaked, Keren Lee Bar-Sinai, Amir Sprecher',
+        year: 2020,
+        source: 'Construction Robotics',
+        link: 'https://www.researchgate.net/publication/370735851_Craft_to_Site_Middleware_for_In_Situ_Robotic_Stonework'
+      }
+    ]
+  },
+  {
+    id: 'additive-manufacturing-with-local-soil',
+    title: 'Additive Manufacturing with Local Soil',
+    description: 'Exploring robotic 3D printing with native soil, integrating material processing, robotic deposition, and structural performance analysis.',
+    longDescription: [
+      'Our research explores robotic 3D printing with native soil, integrating material processing, robotic deposition, and structural performance analysis.',
+      'We focus on sustainable, site-adaptive fabrication methods for architecture and planetary applications, using locally available materials.',
+      'This work spans from earth-moving and terrain shaping to advanced soil-based 3D printing for construction applications.'
+    ],
+    image: '/arcane-horizons/assets/images/research/img18.jpg',
+    publications: [
+      {
+        title: 'Robotic Tools, Native Matter: Workflow and Methods for Geomaterial Reconstitution Using Additive Manufacturing',
+        authors: 'Keren Lee Bar-Sinai, Tom Shaked, Amir Sprecher',
+        year: 2021,
+        source: 'Architectural Science Review',
+        link: 'https://www.researchgate.net/publication/370735851_Robotic_Tools_Native_Matter_Workflow_and_Methods_for_Geomaterial_Reconstitution_Using_Additive_Manufacturing'
+      },
+      {
+        title: 'Stimulated Soil for Continuous Shell Structures',
+        authors: 'Roni Hillel, Tom Shaked, Michael Tsesarsky, Amir Sprecher',
+        year: 2024,
+        source: 'IASS',
+        link: 'https://www.researchgate.net/publication/370735851_Stimulated_Soil_for_Continuous_Shell_Structures'
+      },
+      {
+        title: 'Exploring Robotic Fabrication Using Stimulated Soil',
+        authors: 'Roni Hillel, Tom Shaked, Michael Tsesarsky, Amir Sprecher',
+        year: 2024,
+        source: 'International Conference on Education and Research in Computer-Aided Architectural Design',
+        link: 'https://www.researchgate.net/publication/370735851_Exploring_Robotic_Fabrication_Using_Stimulated_Soil'
+      },
+      {
+        title: 'Aggregate-Forming Planner for Autonomous Earth-Moving',
+        authors: 'Tom Shaked, Keren Lee Bar-Sinai, A. Meles-Braverman, Oren Elmakis, Amir Degani',
+        year: 2023,
+        source: 'IEEE Access',
+        link: 'https://www.researchgate.net/publication/370735851_Aggregate-Forming_Planner_for_Autonomous_Earth-Moving'
+      },
+      {
+        title: 'Earth-Shaping with Heterogeneous Robotic Teams: From Sim to Real',
+        authors: 'Tom Shaked, Amir Degani',
+        year: 2023,
+        source: 'Conference on Robotics and Simulation',
+        link: 'https://www.researchgate.net/publication/370735851_Earth-Shaping_with_Heterogeneous_Robotic_Teams_From_Sim_to_Real'
       }
     ]
   }
