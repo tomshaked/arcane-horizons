@@ -1,4 +1,3 @@
-
 // Define the structure for a publication
 export interface Publication {
   title: string;
@@ -16,6 +15,7 @@ export interface ResearchProject {
   longDescription: string[];
   image: string;
   publications: Publication[];
+  relatedResearch: string[]; // IDs of related research projects
 }
 
 export const researchProjects: ResearchProject[] = [
@@ -51,7 +51,8 @@ export const researchProjects: ResearchProject[] = [
         source: 'Journal of Digital Landscape Architecture',
         link: 'https://www.researchgate.net/publication/370980617_Toward_Acoustic_Landscapes_A_Digital_Design_Workflow_for_Embedding_Noise_Reduction_in_Ground-forming'
       }
-    ]
+    ],
+    relatedResearch: ['performative-ground-forming', 'additive-manufacturing-with-local-soil', 'uav-ugv-collaboration']
   },
   {
     id: 'uav-ugv-collaboration',
@@ -78,7 +79,8 @@ export const researchProjects: ResearchProject[] = [
         source: 'Sensors',
         link: 'https://www.researchgate.net/publication/362207406_BREEZE-Boundary_Red_Emission_Zone_Estimation_Using_Unmanned_Aerial_Vehicles'
       }
-    ]
+    ],
+    relatedResearch: ['robotic-earthmoving', 'additive-manufacturing-with-local-soil']
   },
   {
     id: 'additive-manufacturing-with-local-soil',
@@ -126,7 +128,8 @@ export const researchProjects: ResearchProject[] = [
         source: 'Conference on Robotics and Simulation',
         link: 'https://www.researchgate.net/publication/370735851_Earth-Shaping_with_Heterogeneous_Robotic_Teams_From_Sim_to_Real'
       }
-    ]
+    ],
+    relatedResearch: ['robotic-earthmoving', 'performative-ground-forming', 'robotic-stone-carving']
   },
   {
     id: 'performative-ground-forming',
@@ -160,7 +163,8 @@ export const researchProjects: ResearchProject[] = [
         source: 'ACADIA',
         link: 'https://www.researchgate.net/publication/337945482_Informing_Grounds_A_Theoretical_Framework_and_Iterative_Process_for_Robotic_Groundscaping_of_Remote_Sites'
       }
-    ]
+    ],
+    relatedResearch: ['robotic-earthmoving', 'additive-manufacturing-with-local-soil']
   },
   {
     id: 'robotic-stone-carving',
@@ -187,7 +191,8 @@ export const researchProjects: ResearchProject[] = [
         source: 'Construction Robotics',
         link: 'https://www.researchgate.net/publication/345151267_Craft_to_Site_middleware_for_in_situ_robotic_stonework'
       }
-    ]
+    ],
+    relatedResearch: ['additive-manufacturing-with-local-soil', 'textile-design-to-manufacturing']
   },
   {
     id: 'textile-design-to-manufacturing',
@@ -214,6 +219,7 @@ export const researchProjects: ResearchProject[] = [
         source: 'US Patents 11,421,355 & 11,913,149 (2022, 2024)',
         link: 'https://www.researchgate.net/publication/346095991_Tool_for_design_and_fabrication_of_knitted_components'
       }
-    ]
+    ],
+    relatedResearch: ['robotic-stone-carving']
   }
 ];
