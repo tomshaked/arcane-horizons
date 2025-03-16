@@ -6,35 +6,35 @@ const PublicationsSection = () => {
   const publications = [
     {
       title: "Earth-Shaping with Heterogeneous Robotic Teams: From Sim to Real",
-      authors: "Shaked, Tom and Degani, Amir",
+      authors: "Tom Shaked, Amir Degani",
       journal: "Springer",
       year: 2024,
       link: "https://www.researchgate.net/publication/384344853_Earth-Shaping_with_Heterogeneous_Robotic_Teams_From_Sim_to_Real"
     },
     {
       title: "Exploring Robotic Fabrication Using Stimulated Soil",
-      authors: "Hillel, Roni and Shaked, Tom and Tsesarsky, Michael and Sprecher, Aaron",
+      authors: "Roni Hillel, Tom Shaked, Michael Tsesarsky, Aaron Sprecher",
       journal: "Proceedings of the International Conference on Education and Research in Computer Aided Architectural Design in Europe",
       year: 2024,
       link: "https://www.researchgate.net/publication/383999997_Exploring_Robotic_Fabrication_Using_Stimulated_Soil"
     },
     {
       title: "Stimulated Soil for Continuous Shell Structures",
-      authors: "Hillel, Roni and Shaked, Tom and Tsesarsky, Michael and Sprecher, Aaron",
+      authors: "Roni Hillel, Tom Shaked, Michael Tsesarsky, Aaron Sprecher",
       journal: "The International Association for Shell and Spatial Structures (IASS)",
       year: 2024,
       link: "https://www.researchgate.net/publication/385131103_Stimulated_Soil_for_Continuous_Shell_Structures"
     },
     {
       title: "OS-BREEZE: Oil Spills Boundary Red Emission Zone Estimation Using Unmanned Surface Vehicles",
-      authors: "Elmakis, Oren and Polinov, Sergei and Shaked, Tom and Degani, Amir",
+      authors: "Oren Elmakis, Sergei Polinov, Tom Shaked, Amir Degani",
       journal: "Sensors",
       year: 2024,
       link: "https://www.researchgate.net/publication/377614175_OS-BREEZE_Oil_Spills_Boundary_Red_Emission_Zone_Estimation_Using_Unmanned_Surface_Vehicles"
     },
     {
       title: "Toward Acoustic Landscapes: A Digital Design Workflow for Embedding Noise Reduction in Ground-forming",
-      authors: "Bar-Sinai, Karen Lee and Shaked, Tom and Fettahoglu, Elif Simge and Krimm, Jochen and Pestriakova, Ekaterina and Kniazeva, Liubov and Friedberg, Sharon and Boucsein, Benedikt",
+      authors: "Karen Lee Bar-Sinai, Tom Shaked, Elif Simge Fettahoglu, Jochen Krimm, Ekaterina Pestriakova, Liubov Kniazeva, Sharon Friedberg, Benedikt Boucsein",
       journal: "Digital Landscape Architecture Conference",
       year: 2023,
       link: "https://www.researchgate.net/publication/370980617_Toward_Acoustic_Landscapes_A_Digital_Design_Workflow_for_Embedding_Noise_Reduction_in_Ground-forming"
