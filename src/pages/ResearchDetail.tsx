@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -13,21 +13,6 @@ const ResearchDetail = () => {
   const location = useLocation();
   const projectId = location.pathname.split('/research/')[1];
   const project = researchProjects.find(p => p.id === projectId);
-
-  // Only scroll to top on initial component mount, not on internal link clicks
-  useEffect(() => {
-    // Store the current path in session storage to track navigation
-    const prevPath = sessionStorage.getItem('prevPath');
-    const currentPath = location.pathname;
-    
-    // Only scroll to top if coming from a different route (not within research pages)
-    if (!prevPath || !prevPath.includes('/research/') || !currentPath.includes('/research/')) {
-      window.scrollTo(0, 0);
-    }
-    
-    // Update the previous path
-    sessionStorage.setItem('prevPath', currentPath);
-  }, [location.pathname]);
 
   if (!project) {
     return (
