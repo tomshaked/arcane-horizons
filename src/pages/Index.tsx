@@ -1,5 +1,6 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import ResearchSection from '@/components/ResearchSection';
@@ -10,6 +11,24 @@ import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
+  const location = useLocation();
+
+  // Handle hash navigation after mount
+  useLayoutEffect(() => {
+    if (location.hash) {
+      const id = location.hash.substring(1); // remove the '#'
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100); // small delay to ensure rendering is complete
+      }
+    } else {
+      // If no hash, scroll to top
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
   useEffect(() => {
     // Intersection Observer for animation on scroll
     const observerOptions = {

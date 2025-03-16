@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
@@ -29,6 +30,20 @@ const Header = () => {
       document.body.style.overflow = '';
     };
   }, [isMobileMenuOpen]);
+
+  // Handle scrolling to the specified section when the URL hash changes
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    if (location.hash && location.pathname === '/') {
+      const sectionId = location.hash.substring(1); // Remove the '#' character
+      const element = document.getElementById(sectionId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100); // Small delay to ensure the page has fully loaded
+      }
+    }
+  }, [location.hash, location.pathname]);
 
   // Function to handle section navigation
   const navigateToSection = (sectionId: string) => {
