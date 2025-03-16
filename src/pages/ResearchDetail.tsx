@@ -1,10 +1,10 @@
+
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Section from '@/components/Section';
 import { ArrowLeft } from 'lucide-react';
-import { ScrollArea } from '@/components/ui/scroll-area';
 
 // Define the structure for a publication
 interface Publication {
