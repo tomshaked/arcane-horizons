@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -34,7 +35,7 @@ const researchProjects: ResearchProject[] = [
       'We develop vision-based approaches for surveying, material transport, and site setup, improving efficiency and reducing manual intervention in large-scale operations.',
       'Our systems combine drone-based mapping with autonomous ground vehicles to streamline construction processes and enhance site logistics.'
     ],
-    image: '/arcane-horizons/assets/images/research/UAV-UGV_Collaboration.jpg',
+    image: '/arcane-horizons/assets/images/research/Yotam-21.jpg',
     publications: [
       {
         title: 'Vision-Based UAV-UGV Collaboration for Autonomous Construction Site Preparation',
@@ -61,7 +62,7 @@ const researchProjects: ResearchProject[] = [
       'We explore structured knits, computational patterning, and bridge digital workflows with fabrication for architecture and industrial design applications.',
       'Our methods enable novel approaches to textile manufacturing through computational design tools that span from digital conception to robotic production.'
     ],
-    image: '/arcane-horizons/assets/images/research/Computational_Textile_Design.jpg',
+    image: '/arcane-horizons/assets/images/research/Img8535.jpg',
     publications: [
       {
         title: 'KNITIT: A Computational Tool for Design, Simulation, and Fabrication of Multiple Structured Knits',
@@ -88,7 +89,7 @@ const researchProjects: ResearchProject[] = [
       'We develop noise-reducing terrain features through simulation and real-world testing, optimizing robotic construction for urban soundscapes and infrastructure.',
       'This work creates new possibilities for responsive landscapes that address environmental challenges while maintaining aesthetic and functional qualities.'
     ],
-    image: '/arcane-horizons/assets/images/research/Acoustic_Terrain_Forming.jpg',
+    image: '/arcane-horizons/assets/images/research/bb_img11.jpg',
     publications: [
       {
         title: 'Toward Acoustic Landscapes: A Digital Design Workflow for Embedding Noise Reduction in Ground-Forming',
@@ -122,7 +123,7 @@ const researchProjects: ResearchProject[] = [
       'We enable precise robotic stonework, combining automation with craftsmanship for construction and artistic applications.',
       'Our methods facilitate on-site robotic fabrication and middleware for integrating robots in traditional craft contexts while preserving material integrity.'
     ],
-    image: '/arcane-horizons/assets/images/research/Digital_Stone_Carving_Analysis.jpg',
+    image: '/arcane-horizons/assets/images/research/chisel_stroke_analysis1.jpg',
     publications: [
       {
         title: 'Adaptive Robotic Stone Carving: Method, Tools, and Experiments',
@@ -149,7 +150,7 @@ const researchProjects: ResearchProject[] = [
       'We develop methods for robotic aggregate manipulation, terrain modeling, and noise-mitigating ground-forming techniques.',
       'This work explores scalable, adaptive robotic land modification in urban, rural, and extraterrestrial contexts, integrating digital simulation and execution tools.'
     ],
-    image: '/arcane-horizons/assets/images/research/Robotic_Earthmoving_Processes.jpg',
+    image: '/arcane-horizons/assets/images/research/5b.jpg',
     publications: [
       {
         title: 'Aggregate-Forming Planner for Autonomous Earth-Moving',
@@ -183,7 +184,7 @@ const researchProjects: ResearchProject[] = [
       'We focus on sustainable, site-adaptive fabrication methods for architecture and planetary applications, using locally available materials.',
       'This work spans from earth-moving and terrain shaping to advanced soil-based 3D printing for construction applications.'
     ],
-    image: '/arcane-horizons/assets/images/research/Robotic_Soil_3D_Printing.jpg',
+    image: '/arcane-horizons/assets/images/research/img18.jpg',
     publications: [
       {
         title: 'Robotic Tools, Native Matter: Workflow and Methods for Geomaterial Reconstitution Using Additive Manufacturing',
