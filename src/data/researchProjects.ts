@@ -1,3 +1,4 @@
+
 // Define the structure for a publication
 export interface Publication {
   title: string;
@@ -14,6 +15,7 @@ export interface ResearchProject {
   description: string;
   longDescription: string[];
   image: string;
+  videoSrc?: string; // Optional video source for hero section
   publications: Publication[];
   relatedResearch: string[]; // IDs of related research projects
 }
