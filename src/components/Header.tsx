@@ -13,6 +13,9 @@ const Header = () => {
   const location = useLocation();
 
   useEffect(() => {
+    // Initialize isScrolled based on the initial scroll position
+    setIsScrolled(window.scrollY > 10);
+    
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
@@ -42,8 +45,12 @@ const Header = () => {
       document.body.style.overflow = 'hidden';
       // Always show header when mobile menu is open
       setIsHeaderVisible(true);
+      // Ensure the background is visible when menu is open
+      setIsScrolled(true);
     } else {
       document.body.style.overflow = '';
+      // Update the scroll state based on current position when closing menu
+      setIsScrolled(window.scrollY > 10);
     }
     return () => {
       document.body.style.overflow = '';
@@ -108,7 +115,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/90 text-black py-3 shadow-md' : 'py-6 bg-transparent text-white'
+        isScrolled || isMobileMenuOpen ? 'bg-white/90 text-black py-3 shadow-md' : 'py-6 bg-transparent text-white'
       } transform ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-8">
