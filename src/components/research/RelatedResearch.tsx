@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ResearchProject } from '@/data/researchProjects';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
+import { getAssetPath } from '@/utils/assetPaths';
 
 interface RelatedResearchProps {
   relatedProjects: ResearchProject[];
@@ -18,7 +19,7 @@ const RelatedResearch: React.FC<RelatedResearchProps> = ({ relatedProjects }) =>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {relatedProjects.map((project) => (
           <Card key={project.id} className="overflow-hidden bg-card/50 hover:bg-card/80 transition-colors border-border/50 rounded-none">
-            <div className="aspect-video bg-cover bg-center" style={{ backgroundImage: `url(${project.image})` }} />
+            <div className="aspect-video bg-cover bg-center" style={{ backgroundImage: `url(${getAssetPath(project.image)})` }} />
             <CardContent className="p-6">
               <h4 className="font-display text-xl font-medium mb-2">{project.title}</h4>
               <p className="text-sm text-foreground/70 mb-4 line-clamp-3">{project.description}</p>

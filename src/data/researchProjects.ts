@@ -1,4 +1,3 @@
-
 // Define the structure for a publication
 export interface Publication {
   title: string;
@@ -30,8 +29,8 @@ export const researchProjects: ResearchProject[] = [
       'We develop methods for robotic aggregate manipulation, terrain modeling, and noise-mitigating ground-forming techniques.',
       'This work explores scalable, adaptive robotic land modification in urban, rural, and extraterrestrial contexts, integrating digital simulation and execution tools.'
     ],
-    videoSrc: '/arcane-horizons/assets/videos/Robotic_Earthmoving_Processes.mp4',
-    image: '/arcane-horizons/assets/images/research/Robotic_Earthmoving_Processes.jpg',
+    videoSrc: '/assets/videos/Robotic_Earthmoving_Processes.mp4',
+    image: '/assets/images/research/Robotic_Earthmoving_Processes.jpg',
     publications: [
       {
         title: 'Earth-Shaping with Heterogeneous Robotic Teams: From Sim to Real',
@@ -74,7 +73,7 @@ export const researchProjects: ResearchProject[] = [
       'Our systems combine drone-based mapping with autonomous ground vehicles to streamline construction processes and enhance site logistics.'
     ],
     videoSrc: '', // Empty string for no video
-    image: '/arcane-horizons/assets/images/research/UAV-UGV_Collaboration.jpg',
+    image: '/assets/images/research/UAV-UGV_Collaboration.jpg',
     publications: [
       {
         title: 'Earth-Shaping with Heterogeneous Robotic Teams: From Sim to Real',
@@ -109,8 +108,8 @@ export const researchProjects: ResearchProject[] = [
       'We focus on sustainable, site-adaptive fabrication methods for architecture and planetary applications, using locally available materials.',
       'This work spans from earth-moving and terrain shaping to advanced soil-based 3D printing for construction applications.'
     ],
-    videoSrc: '/arcane-horizons/assets/videos/Robotic_Soil_3D_Printing.mp4',
-    image: '/arcane-horizons/assets/images/research/Robotic_Soil_3D_Printing.jpg',
+    videoSrc: '/assets/videos/Robotic_Soil_3D_Printing.mp4',
+    image: '/assets/images/research/Robotic_Soil_3D_Printing.jpg',
     publications: [
       {
         title: 'Robotic Tools, Native Matter: Workflow and Methods for Geomaterial Reconstitution Using Additive Manufacturing',
@@ -160,7 +159,7 @@ export const researchProjects: ResearchProject[] = [
       'This work creates new possibilities for responsive landscapes that address environmental challenges while maintaining aesthetic and functional qualities.'
     ],
     videoSrc: '', // Empty string for no video
-    image: '/arcane-horizons/assets/images/research/Acoustic_Terrain_Forming.jpg',
+    image: '/assets/images/research/Acoustic_Terrain_Forming.jpg',
     publications: [
       {
         title: 'Toward Acoustic Landscapes: A Digital Design Workflow for Embedding Noise Reduction in Ground-Forming',
@@ -196,7 +195,7 @@ export const researchProjects: ResearchProject[] = [
       'Our methods facilitate on-site robotic fabrication and middleware for integrating robots in traditional craft contexts while preserving material integrity.'
     ],
     videoSrc: '', // Empty string for no video
-    image: '/arcane-horizons/assets/images/research/Digital_Stone_Carving_Analysis.jpg',
+    image: '/assets/images/research/Digital_Stone_Carving_Analysis.jpg',
     publications: [
       {
         title: 'Adaptive Robotic Stone Carving: Method, Tools, and Experiments',
@@ -232,7 +231,7 @@ export const researchProjects: ResearchProject[] = [
       'Our methods enable novel approaches to textile manufacturing through computational design tools that span from digital conception to robotic production.'
     ],
     videoSrc: '', // Empty string for no video
-    image: '/arcane-horizons/assets/images/research/Computational_Textile_Design.jpg',
+    image: '/assets/images/research/Computational_Textile_Design.jpg',
     publications: [
       {
         title: 'KNITIT: A Computational Tool for Design, Simulation, and Fabrication of Multiple Structured Knits',

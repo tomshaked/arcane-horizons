@@ -4,6 +4,7 @@ import Section from './Section';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { researchProjects } from '@/data/researchProjects';
+import { getAssetPath } from '@/utils/assetPaths';
 
 const ResearchSection = () => {
   useEffect(() => {
@@ -66,7 +67,7 @@ const ResearchSection = () => {
           {researchProjects.map((project, index) => <div key={index} className="relative h-screen w-full overflow-hidden scroll-reveal m-0 p-0">
               <div className="absolute inset-0 w-full h-full">
                 <div className="w-full h-full bg-cover bg-center transition-all duration-700 ease-in-out" style={{
-              backgroundImage: `url(${project.image})`,
+              backgroundImage: `url(${getAssetPath(project.image)})`,
               backgroundBlendMode: 'overlay',
               backgroundColor: 'rgba(0,0,0,0.65)'
             }} />

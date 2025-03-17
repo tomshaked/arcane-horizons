@@ -36,6 +36,8 @@ jobs:
         run: |
           # Create .nojekyll file to bypass Jekyll processing
           touch dist/.nojekyll
+          # Create CNAME file if custom domain is used
+          echo "arcalaboratory.com" > dist/CNAME
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { getAssetPath } from '@/utils/assetPaths';
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const Hero = () => {
       {/* Full-page Video Background */}
       <div className="absolute inset-0 z-0">
         <video autoPlay muted loop playsInline className="object-cover w-full h-full">
-          <source src="/arcane-horizons/assets/videos/arca-hero.mp4" type="video/mp4" />
+          <source src={getAssetPath('/assets/videos/arca-hero.mp4')} type="video/mp4" />
         </video>
         
         {/* Overlay */}

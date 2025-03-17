@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Section from './Section';
+import { getAssetPath } from '@/utils/assetPaths';
 
 const TeamSection = () => {
   const teamMembers = [
@@ -8,37 +9,37 @@ const TeamSection = () => {
       name: 'Tom Shaked',
       role: 'Founder & PI',
       bio: 'Dr. Shaked leads our research endeavors in construction robotics.',
-      image: '/arcane-horizons/assets/images/team/tom-shaked.jpg'
+      image: '/assets/images/team/tom-shaked.jpg'
     },
     {
       name: 'Roni Hillel',
       role: 'PhD Student',
       bio: 'Roni is passionate about robotics and has a strong academic record in engineering.',
-      image: '/arcane-horizons/assets/images/team/roni-hillel.jpg'
+      image: '/assets/images/team/roni-hillel.jpg'
     },
     {
       name: 'Nave Segev',
       role: 'MSc Student',
       bio: 'Nave is an experienced architect with expertise in Building Information Modeling (BIM).',
-      image: '/arcane-horizons/assets/images/team/nave-segev.jpg'
+      image: '/assets/images/team/nave-segev.jpg'
     },
     {
       name: 'Ofer Finkelstein',
       role: 'MSc Student',
       bio: 'Ofer is a civil engineer with a passion for sustainable construction and material innovation.',
-      image: '/arcane-horizons/assets/images/team/ofer-finkelstein.jpg'
+      image: '/assets/images/team/ofer-finkelstein.jpg'
     },
     {
       name: 'Ori Dvir',
       role: 'MSc Student',
       bio: 'Ori investigates the evolution of architectural expression through the impact of design tools and planning methodologies.',
-      image: '/arcane-horizons/assets/images/team/ori-dvir.jpg'
+      image: '/assets/images/team/ori-dvir.jpg'
     },
     {
       name: 'Simon Fishkin',
       role: 'Research Assistant',
       bio: 'Simon is passionate about dynamic architectural systems.',
-      image: '/arcane-horizons/assets/images/team/simon-fishkin.jpg'
+      image: '/assets/images/team/simon-fishkin.jpg'
     }
   ];
 
@@ -61,7 +62,7 @@ const TeamSection = () => {
             <div className="aspect-square overflow-hidden">
               <div 
                 className="w-full h-full bg-cover bg-center grayscale transition-all duration-500 group-hover:grayscale-0"
-                style={{ backgroundImage: `url(${member.image})` }}
+                style={{ backgroundImage: `url(${getAssetPath(member.image)})` }}
               />
             </div>
             <div className="p-6">

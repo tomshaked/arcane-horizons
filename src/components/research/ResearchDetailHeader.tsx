@@ -1,5 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
+import { getAssetPath } from '@/utils/assetPaths';
 
 interface ResearchDetailHeaderProps {
   imageSrc: string;
@@ -13,7 +14,7 @@ const ResearchDetailHeader: React.FC<ResearchDetailHeaderProps> = ({ imageSrc, v
   useEffect(() => {
     if (videoRef.current && videoSrc) {
       // Reset the video element by updating its src and reloading
-      videoRef.current.src = videoSrc;
+      videoRef.current.src = getAssetPath(videoSrc);
       videoRef.current.load();
       videoRef.current.play().catch(err => {
         console.log('Video autoplay failed:', err);
@@ -36,12 +37,12 @@ const ResearchDetailHeader: React.FC<ResearchDetailHeaderProps> = ({ imageSrc, v
               className="object-cover w-full h-full"
               key={videoSrc} // Add key prop based on videoSrc to force re-render
             >
-              <source src={videoSrc} type="video/mp4" />
+              <source src={getAssetPath(videoSrc)} type="video/mp4" />
               {/* Fallback to image if video fails */}
               <div 
                 className="w-full h-full bg-cover bg-center"
                 style={{ 
-                  backgroundImage: `url(${imageSrc})`,
+                  backgroundImage: `url(${getAssetPath(imageSrc)})`,
                   backgroundBlendMode: 'overlay',
                   backgroundColor: 'rgba(0,0,0,0.6)'
                 }}
@@ -54,7 +55,7 @@ const ResearchDetailHeader: React.FC<ResearchDetailHeaderProps> = ({ imageSrc, v
           <div 
             className="w-full h-full bg-cover bg-center"
             style={{ 
-              backgroundImage: `url(${imageSrc})`,
+              backgroundImage: `url(${getAssetPath(imageSrc)})`,
               backgroundBlendMode: 'overlay',
               backgroundColor: 'rgba(0,0,0,0.6)'
             }} 
