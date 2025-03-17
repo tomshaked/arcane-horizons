@@ -62,9 +62,9 @@ const ResearchDetailHeader: React.FC<ResearchDetailHeaderProps> = ({ imageSrc, v
         )}
       </div>
       
-      {/* Scroll Down Indicator - Using the same SVG as in Hero component */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce opacity-70 text-white">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Scroll Down Indicator - Updated with the same fix for consistent centering */}
+      <div className="absolute bottom-8 left-0 right-0 mx-auto w-24 text-center animate-bounce opacity-70 text-white">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-auto">
           <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </div>
