@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
@@ -101,7 +102,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/90 backdrop-blur-sm text-black py-3 shadow-md' : 'py-6 bg-black/30 backdrop-blur-sm text-white'
+        isScrolled ? 'bg-white/90 text-black py-3 shadow-md' : 'py-6 bg-transparent text-white'
       } ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
@@ -200,3 +201,4 @@ const NavLinks = ({ mobile, isScrolled, onNavigate }: NavLinksProps) => {
 };
 
 export default Header;
+
