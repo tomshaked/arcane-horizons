@@ -7,50 +7,24 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
-    // Initialize isScrolled based on the initial scroll position
-    setIsScrolled(window.scrollY > 10);
-    
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      // Determine if we should show or hide the header based on scroll direction
-      if (currentScrollY > lastScrollY && currentScrollY > 100 && !isMobileMenuOpen) {
-        // Scrolling down & past threshold & menu not open - hide header
-        setIsHeaderVisible(false);
-      } else {
-        // Scrolling up or at top - show header
-        setIsHeaderVisible(true);
-      }
-      
-      // Update last scroll position
-      setLastScrollY(currentScrollY);
-      
-      // Update the isScrolled state (for background color)
-      setIsScrolled(currentScrollY > 10);
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY, isMobileMenuOpen]);
+  }, []);
 
   // Prevent scrolling when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
-      // Always show header when mobile menu is open
-      setIsHeaderVisible(true);
-      // Ensure the background is visible when menu is open
-      setIsScrolled(true);
     } else {
       document.body.style.overflow = '';
-      // Update the scroll state based on current position when closing menu
-      setIsScrolled(window.scrollY > 10);
     }
     return () => {
       document.body.style.overflow = '';
@@ -73,9 +47,6 @@ const Header = () => {
 
   // Function to handle section navigation
   const navigateToSection = (sectionId: string) => {
-    // Ensure the header always has a background when clicked
-    setIsScrolled(true);
-    
     // If we're already on the home page, just scroll to the section
     if (location.pathname === '/') {
       const element = document.getElementById(sectionId);
@@ -96,9 +67,6 @@ const Header = () => {
   // Function to handle logo click
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    // Ensure the header always has a background when clicked
-    setIsScrolled(true);
-    
     // If already on homepage, refresh the view by scrolling to top
     if (location.pathname === '/') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -115,8 +83,8 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || isMobileMenuOpen ? 'bg-white/90 text-black py-3 shadow-md' : 'py-6 bg-transparent text-white'
-      } transform ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
+        isScrolled ? 'bg-white/90 text-black py-3 shadow-md' : 'py-6 bg-transparent text-white'
+      }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-8">
         <a href="/" onClick={handleLogoClick} className="flex items-center space-x-2 no-underline">
@@ -142,10 +110,7 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           className="md:hidden"
-          onClick={() => {
-            setIsScrolled(true);
-            setIsMobileMenuOpen(!isMobileMenuOpen);
-          }}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
