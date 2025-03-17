@@ -7,40 +7,22 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      // Determine if scrolled for styling
-      setIsScrolled(currentScrollY > 10);
-      
-      // Hide/show based on scroll direction (with threshold to avoid jumpy behavior)
-      if (currentScrollY > lastScrollY + 5) {
-        // Scrolling down - hide header
-        setIsVisible(false);
-      } else if (currentScrollY < lastScrollY - 5 || currentScrollY < 10) {
-        // Scrolling up or at top - show header
-        setIsVisible(true);
-      }
-      
-      setLastScrollY(currentScrollY);
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   // Prevent scrolling when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
-      // Force header to be visible when menu is open
-      setIsVisible(true);
     } else {
       document.body.style.overflow = '';
     }
@@ -101,8 +83,8 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-[#EEE7E3]/90 text-black py-3 shadow-md' : 'py-6 bg-transparent text-white'
-      } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
+        isScrolled ? 'bg-white/90 text-black py-3 shadow-md' : 'py-6 bg-transparent text-white'
+      }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-8">
         <a href="/" onClick={handleLogoClick} className="flex items-center space-x-2 no-underline">
@@ -137,7 +119,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 top-0 z-40 bg-[#EEE7E3] md:hidden">
+        <div className="fixed inset-0 top-0 z-40 bg-white md:hidden">
           <div className="fixed top-0 left-0 right-0 flex justify-between items-center p-6 text-black">
             <a href="/" onClick={handleLogoClick} className="flex items-center space-x-2 no-underline">
               <span className="text-xl font-display font-bold tracking-tight">ARCA</span>
