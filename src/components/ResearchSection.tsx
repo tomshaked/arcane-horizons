@@ -1,8 +1,10 @@
+
 import React, { useEffect } from 'react';
 import Section from './Section';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { researchProjects } from '@/data/researchProjects';
+
 const ResearchSection = () => {
   useEffect(() => {
     // Initialize IntersectionObserver
@@ -30,6 +32,7 @@ const ResearchSection = () => {
     });
     return () => observer.disconnect();
   }, []);
+  
   return <>
       <Section id="mission" className="py-28">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
@@ -75,9 +78,12 @@ const ResearchSection = () => {
         </div>
 
         <div className="py-16 text-center scroll-reveal">
-          <p className="text-foreground/70 max-w-3xl mx-auto">Get in touch to learn more about our research and collaboration opportunities.</p>
+          <p className="text-foreground/70 max-w-3xl mx-auto">
+            <Link to="#contact" className="text-primary hover:underline">Get in touch</Link> to learn more about our research and collaboration opportunities.
+          </p>
         </div>
       </Section>
     </>;
 };
+
 export default ResearchSection;
