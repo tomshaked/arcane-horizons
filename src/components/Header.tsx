@@ -156,10 +156,10 @@ interface NavLinksProps {
 
 const NavLinks = ({ mobile, isScrolled, onNavigate }: NavLinksProps) => {
   const links = [
+    { name: 'Mission', sectionId: 'mission' },
     { name: 'Research', sectionId: 'research' },
     { name: 'Team', sectionId: 'team' },
     { name: 'Publications', sectionId: 'publications' },
-    { name: 'Projects', sectionId: 'projects' },
   ];
 
   return (

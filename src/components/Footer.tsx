@@ -45,10 +45,10 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4 text-white">Navigation</h3>
             <ul className="space-y-2">
+              <li><button onClick={() => navigateToSection('mission')} className="text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer">Mission</button></li>
               <li><button onClick={() => navigateToSection('research')} className="text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer">Research</button></li>
               <li><button onClick={() => navigateToSection('team')} className="text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer">Team</button></li>
               <li><button onClick={() => navigateToSection('publications')} className="text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer">Publications</button></li>
-              <li><button onClick={() => navigateToSection('projects')} className="text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer">Projects</button></li>
               <li><button onClick={() => navigateToSection('contact')} className="text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer">Contact</button></li>
             </ul>
           </div>
