@@ -7,32 +7,32 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 24 18% 91%; /* Changed from 0 0% 100% to #EEE7E3 */
     --foreground: 0 0% 0%;
 
-    --card: 0 0% 100%;
+    --card: 24 18% 91%; /* Changed to match background */
     --card-foreground: 0 0% 0%;
 
-    --popover: 0 0% 100%;
+    --popover: 24 18% 91%; /* Changed to match background */
     --popover-foreground: 0 0% 0%;
 
     --primary: 0 0% 0%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 96%;
+    --secondary: 24 10% 93%; /* Adjusted to complement new background */
     --secondary-foreground: 0 0% 0%;
 
-    --muted: 0 0% 96%;
+    --muted: 24 10% 93%; /* Adjusted to complement new background */
     --muted-foreground: 0 0% 45%;
 
-    --accent: 0 0% 96%;
+    --accent: 24 10% 93%; /* Adjusted to complement new background */
     --accent-foreground: 0 0% 0%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
+    --border: 24 10% 86%; /* Adjusted for slightly darker border on new background */
+    --input: 24 10% 86%; /* Adjusted for slightly darker input on new background */
     --ring: 0 0% 0%;
 
     --radius: 0.5rem;
