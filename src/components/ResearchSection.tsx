@@ -1,8 +1,10 @@
+
 import React, { useEffect } from 'react';
 import Section from './Section';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { researchProjects } from '@/data/researchProjects';
+
 const ResearchSection = () => {
   useEffect(() => {
     // Initialize IntersectionObserver
@@ -30,6 +32,15 @@ const ResearchSection = () => {
     });
     return () => observer.disconnect();
   }, []);
+
+  const scrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return <>
       <Section id="mission" className="py-28">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
@@ -75,9 +86,12 @@ const ResearchSection = () => {
         </div>
 
         <div className="py-16 text-center scroll-reveal">
-          <p className="text-foreground/70 max-w-3xl mx-auto">Get in touch to learn more about our research and collaboration opportunities.</p>
+          <p className="text-foreground/70 max-w-3xl mx-auto">
+            <a href="#contact" onClick={scrollToContact} className="text-foreground hover:underline font-medium">Get in touch</a> to learn more about our research and collaboration opportunities.
+          </p>
         </div>
       </Section>
     </>;
 };
+
 export default ResearchSection;
