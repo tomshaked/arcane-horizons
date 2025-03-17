@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
@@ -65,6 +66,9 @@ const Header = () => {
 
   // Function to handle section navigation
   const navigateToSection = (sectionId: string) => {
+    // Ensure the header always has a background when clicked
+    setIsScrolled(true);
+    
     // If we're already on the home page, just scroll to the section
     if (location.pathname === '/') {
       const element = document.getElementById(sectionId);
@@ -85,6 +89,9 @@ const Header = () => {
   // Function to handle logo click
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
+    // Ensure the header always has a background when clicked
+    setIsScrolled(true);
+    
     // If already on homepage, refresh the view by scrolling to top
     if (location.pathname === '/') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -128,7 +135,10 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           className="md:hidden"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          onClick={() => {
+            setIsScrolled(true);
+            setIsMobileMenuOpen(!isMobileMenuOpen);
+          }}
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
