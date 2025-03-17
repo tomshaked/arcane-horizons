@@ -35,7 +35,7 @@ const TeamSection = () => {
   return <Section id="team" className="bg-background">
       <div className="mb-16 text-center">
         <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 animate-fade-in">Our Team</h2>
-        <p className="text-foreground/70 max-w-3xl mx-auto animate-fade-in">Bringing together experts in architecture, engineering, and robotics to explore innovative and sustainable building practices.</p>
+        <p className="text-foreground/70 max-w-3xl mx-auto animate-fade-in">Bringing together experts in architecture, engineering, and robotics to explore sustainable building practices.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
