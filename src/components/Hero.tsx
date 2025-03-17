@@ -1,6 +1,5 @@
 
 import React from 'react';
-import Button from './Button';
 import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
@@ -24,17 +23,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 flex items-center justify-center h-full px-6 md:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight md:leading-tight tracking-tight mb-6 text-white">Architectural Robotics &amp; Construction Automation</h1>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            {/* Button links using React Router navigation */}
-            <div className="no-underline">
-              <Button size="lg" onClick={() => navigateToSection('research')}>Explore Research</Button>
-            </div>
-            <div className="no-underline">
-              <Button variant="outline" size="lg" onClick={() => navigateToSection('contact')} className="border-white/20 text-white hover:bg-white/10">Join Our Team</Button>
-            </div>
-          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight md:leading-tight tracking-tight text-white">Architectural Robotics &amp; Construction Automation</h1>
         </div>
       </div>
 
