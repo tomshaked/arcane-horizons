@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
@@ -7,15 +7,32 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const currentScrollY = window.scrollY;
+      
+      // Determine if we should show or hide the navbar
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        // Scrolling down and past initial threshold
+        setIsVisible(false);
+      } else {
+        // Scrolling up or at the top
+        setIsVisible(true);
+      }
+      
+      // Update scroll state for shadow effect
+      setIsScrolled(currentScrollY > 10);
+      
+      // Remember current scroll position
+      lastScrollY.current = currentScrollY;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -23,6 +40,8 @@ const Header = () => {
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
+      // Always show header when mobile menu is open
+      setIsVisible(true);
     } else {
       document.body.style.overflow = '';
     }
@@ -84,6 +103,8 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-white/90 text-black py-3 shadow-md' : 'py-6 bg-transparent text-white'
+      } ${
+        isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-8">
@@ -180,3 +201,4 @@ const NavLinks = ({ mobile, isScrolled, onNavigate }: NavLinksProps) => {
 };
 
 export default Header;
+
