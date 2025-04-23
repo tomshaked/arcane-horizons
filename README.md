@@ -1,205 +1,173 @@
 
 # ARCA Laboratory Website Configuration Guide
 
-This guide explains how to customize the ARCA Laboratory website components and content. It provides instructions for modifying images, videos, research projects, team members, publications, and other key elements.
+This document provides instructions for customizing the ARCA Laboratory website, including how and where to change background images, add new projects and content, update team members, and manage the publications list.
+
+---
 
 ## Table of Contents
 
-- [General Structure](#general-structure)
-- [Changing Assets (Images & Videos)](#changing-assets)
-- [Updating Research Projects](#updating-research-projects)
+- [Changing Background Images and Videos](#changing-background-images-and-videos)
+- [Editing/Adding Research Projects](#editingadding-research-projects)
 - [Managing Team Members](#managing-team-members)
 - [Updating Publications](#updating-publications)
-- [Contact Form Configuration](#contact-form-configuration)
-- [Deployment](#deployment)
+- [Changing the Hero Section (Landing Page)](#changing-the-hero-section-landing-page)
+- [Updating Contact Information](#updating-contact-information)
+- [Deployment & Local Development](#deployment--local-development)
 
-## General Structure
+---
 
-The website consists of several main sections:
+## Changing Background Images and Videos
 
-- **Hero**: Full-screen video landing section
-- **Research Areas**: Grid of research projects with links to detailed pages
-- **Team**: Team member profiles
-- **Publications**: Recent academic publications
-- **Contact**: Contact form
+Images and video assets are stored in the `public/assets/` folder.
 
-Each section has its own component file in the `src/components/` directory.
+- **Main Page Background Video:**  
+  - Path: `public/assets/videos/arca-hero.mp4`
+  - Change by replacing this file or updating its path in `src/components/Hero.tsx`:
+    ```jsx
+    <source src={getAssetPath('/assets/videos/arca-hero.mp4')} type="video/mp4" />
+    ```
 
-## Changing Assets
+- **Research/Project Images:**  
+  - Store images in `public/assets/images/research/`
+  - Update their references in the project data file `src/data/researchProjects.ts`
 
-### Images and Videos
+- **Team Photos and Other Images:**  
+  - Store in `public/assets/images/team/` for team members
+  - Update as referenced in `src/components/TeamSection.tsx`
 
-All images and videos are stored in the `public/assets/` directory:
+> **Tip:**  
+> To add a new image or video, simply put your file into the appropriate folder and reference it using a relative path (ex: `/assets/images/yourimage.jpg`).
 
-- Images: `public/assets/images/`
-- Videos: `public/assets/videos/`
+---
 
-To update an asset:
+## Editing/Adding Research Projects
 
-1. Prepare your new image or video file
-2. Add it to the appropriate folder in the `public/assets/` directory
-3. Reference it in the code using the `getAssetPath` utility:
+All research project entries are managed in [`src/data/researchProjects.ts`](src/data/researchProjects.ts).
 
-```jsx
-import { getAssetPath } from '@/utils/assetPaths';
+- **Add a New Project:**  
+  1. Open `src/data/researchProjects.ts`
+  2. Add an object to the `researchProjects` array with this structure:
+      ```ts
+      {
+        id: 'unique-project-id',
+        title: 'Project Title',
+        description: 'Short description for cards',
+        longDescription: [
+          'Paragraph 1.',
+          'Paragraph 2 (optional).'
+        ],
+        image: '/assets/images/research/your-image.jpg',
+        videoSrc: '/assets/videos/your-video.mp4', // optional
+        publications: [
+          {
+            title: 'Publication Title',
+            authors: 'Author list',
+            year: 2023,
+            source: 'Journal/Conference',
+            link: 'https://...'
+          }
+        ],
+        relatedResearch: ['other-project-id'] // optional
+      }
+      ```
+  3. Put image and video files in their respective folders.
 
-// In your component:
-<img src={getAssetPath('/assets/images/your-new-image.jpg')} alt="Description" />
+- **Edit/Remove Existing Projects:**  
+  - Edit or remove objects from the `researchProjects` array as needed.
 
-// For video backgrounds:
-<video autoPlay muted loop playsInline>
-  <source src={getAssetPath('/assets/videos/your-new-video.mp4')} type="video/mp4" />
-</video>
-```
-
-### Updating the Hero Video
-
-To change the main homepage video:
-
-1. Add your new video to `public/assets/videos/`
-2. Open `src/components/Hero.tsx`
-3. Update the video source path:
-
-```jsx
-<video autoPlay muted loop playsInline className="object-cover w-full h-full">
-  <source src={getAssetPath('/assets/videos/your-new-hero-video.mp4')} type="video/mp4" />
-</video>
-```
-
-## Updating Research Projects
-
-All research project data is managed in `src/data/researchProjects.ts`.
-
-### To Add or Update a Research Project:
-
-1. Open `src/data/researchProjects.ts`
-2. Add a new object to the `researchProjects` array or modify an existing one:
-
-```typescript
-{
-  id: 'your-project-id', // Used in URLs, must be unique
-  title: 'Your Project Title',
-  description: 'Short project description for the cards.',
-  longDescription: [
-    'First paragraph of detailed description.',
-    'Second paragraph with more details.',
-    // Add more paragraphs as needed
-  ],
-  image: '/assets/images/research/your-project-image.jpg', // Main image path
-  videoSrc: '/assets/videos/your-project-video.mp4', // Optional video
-  publications: [
-    {
-      title: 'Publication Title',
-      authors: 'Author 1, Author 2, Author 3',
-      year: 2024,
-      source: 'Journal or Conference Name',
-      link: 'https://link-to-publication.com'
-    },
-    // Add more publications as needed
-  ],
-  relatedResearch: ['related-project-id-1', 'related-project-id-2'] // IDs of related projects
-}
-```
-
-Important notes:
-
-- Make sure to add your image to `public/assets/images/research/`
-- If adding a video, place it in `public/assets/videos/`
-- The `relatedResearch` array must contain valid IDs of other projects in the same file
+---
 
 ## Managing Team Members
 
-Team members are defined in `src/components/TeamSection.tsx`.
+Team members are defined directly in [`src/components/TeamSection.tsx`](src/components/TeamSection.tsx).
 
-### To Add or Update Team Members:
+- **Add/Edit a Team Member:**
+  1. Open `TeamSection.tsx`
+  2. Update the `teamMembers` array:
+      ```js
+      {
+        name: 'Full Name',
+        role: 'Position or title',
+        bio: 'Short biography...',
+        image: '/assets/images/team/filename.jpg'
+      }
+      ```
+  3. Add their photo to `public/assets/images/team/`
 
-1. Open `src/components/TeamSection.tsx`
-2. Find the `teamMembers` array and add or modify entries:
+- **Remove a Member:**  
+  - Simply remove their entry from the array.
 
-```javascript
-const teamMembers = [
-  {
-    name: 'New Team Member',
-    role: 'Their Role',
-    bio: 'A short biography about the team member.',
-    image: '/assets/images/team/new-member.jpg'
-  },
-  // Add more team members as needed
-];
-```
-
-3. Add the team member's photo to `public/assets/images/team/`
+---
 
 ## Updating Publications
 
-Publications are defined in `src/components/PublicationsSection.tsx`.
+The publications list for the main site can be edited in [`src/components/PublicationsSection.tsx`](src/components/PublicationsSection.tsx):
 
-### To Add or Update Publications:
+- **To add or update a publication:**
+  1. Edit the `publications` array:
+      ```js
+      {
+        title: 'Title of the publication',
+        authors: 'Authors',
+        journal: 'Journal or Conference',
+        year: 2024,
+        link: 'https://...'
+      }
+      ```
 
-1. Open `src/components/PublicationsSection.tsx`
-2. Find the `publications` array and add or modify entries:
+---
 
-```javascript
-const publications = [
-  {
-    title: "Your New Publication Title",
-    authors: "Author 1, Author 2, Author 3",
-    journal: "Journal or Conference Name",
-    year: 2024,
-    link: "https://link-to-publication.com"
-  },
-  // Add more publications as needed
-];
-```
+## Changing the Hero Section (Landing Page)
 
-## Contact Form Configuration
+- **To update the hero (landing) section video or image:**  
+  1. Upload a new video to `public/assets/videos/`  
+  2. Change the video `src` in `src/components/Hero.tsx`  
+  3. The title text can also be changed directly in `Hero.tsx` (within the `<h1>` tag)
 
-The contact form uses Formspree to handle form submissions. To update the form endpoint:
+- **To update the Open Graph (social sharing) image:**  
+  1. Replace the value of the `<meta property="og:image" ... />` tag in `index.html`:
+      ```html
+      <meta property="og:image" content="/lovable-uploads/f65dcf06-e07a-41ab-8768-4d5d0f21fe8d.png" />
+      ```
+  2. This ensures social media platforms use the correct preview image.
 
-1. Create an account on [Formspree](https://formspree.io/) if you don't have one
-2. Create a new form and get your form endpoint
-3. Open `src/components/ContactSection.tsx`
-4. Update the form action with your new endpoint:
+---
 
-```jsx
-<form action="https://formspree.io/f/your-new-endpoint" method="POST" className="space-y-6">
-```
+## Updating Contact Information
 
-## Deployment
+- The contact form is handled in [`src/components/ContactSection.tsx`](src/components/ContactSection.tsx).
+- If using Formspree or another provider, update the endpoint in the form’s `action` property:
+    ```jsx
+    <form action="https://formspree.io/f/your-endpoint" method="POST" ...>
+    ```
 
-### GitHub Pages
+---
 
-This site is configured to deploy automatically to GitHub Pages.
+## Deployment & Local Development
 
-1. Push your changes to the main branch
-2. GitHub Actions will automatically build and deploy the site
+- **Local Development:**
+  ```sh
+  npm install
+  npm run dev
+  # Visit http://localhost:8080
+  ```
 
-### Custom Domain
+- **Deploying:**  
+  - For static hosting (like GitHub Pages), just push to your main branch; GitHub Actions will handle deployment.
 
-To use a custom domain:
+- **Custom Domain:**  
+  - Use the domain/DNS settings in your repository and add a CNAME file as needed.
 
-1. Update the CNAME file in the GitHub repository settings
-2. Configure your domain's DNS settings to point to GitHub Pages
-3. The site will be available at your custom domain
-
-### Local Development
-
-To run the site locally:
-
-```sh
-# Install dependencies
-npm install
-
-# Start the development server
-npm run dev
-```
-
-This will start a local development server accessible at http://localhost:8080
+---
 
 ## Advanced Customization
 
-For more advanced customization such as changing colors, fonts, or layout, you'll need to modify the following files:
+- **Styling:**  
+  - For site-wide styles and color changes, edit `tailwind.config.ts`
+  - For per-section changes, edit individual files in `src/components/`
 
-- **Tailwind Config**: `tailwind.config.ts` - For color themes and basic styling
-- **Component Files**: Individual component files in `src/components/`
-- **Routing**: `src/App.tsx` - To add or modify page routes
+- **Routing/Pages:**  
+  - Adjust routes in `src/App.tsx` as desired.
+
+---
