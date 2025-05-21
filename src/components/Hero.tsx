@@ -1,15 +1,11 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getAssetPath } from '@/utils/assetPaths';
-
 const Hero = () => {
   const navigate = useNavigate();
-
   const navigateToSection = (sectionId: string) => {
     navigate(`/#${sectionId}`);
   };
-
   return <div className="relative h-screen w-full overflow-hidden">
       {/* Full-page Video Background */}
       <div className="absolute inset-0 z-0">
@@ -24,7 +20,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 flex items-center justify-center h-full px-6 md:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight md:leading-tight tracking-tight text-white">Architectural Robotics &amp; Construction Automation</h1>
+          
         </div>
       </div>
 
@@ -36,5 +32,4 @@ const Hero = () => {
       </div>
     </div>;
 };
-
 export default Hero;
