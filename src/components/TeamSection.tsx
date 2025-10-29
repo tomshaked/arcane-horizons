@@ -36,6 +36,12 @@ const TeamSection = () => {
       image: '/assets/images/team/ori-dvir.jpg'
     },
     {
+      name: 'Maor Brill',
+      role: 'MSc Student',
+      bio: 'Maor is researching 3D printing of sustainable concrete alternatives and is passionate about robotic construction.',
+      image: '/assets/images/team/maor-brill.jpg'
+    },
+    {
       name: 'Simon Fishkin',
       role: 'Research Assistant',
       bio: 'Simon is passionate about dynamic architectural systems.',
