@@ -42,6 +42,12 @@ const TeamSection = () => {
       image: '/assets/images/team/maor-brill.jpg'
     },
     {
+      name: 'Slava Rubtsov',
+      role: 'MSc Student',
+      bio: 'Slava is researching planning and control for mobile 3D printing in on-site robotic construction.',
+      image: '/assets/images/team/slava-rubtsov.jpg'
+    },
+    {
       name: 'Simon Fishkin',
       role: 'Research Assistant',
       bio: 'Simon is passionate about dynamic architectural systems.',
