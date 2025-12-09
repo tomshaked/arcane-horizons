@@ -10,10 +10,12 @@ import ResearchDetail from "./pages/ResearchDetail";
 
 const queryClient = new QueryClient();
 
-// Check if we're running on GitHub Pages
+// Check if we're running on GitHub Pages (including custom domain)
 const isGitHubPages = 
   window.location.hostname.includes('github.io') || 
-  window.location.hostname.includes('githubusercontent.com');
+  window.location.hostname.includes('githubusercontent.com') ||
+  window.location.hostname === 'arcalaboratory.com' ||
+  window.location.hostname === 'www.arcalaboratory.com';
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
