@@ -54,9 +54,16 @@ const Header = () => {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // Otherwise, navigate to the home page with the section hash
-      // Using navigate instead of window.location to prevent full page reload
-      navigate(`/#${sectionId}`);
+      // Navigate to home first, then scroll to section
+      // With HashRouter, we navigate to "/" and handle scrolling after
+      navigate('/');
+      // Use setTimeout to ensure navigation completes before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     }
     // Close mobile menu if it's open
     if (isMobileMenuOpen) {
