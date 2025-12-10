@@ -49,6 +49,7 @@ const Footer = () => {
               <li><button onClick={() => navigateToSection('research')} className="text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer">Research</button></li>
               <li><button onClick={() => navigateToSection('team')} className="text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer">Team</button></li>
               <li><button onClick={() => navigateToSection('publications')} className="text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer">Publications</button></li>
+              <li><button onClick={() => navigateToSection('news')} className="text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer">News</button></li>
               <li><button onClick={() => navigateToSection('contact')} className="text-white/70 hover:text-primary transition-colors bg-transparent border-none cursor-pointer">Contact</button></li>
             </ul>
           </div>

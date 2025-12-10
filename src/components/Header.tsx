@@ -167,6 +167,7 @@ const NavLinks = ({ mobile, isScrolled, onNavigate }: NavLinksProps) => {
     { name: 'Research', sectionId: 'research' },
     { name: 'Team', sectionId: 'team' },
     { name: 'Publications', sectionId: 'publications' },
+    { name: 'News', sectionId: 'news' },
   ];
 
   return (
