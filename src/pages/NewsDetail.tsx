@@ -114,11 +114,95 @@ const NewsDetail = () => {
 
           {/* Full Content */}
           <div className="space-y-6">
-            {newsItem.content.map((paragraph, index) => (
-              <p key={index} className="text-foreground/70 leading-relaxed">
-                {paragraph}
-              </p>
-            ))}
+            {newsItem.content.map((paragraph, index) => {
+              // Check if paragraph is a list (contains \n-)
+              if (paragraph.includes('\n-')) {
+                const items = paragraph.split('\n-').filter(item => item.trim());
+                return (
+                  <ul key={index} className="list-disc list-inside space-y-2 text-foreground/70">
+                    {items.map((item, i) => (
+                      <li key={i} className="leading-relaxed">{item.trim().replace(/^- /, '')}</li>
+                    ))}
+                  </ul>
+                );
+              }
+              
+              // Check if paragraph is a bold title
+              if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
+                const title = paragraph.replace(/\*\*/g, '');
+                return (
+                  <h3 key={index} className="font-semibold text-foreground mt-8 first:mt-0">
+                    {title}
+                  </h3>
+                );
+              }
+              
+              // Parse inline markdown (links and bold)
+              const parseInlineMarkdown = (text: string) => {
+                const parts: React.ReactNode[] = [];
+                let remaining = text;
+                let keyIndex = 0;
+                
+                while (remaining.length > 0) {
+                  // Check for links [text](url)
+                  const linkMatch = remaining.match(/\[([^\]]+)\]\(([^)]+)\)/);
+                  if (linkMatch && linkMatch.index !== undefined) {
+                    if (linkMatch.index > 0) {
+                      parts.push(remaining.substring(0, linkMatch.index));
+                    }
+                    const linkText = linkMatch[1];
+                    const linkUrl = linkMatch[2];
+                    
+                    if (linkUrl.startsWith('#')) {
+                      // Internal anchor link
+                      parts.push(
+                        <a
+                          key={keyIndex++}
+                          href="#"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            navigate('/');
+                            setTimeout(() => {
+                              const section = document.getElementById(linkUrl.substring(1));
+                              if (section) {
+                                section.scrollIntoView({ behavior: 'smooth' });
+                              }
+                            }, 100);
+                          }}
+                          className="text-primary hover:underline"
+                        >
+                          {linkText}
+                        </a>
+                      );
+                    } else {
+                      parts.push(
+                        <a
+                          key={keyIndex++}
+                          href={linkUrl}
+                          className="text-primary hover:underline"
+                          target={linkUrl.startsWith('mailto:') ? undefined : '_blank'}
+                          rel={linkUrl.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+                        >
+                          {linkText}
+                        </a>
+                      );
+                    }
+                    remaining = remaining.substring(linkMatch.index + linkMatch[0].length);
+                  } else {
+                    parts.push(remaining);
+                    break;
+                  }
+                }
+                
+                return parts;
+              };
+              
+              return (
+                <p key={index} className="text-foreground/70 leading-relaxed">
+                  {parseInlineMarkdown(paragraph)}
+                </p>
+              );
+            })}
           </div>
 
           {/* External Link */}
