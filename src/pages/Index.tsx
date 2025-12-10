@@ -6,6 +6,7 @@ import Hero from '@/components/Hero';
 import ResearchSection from '@/components/ResearchSection';
 import TeamSection from '@/components/TeamSection';
 import PublicationsSection from '@/components/PublicationsSection';
+import NewsSection from '@/components/NewsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
@@ -66,6 +67,7 @@ const Index = () => {
       <ResearchSection />
       <TeamSection />
       <PublicationsSection />
+      <NewsSection />
       <ContactSection />
       <Footer />
     </div>
