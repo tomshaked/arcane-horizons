@@ -17,7 +17,13 @@ const ResearchDetail = () => {
 
   // Always scroll to top when navigating to a research detail page
   useLayoutEffect(() => {
+    // Immediate scroll
     window.scrollTo(0, 0);
+    // Also scroll after a brief delay to handle any async content loading
+    const timeoutId = setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }, 50);
+    return () => clearTimeout(timeoutId);
   }, [projectId]);
 
   // Handle browser back navigation to ensure we don't get a 404
