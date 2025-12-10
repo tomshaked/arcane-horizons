@@ -27,7 +27,7 @@ export const newsItems: NewsItem[] = [
       '- A Cover Letter explaining your research interests\n- A CV with a list of publications (if applicable)\n- Contact information of 2-3 potential referees\n- Academic transcripts',
       'Positions are open until filled. For more information [contact us](#contact).'
     ],
-    image: '/assets/images/research/Robotic_Soil_3D_Printing.jpg'
+    image: '/assets/images/news/Lab_Presentation.jpg'
   },
   {
     id: 'clawar-2024-presentation',
