@@ -12,16 +12,16 @@ export interface NewsItem {
 export const newsItems: NewsItem[] = [
   {
     id: 'open-research-positions',
-    title: 'Open Research Positions at ARCA Lab',
+    title: 'Open Postdoctoral and PhD Positions at ARCA Lab',
     date: '2024-12-10',
-    summary: 'We are seeking motivated researchers at postdoc, doctoral, and master levels to join our team in collective robotic construction research.',
+    summary: 'We are seeking motivated postdoctoral researchers and PhD candidates to join our team in collective robotic construction research.',
     content: [
-      'The Architectural Robotics & Construction Automation Lab (ARCA Lab) at Ariel University, led by Dr. Tom Shaked, is inviting applications for research positions at multiple levels: Post-Doctoral, Doctoral (PhD), and Master\'s students.',
+      'The Architectural Robotics & Construction Automation Lab (ARCA Lab) at Ariel University, led by Dr. Tom Shaked, is inviting applications for Postdoctoral and Doctoral (PhD) positions.',
       'Our group conducts advanced research in robotic construction, digital fabrication, autonomous multi-agent systems, and simulation-based methods for construction. We welcome candidates from architecture, engineering, robotics, computer science, materials science, or related fields.',
       '**Research Focus Areas:**',
       '- Multi-agent robotic construction (UAVs, UGVs, robotic arms)\n- Robotic 3D printing and automated fabrication workflows\n- Autonomous earthworks and physics-based simulation\n- Digital twins for construction',
       '**Required Qualifications:**',
-      '- For Postdoc: PhD (completed or nearing completion) in a relevant discipline\n- For Doctoral: Master\'s degree in a relevant field\n- For Master\'s: Bachelor\'s degree in a relevant field\n- Published research or strong academic record\n- Strong quantitative skills\n- Excellent scientific communication skills in English',
+      '- For Postdoc: PhD (completed or nearing completion) in a relevant discipline\n- For Doctoral: Master\'s degree in a relevant field\n- Published research or strong academic record\n- Strong quantitative skills\n- Excellent scientific communication skills in English',
       '**To Apply:**',
       'Please send a single PDF to [tomsha@ariel.ac.il](mailto:tomsha@ariel.ac.il) including:',
       '- A Cover Letter explaining your research interests\n- A CV with a list of publications (if applicable)\n- Contact information of 2-3 potential referees\n- Academic transcripts',
