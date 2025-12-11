@@ -17,10 +17,10 @@ export const newsItems: NewsItem[] = [
     summary: 'We are seeking motivated postdoctoral researchers and PhD candidates to join our team in collective robotic construction research.',
     content: [
       'Our group conducts advanced research in robotic construction, digital fabrication, autonomous multi-agent systems, and simulation-based methods for construction. We welcome candidates from architecture, engineering, robotics, computer science, materials science, or related fields.',
-      '**What We Offer:**',
-      '- Competitive scholarships\n- Access to advanced research facilities\n- Opportunities for publications, conference participation, and grant applications\n- Mentorship and career development within an interdisciplinary research environment\n- Support for international researchers with visas, housing, and relocation',
       '**Research Focus Areas:**',
       '- Multi-agent robotic construction (UAVs, UGVs, robotic arms)\n- Robotic 3D printing and automated fabrication workflows\n- Autonomous earthworks and physics-based simulation\n- Digital twins for construction',
+      '**What We Offer:**',
+      '- Competitive scholarships\n- Access to advanced research facilities\n- Opportunities for publications, conference participation, and grant applications\n- Mentorship and career development within an interdisciplinary research environment\n- Support for international researchers with visas, housing, and relocation',
       '**Required Qualifications:**',
       '- For Postdoc: PhD (completed or nearing completion) in a relevant discipline\n- For Doctoral: Master\'s degree in a relevant field\n- Published research or strong academic record\n- Strong quantitative skills\n- Excellent scientific communication skills in English',
       '**To Apply:**',
