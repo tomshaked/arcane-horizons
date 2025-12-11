@@ -16,7 +16,6 @@ export const newsItems: NewsItem[] = [
     date: '2024-12-10',
     summary: 'We are seeking motivated postdoctoral researchers and PhD candidates to join our team in collective robotic construction research.',
     content: [
-      'The Architectural Robotics & Construction Automation Lab (ARCA Lab) at Ariel University, led by Dr. Tom Shaked, is inviting applications for Postdoctoral and Doctoral (PhD) positions.',
       'Our group conducts advanced research in robotic construction, digital fabrication, autonomous multi-agent systems, and simulation-based methods for construction. We welcome candidates from architecture, engineering, robotics, computer science, materials science, or related fields.',
       '**Research Focus Areas:**',
       '- Multi-agent robotic construction (UAVs, UGVs, robotic arms)\n- Robotic 3D printing and automated fabrication workflows\n- Autonomous earthworks and physics-based simulation\n- Digital twins for construction',
