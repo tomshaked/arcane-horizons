@@ -54,29 +54,21 @@ const NewsSection = () => {
               
               {/* Content - 2/3 width */}
               <div className="w-2/3 p-5 flex items-center gap-4">
-                <div className="flex-1 min-w-0">
-                  <h3 className="font-display text-lg font-bold mb-1 text-primary group-hover:text-primary/90">
-                    {item.title}
-                  </h3>
-                  <p className="text-foreground/60 text-sm mb-1">{formatDate(item.date)}</p>
-                  <p className="text-foreground/80 text-sm line-clamp-1">{item.summary}</p>
+                <div className="flex-1 min-w-0 flex flex-col justify-between h-full">
+                  <div>
+                    <p className="text-foreground/50 text-xs uppercase tracking-wider mb-2">{formatDate(item.date)}</p>
+                    <h3 className="font-display text-xl font-bold text-primary group-hover:text-primary/90 leading-tight mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-foreground/70 text-sm line-clamp-2">{item.summary}</p>
+                  </div>
+                  <span className="text-primary/80 text-sm font-medium mt-3 inline-flex items-center gap-1 group-hover:text-primary transition-colors">
+                    Read more
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </span>
                 </div>
-                
-                {/* Arrow */}
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  width="20" 
-                  height="20" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                  className="text-primary/60 group-hover:text-primary transition-colors flex-shrink-0"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
               </div>
             </div>
           </div>
