@@ -11,6 +11,30 @@ export interface NewsItem {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 'erc-parallel-grant-2025',
+    title: 'ARCA Lab Wins Ministry of Science ERC-Parallel Grant',
+    date: '2025-12-07',
+    summary: 'ARCA Lab has been awarded a 4-year Ministry of Innovation, Science & Technology grant under the ERC-Parallel (Starting) program.',
+    content: [
+      'The Ministry of Innovation, Science & Technology has granted ARCA Lab a 4-year ERC-Parallel (Starting) award to support new research on autonomous multi-robot construction systems.',
+      'The project explores advanced automation across key phases of the construction process and includes international collaboration.',
+      'Candidates interested in contributing to this research are encouraged to apply to our [open Postdoctoral and PhD positions](#/news/open-research-positions).'
+    ],
+    image: '/assets/images/research/UAV-UGV_Collaboration.jpg'
+  },
+  {
+    id: 'kkl-grant-2025',
+    title: 'KKL 2025 Research Grant Awarded to ARCA Lab',
+    date: '2025-12-01',
+    summary: 'ARCA Lab has received a 2025 KKL–JNF research grant to support innovative work on sustainable trail and ground-stabilization technologies.',
+    content: [
+      'ARCA Lab has been awarded a competitive KKL–JNF grant to advance new robotic and environmentally oriented methods for stabilizing forest roads and hiking trails.',
+      'The project includes laboratory development and field testing in KKL forest areas.',
+      'Researchers interested in joining the team are invited to view our [open Postdoctoral and PhD positions](#/news/open-research-positions).'
+    ],
+    image: '/assets/images/research/Robotic_Earthmoving_Processes.jpg'
+  },
+  {
     id: 'open-research-positions',
     title: 'Open Postdoctoral and PhD Positions at ARCA Lab',
     date: '2024-12-10',
