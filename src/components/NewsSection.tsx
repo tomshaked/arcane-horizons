@@ -46,10 +46,7 @@ const NewsSection = () => {
                     className="w-full h-full relative overflow-hidden"
                     style={{ backgroundColor: newsColors[index % newsColors.length] }}
                   >
-                    {/* Subtle gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-black/20" />
-                    {/* Large cropped text - positioned bottom-left for dramatic effect */}
-                    <span className="absolute bottom-0 left-0 text-white/90 font-display font-black text-5xl md:text-6xl lg:text-7xl leading-[0.85] tracking-tight p-3 translate-y-[10%]">
+                    <span className="absolute bottom-0 left-0 text-white/90 font-sans font-bold text-5xl md:text-6xl lg:text-7xl leading-[0.85] tracking-tight p-3 translate-y-[10%]">
                       {item.shortTitle}
                     </span>
                   </div>
