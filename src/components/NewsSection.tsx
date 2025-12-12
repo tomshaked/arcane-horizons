@@ -43,10 +43,10 @@ const NewsSection = () => {
                   />
                 ) : (
                   <div 
-                    className="w-full h-full flex items-center justify-center p-3"
+                    className="w-full h-full flex items-center justify-center overflow-hidden"
                     style={{ backgroundColor: newsColors[index % newsColors.length] }}
                   >
-                    <span className="text-white font-display font-bold text-lg md:text-xl leading-tight text-center overflow-hidden">
+                    <span className="text-white font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-none text-center px-2">
                       {item.shortTitle}
                     </span>
                   </div>
