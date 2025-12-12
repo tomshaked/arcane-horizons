@@ -32,9 +32,9 @@ const NewsSection = () => {
             style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             onClick={() => navigate(`/news/${item.id}`)}
           >
-            <div className="flex">
-              {/* Square Image/Color Block - 1/3 width, aspect-square */}
-              <div className="w-1/3 aspect-square flex-shrink-0 relative overflow-hidden">
+            <div className="flex flex-col md:flex-row">
+              {/* Square Image/Color Block */}
+              <div className="w-full md:w-1/3 aspect-square flex-shrink-0 relative overflow-hidden">
                 {item.image ? (
                   <img 
                     src={item.image} 
@@ -53,8 +53,8 @@ const NewsSection = () => {
                 )}
               </div>
               
-              {/* Content - 2/3 width */}
-              <div className="w-2/3 p-5 flex items-center gap-4">
+              {/* Content */}
+              <div className="w-full md:w-2/3 p-5 flex items-center gap-4">
                 <div className="flex-1 min-w-0 flex flex-col justify-between h-full">
                   <div>
                     <p className="text-foreground/50 text-xs uppercase tracking-wider mb-2">{formatDate(item.date)}</p>
