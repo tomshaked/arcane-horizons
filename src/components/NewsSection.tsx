@@ -32,9 +32,9 @@ const NewsSection = () => {
             style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             onClick={() => navigate(`/news/${item.id}`)}
           >
-            <div className="flex items-stretch">
-              {/* Square Image - flush with edges */}
-              <div className="w-24 h-24 flex-shrink-0 bg-secondary/50">
+            <div className="flex">
+              {/* Square Image - 1/3 width, flush with edges */}
+              <div className="w-1/3 min-h-[120px] flex-shrink-0 bg-secondary/50">
                 {item.image ? (
                   <img 
                     src={item.image} 
@@ -43,7 +43,7 @@ const NewsSection = () => {
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-primary/40">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                       <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
                       <circle cx="9" cy="9" r="2"/>
                       <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
@@ -52,8 +52,8 @@ const NewsSection = () => {
                 )}
               </div>
               
-              {/* Content */}
-              <div className="flex-1 min-w-0 p-4 flex items-center gap-4">
+              {/* Content - 2/3 width */}
+              <div className="w-2/3 p-5 flex items-center gap-4">
                 <div className="flex-1 min-w-0">
                   <h3 className="font-display text-lg font-medium mb-1 text-primary group-hover:text-primary/90">
                     {item.title}
