@@ -153,7 +153,23 @@ const NewsDetail = () => {
                     const linkText = linkMatch[1];
                     const linkUrl = linkMatch[2];
                     
-                    if (linkUrl.startsWith('#')) {
+                    if (linkUrl.startsWith('#/')) {
+                      // Internal route link (hash router)
+                      const route = linkUrl.substring(1); // Remove the # to get /news/...
+                      parts.push(
+                        <a
+                          key={keyIndex++}
+                          href="#"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            navigate(route);
+                          }}
+                          className="text-primary hover:underline"
+                        >
+                          {linkText}
+                        </a>
+                      );
+                    } else if (linkUrl.startsWith('#')) {
                       // Internal anchor link
                       parts.push(
                         <a
