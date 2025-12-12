@@ -32,14 +32,36 @@ const NewsSection = () => {
             style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             onClick={() => navigate(`/news/${item.id}`)}
           >
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex-1">
+            <div className="flex items-start gap-4">
+              {/* Square Image */}
+              <div className="w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden bg-secondary/50">
+                {item.image ? (
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-primary/40">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+                      <circle cx="9" cy="9" r="2"/>
+                      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+                    </svg>
+                  </div>
+                )}
+              </div>
+              
+              {/* Content */}
+              <div className="flex-1 min-w-0">
                 <h3 className="font-display text-lg font-medium mb-2 text-primary group-hover:text-primary/90">
                   {item.title}
                 </h3>
                 <p className="text-foreground/60 text-sm mb-2">{formatDate(item.date)}</p>
-                <p className="text-foreground/80 text-sm">{item.summary}</p>
+                <p className="text-foreground/80 text-sm line-clamp-2">{item.summary}</p>
               </div>
+              
+              {/* Arrow */}
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="20" 
