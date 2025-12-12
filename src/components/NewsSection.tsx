@@ -28,13 +28,13 @@ const NewsSection = () => {
         {newsItems.slice(0, 5).map((item, index) => (
           <div 
             key={item.id} 
-            className="glass-panel p-6 transition-all hover:translate-x-1 group animate-fade-in cursor-pointer"
+            className="glass-panel transition-all hover:translate-x-1 group animate-fade-in cursor-pointer overflow-hidden"
             style={{ animationDelay: `${0.2 + index * 0.1}s` }}
             onClick={() => navigate(`/news/${item.id}`)}
           >
-            <div className="flex items-start gap-4">
-              {/* Square Image */}
-              <div className="w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden bg-secondary/50">
+            <div className="flex items-stretch">
+              {/* Square Image - flush with edges */}
+              <div className="w-24 h-24 flex-shrink-0 bg-secondary/50">
                 {item.image ? (
                   <img 
                     src={item.image} 
@@ -53,29 +53,31 @@ const NewsSection = () => {
               </div>
               
               {/* Content */}
-              <div className="flex-1 min-w-0">
-                <h3 className="font-display text-lg font-medium mb-2 text-primary group-hover:text-primary/90">
-                  {item.title}
-                </h3>
-                <p className="text-foreground/60 text-sm mb-2">{formatDate(item.date)}</p>
-                <p className="text-foreground/80 text-sm line-clamp-2">{item.summary}</p>
+              <div className="flex-1 min-w-0 p-4 flex items-center gap-4">
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-display text-lg font-medium mb-1 text-primary group-hover:text-primary/90">
+                    {item.title}
+                  </h3>
+                  <p className="text-foreground/60 text-sm mb-1">{formatDate(item.date)}</p>
+                  <p className="text-foreground/80 text-sm line-clamp-1">{item.summary}</p>
+                </div>
+                
+                {/* Arrow */}
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="20" 
+                  height="20" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                  className="text-primary/60 group-hover:text-primary transition-colors flex-shrink-0"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
               </div>
-              
-              {/* Arrow */}
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                width="20" 
-                height="20" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-                className="text-primary/60 group-hover:text-primary transition-colors flex-shrink-0 mt-1"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
             </div>
           </div>
         ))}
