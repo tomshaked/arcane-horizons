@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Section from './Section';
-import { newsItems } from '@/data/newsItems';
+import { newsItems, newsColors } from '@/data/newsItems';
 
 const NewsSection = () => {
   const navigate = useNavigate();
@@ -33,8 +33,8 @@ const NewsSection = () => {
             onClick={() => navigate(`/news/${item.id}`)}
           >
             <div className="flex">
-              {/* Square Image - 1/3 width, aspect-square */}
-              <div className="w-1/3 aspect-square flex-shrink-0 bg-secondary/50">
+              {/* Square Image/Color Block - 1/3 width, aspect-square */}
+              <div className="w-1/3 aspect-square flex-shrink-0 relative overflow-hidden">
                 {item.image ? (
                   <img 
                     src={item.image} 
@@ -42,12 +42,13 @@ const NewsSection = () => {
                     className="w-full h-full object-cover"
                   />
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center text-primary/40">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                      <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
-                      <circle cx="9" cy="9" r="2"/>
-                      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
-                    </svg>
+                  <div 
+                    className="w-full h-full flex items-center justify-center p-3"
+                    style={{ backgroundColor: newsColors[index % newsColors.length] }}
+                  >
+                    <span className="text-white font-display font-bold text-lg md:text-xl leading-tight text-center overflow-hidden">
+                      {item.shortTitle}
+                    </span>
                   </div>
                 )}
               </div>
