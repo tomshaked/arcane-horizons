@@ -25,7 +25,7 @@ const NewsSection = () => {
       </div>
 
       <div className="space-y-6 max-w-4xl mx-auto">
-        {newsItems.map((item, index) => (
+        {newsItems.slice(0, 5).map((item, index) => (
           <div 
             key={item.id} 
             className="glass-panel p-6 transition-all hover:translate-x-1 group animate-fade-in cursor-pointer"
