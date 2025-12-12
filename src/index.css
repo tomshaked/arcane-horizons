@@ -44,7 +44,7 @@
     @apply border-border;
   }
   html {
-    @apply scroll-smooth;
+    /* scroll-smooth removed - causes jumping issues on iOS Safari */
   }
   body {
     @apply bg-background text-foreground;
