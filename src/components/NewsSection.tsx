@@ -33,8 +33,8 @@ const NewsSection = () => {
             onClick={() => navigate(`/news/${item.id}`)}
           >
             <div className="flex">
-              {/* Square Image - 1/3 width, flush with edges */}
-              <div className="w-1/3 min-h-[120px] flex-shrink-0 bg-secondary/50">
+              {/* Square Image - 1/3 width, aspect-square */}
+              <div className="w-1/3 aspect-square flex-shrink-0 bg-secondary/50">
                 {item.image ? (
                   <img 
                     src={item.image} 
