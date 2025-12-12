@@ -55,7 +55,7 @@ const NewsSection = () => {
               {/* Content - 2/3 width */}
               <div className="w-2/3 p-5 flex items-center gap-4">
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-display text-lg font-medium mb-1 text-primary group-hover:text-primary/90">
+                  <h3 className="font-display text-lg font-bold mb-1 text-primary group-hover:text-primary/90">
                     {item.title}
                   </h3>
                   <p className="text-foreground/60 text-sm mb-1">{formatDate(item.date)}</p>
