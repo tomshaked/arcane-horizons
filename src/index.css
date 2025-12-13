@@ -45,10 +45,14 @@
   }
   html {
     /* scroll-smooth removed - causes jumping issues on iOS Safari */
+    /* overscroll-behavior prevents mobile browser address bar bounce/jump */
+    overscroll-behavior-y: none;
   }
   body {
     @apply bg-background text-foreground;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Prevent layout shift from scrollbar on mobile */
+    overscroll-behavior-y: none;
   }
   
   /* Removed the section-divider class that was creating the diagonal effect */
