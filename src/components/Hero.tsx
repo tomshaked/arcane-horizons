@@ -10,7 +10,7 @@ const Hero = () => {
     navigate(`/#${sectionId}`);
   };
 
-  return <div className="relative h-[100svh] w-full overflow-hidden">
+  return <div className="relative h-screen w-full overflow-hidden">
       {/* Full-page Video Background */}
       <div className="absolute inset-0 z-0">
         <video autoPlay muted loop playsInline className="object-cover w-full h-full">

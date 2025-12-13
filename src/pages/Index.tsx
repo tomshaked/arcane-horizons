@@ -41,7 +41,7 @@ const Index = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-fade-in');
-          entry.target.classList.add('opacity-100');
+          (entry.target as HTMLElement).style.opacity = '1';
           observer.unobserve(entry.target);
         }
       });
@@ -50,9 +50,9 @@ const Index = () => {
     // Get all elements with animate-on-scroll or scroll-reveal class
     const scrollElements = document.querySelectorAll('.animate-on-scroll, .scroll-reveal');
     scrollElements.forEach(el => {
-      // Use CSS class instead of inline style to avoid layout thrashing
-      if (!el.classList.contains('opacity-100')) {
-        el.classList.add('opacity-0');
+      // Set initial opacity if not already set
+      if (!(el as HTMLElement).style.opacity) {
+        (el as HTMLElement).style.opacity = '0';
       }
       observer.observe(el);
     });

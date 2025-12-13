@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useEffect } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
-import { newsItems, newsColors } from '@/data/newsItems';
+import { newsItems } from '@/data/newsItems';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -9,9 +9,7 @@ const NewsDetail = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const newsIndex = newsItems.findIndex(item => item.id === newsId);
-  const newsItem = newsIndex >= 0 ? newsItems[newsIndex] : undefined;
-  const newsColor = newsIndex >= 0 ? newsColors[newsIndex % newsColors.length] : undefined;
+  const newsItem = newsItems.find(item => item.id === newsId);
 
   // Always scroll to top when navigating to a news detail page
   useLayoutEffect(() => {
@@ -75,8 +73,8 @@ const NewsDetail = () => {
             <div className="absolute inset-0 bg-black/60" />
           </div>
         )}
-        {!newsItem.image && newsColor && (
-          <div className="absolute inset-0" style={{ backgroundColor: newsColor }} />
+        {!newsItem.image && (
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/40" />
         )}
         
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
