@@ -24,13 +24,13 @@ export const newsColors = [
 
 export const newsItems: NewsItem[] = [
   {
-    id: 'erc-parallel-grant-2025',
-    title: 'ARCA Lab Wins Ministry of Science ERC-Parallel Grant',
-    shortTitle: 'ERC-Parallel Grant',
+    id: 'erc-starting-parallel-grant-2025',
+    title: 'ARCA Lab Wins Ministry of Science ERC Starting Parallel Grant',
+    shortTitle: 'ERC Starting Parallel Grant',
     date: '2025-12-07',
-    summary: 'ARCA Lab has been awarded a 4-year Ministry of Innovation, Science & Technology grant under the ERC-Parallel (Starting) program.',
+    summary: 'ARCA Lab has been awarded a 4-year Ministry of Innovation, Science & Technology grant under the ERC Starting Parallel program.',
     content: [
-      'The Ministry of Innovation, Science & Technology has granted ARCA Lab a 4-year ERC-Parallel (Starting) award to support new research on autonomous multi-robot construction systems.',
+      'The Ministry of Innovation, Science & Technology has granted ARCA Lab a 4-year ERC Starting Parallel award to support new research on autonomous multi-robot construction systems.',
       'The project explores advanced automation across key phases of the construction process and includes international collaboration.',
       'Candidates interested in contributing to this research are encouraged to apply to our [open Postdoctoral and PhD positions](#/news/open-research-positions).'
     ]
