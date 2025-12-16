@@ -5,6 +5,13 @@ import Section from './Section';
 const PublicationsSection = () => {
   const publications = [
     {
+      title: "Trajectory-Based Observer Design: A Framework for Lightweight Sensor Fusion",
+      authors: "Federico Oliva, Tom Shaked, Daniele Carnevale, Amir Degani",
+      journal: "Control Engineering Practice, Elsevier",
+      year: 2025,
+      link: "https://doi.org/10.1016/j.conengprac.2025.106592"
+    },
+    {
       title: "Earth-Shaping with Heterogeneous Robotic Teams: From Sim to Real",
       authors: "Federico Oliva, Tom Shaked, Karen-Lee Bar-Sinai, Omer Shalev, Oren Elmakis, Ari Meles-Braverman, Amir Degani",
       journal: "Climbing and Walking Robots Conference, Springer",
@@ -32,13 +39,13 @@ const PublicationsSection = () => {
       year: 2024,
       link: "https://www.researchgate.net/publication/377614175_OS-BREEZE_Oil_Spills_Boundary_Red_Emission_Zone_Estimation_Using_Unmanned_Surface_Vehicles"
     },
-    {
-      title: "Toward Acoustic Landscapes: A Digital Design Workflow for Embedding Noise Reduction in Ground-forming",
-      authors: "Karen Lee Bar-Sinai, Tom Shaked, Elif Simge Fettahoglu, Jochen Krimm, Ekaterina Pestriakova, Liubov Kniazeva, Sharon Friedberg, Benedikt Boucsein",
-      journal: "Digital Landscape Architecture Conference",
-      year: 2023,
-      link: "https://www.researchgate.net/publication/370980617_Toward_Acoustic_Landscapes_A_Digital_Design_Workflow_for_Embedding_Noise_Reduction_in_Ground-forming"
-    }
+    // {
+    //   title: "Toward Acoustic Landscapes: A Digital Design Workflow for Embedding Noise Reduction in Ground-forming",
+    //   authors: "Karen Lee Bar-Sinai, Tom Shaked, Elif Simge Fettahoglu, Jochen Krimm, Ekaterina Pestriakova, Liubov Kniazeva, Sharon Friedberg, Benedikt Boucsein",
+    //   journal: "Digital Landscape Architecture Conference",
+    //   year: 2023,
+    //   link: "https://www.researchgate.net/publication/370980617_Toward_Acoustic_Landscapes_A_Digital_Design_Workflow_for_Embedding_Noise_Reduction_in_Ground-forming"
+    // }
   ];
 
   return (
