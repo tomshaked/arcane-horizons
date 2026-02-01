@@ -48,6 +48,12 @@ const TeamSection = () => {
       image: '/assets/images/team/slava-rubtsov.jpg'
     },
     {
+      name: 'Shiran Wiessman',
+      role: 'Research Assistant',
+      bio: 'Shiran is interested in multi-agent robotic systems and collective robotic construction.',
+      image: '/assets/images/team/shiran-wiessman.jpg'
+    },
+    {
       name: 'Simon Fishkin',
       role: 'Research Assistant',
       bio: 'Simon is passionate about dynamic architectural systems.',
