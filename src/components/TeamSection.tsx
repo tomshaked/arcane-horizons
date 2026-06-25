@@ -6,6 +6,18 @@ import { getAssetPath } from '@/utils/assetPaths';
 const TeamSection = () => {
 const teamMembers = [
     {
+      name: 'Dr. Tom Shaked',
+      role: 'Director & PI',
+      bio: 'Founder of ARCA Lab, Tom leads research in architectural robotics and construction automation.',
+      image: '/assets/images/team/tom-shaked.jpg'
+    },
+    {
+      name: 'Dr. Uri Dubin',
+      role: 'Researcher',
+      bio: 'Uri specializes in computer vision, robotics, and AI-driven perception, and is the founder of RobotAI.'
+      image: '/assets/images/team/uri-dubin.jpg'
+    },
+    {
       name: 'Tom Shaked',
       role: 'Director & PI',
       bio: 'Founder of ARCA Lab, Dr. Shaked leads research in architectural robotics and construction automation.',
