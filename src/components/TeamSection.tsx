@@ -6,108 +6,66 @@ import { getAssetPath } from '@/utils/assetPaths';
 const TeamSection = () => {
   const teamMembers = [
     {
-      name: 'Dr. Tom Shaked',
-      role: 'Director & PI',
-      bio: 'Founder of ARCA Lab, Tom leads research in architectural robotics and construction automation.',
+      name: 'Tom Shaked',
+      role: 'Founder & PI',
+      bio: 'Dr. Shaked leads our research endeavors in construction robotics.',
       image: '/assets/images/team/tom-shaked.jpg'
     },
     {
-      name: 'Dr. Uri Dubin',
+      name: 'Uri Dubin',
       role: 'Researcher',
-      bio: 'Uri specializes in computer vision, robotics, and AI-driven perception, and is the founder of RobotAI.',
+      bio: 'Dr. Dubin is an experienced researcher with expertise in computer vision, robotics, and AI-driven perception for autonomous robotic systems. He is the founder of robotics companies, including RobotAI.',
       image: '/assets/images/team/uri-dubin.jpg'
     },
     {
       name: 'Roni Hillel',
       role: 'PhD Student',
-      bio: 'Roni develops bio-cemented soils and MICP for sustainable robotic fabrication.',
+      bio: 'Roni is passionate about robotics and has a strong academic record in engineering.',
       image: '/assets/images/team/roni-hillel.jpg'
     },
     {
       name: 'Nave Segev',
       role: 'MSc Student',
-      bio: 'Nave advances BIM-to-CAM workflows for automated construction.',
+      bio: 'Nave is an experienced architect with expertise in Building Information Modeling (BIM).',
       image: '/assets/images/team/nave-segev.jpg'
     },
     {
       name: 'Ofer Finkelstein',
       role: 'MSc Student',
-      bio: 'Ofer explores sensor-driven robotic fabrication and adaptive 3D printing.',
+      bio: 'Ofer is a civil engineer with a passion for sustainable construction and material innovation.',
       image: '/assets/images/team/ofer-finkelstein.jpg'
     },
     {
       name: 'Ori Dvir',
       role: 'MSc Student',
-      bio: 'Ori investigates computational design, visual programming, and architectural software.',
+      bio: 'Ori investigates the evolution of architectural expression through the impact of design tools and planning methodologies.',
       image: '/assets/images/team/ori-dvir.jpg'
     },
     {
       name: 'Maor Brill',
       role: 'MSc Student',
-      bio: 'Maor explores sustainable robotic 3D printing using industrial waste and cement-free materials.',
+      bio: 'Maor is researching 3D printing of sustainable concrete alternatives and is passionate about robotic construction.',
       image: '/assets/images/team/maor-brill.jpg'
     },
     {
       name: 'Slava Rubtsov',
       role: 'MSc Student',
-      bio: 'Slava develops graph-based planning for mobile robotic 3D printing.',
+      bio: 'Slava is researching planning and control for mobile 3D printing in on-site robotic construction.',
       image: '/assets/images/team/slava-rubtsov.jpg'
     },
     {
       name: 'Shiran Wiessman',
       role: 'Research Assistant',
-      bio: 'Shiran investigates robotic autonomy and multi-agent systems for autonomous construction.',
+      bio: 'Shiran is interested in multi-agent robotic systems and collective robotic construction.',
       image: '/assets/images/team/shiran-wiessman.jpg'
     },
     // {
     //   name: 'Simon Fishkin',
     //   role: 'Research Assistant',
-    //   bio: 'Simon explores environmental acoustics and robotic earthmoving.',
+    //   bio: 'Simon is passionate about dynamic architectural systems.',
     //   image: '/assets/images/team/simon-fishkin.jpg'
     // }
   ];
-
-  return (
-    <Section id="team" className="bg-background">
-      <div className="mb-16 text-center">
-        <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 animate-fade-in">
-          Our Team
-        </h2>
-        <p className="text-foreground/70 max-w-3xl mx-auto animate-fade-in">
-          Bringing together researchers in architecture, robotics, engineering, and AI to advance autonomous construction systems.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {teamMembers.map((member, index) => (
-          <div
-            key={index}
-            className="glass-panel overflow-hidden transition-all hover:translate-y-[-8px] group animate-fade-in"
-            style={{ animationDelay: `${0.2 + index * 0.15}s` }}
-          >
-            <div className="aspect-square overflow-hidden">
-              <div
-                className="w-full h-full bg-cover bg-center grayscale transition-all duration-500 group-hover:grayscale-0"
-                style={{ backgroundImage: `url(${getAssetPath(member.image)})` }}
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="font-display text-xl font-semibold mb-1 text-primary">
-                {member.name}
-              </h3>
-              <p className="text-foreground/90 font-medium text-sm mb-3">
-                {member.role}
-              </p>
-              <p className="text-foreground/70 text-sm">
-                {member.bio}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </Section>
-  );
-};
 
   return (
     <Section id="team" className="bg-background">
