@@ -4,65 +4,65 @@ import Section from './Section';
 import { getAssetPath } from '@/utils/assetPaths';
 
 const TeamSection = () => {
-  const teamMembers = [
+const teamMembers = [
     {
       name: 'Tom Shaked',
-      role: 'Founder & PI',
-      bio: 'Dr. Shaked leads our research endeavors in construction robotics.',
+      role: 'Director & PI',
+      bio: 'Founder of ARCA Lab, Dr. Shaked leads research in architectural robotics and construction automation.',
       image: '/assets/images/team/tom-shaked.jpg'
     },
     {
       name: 'Uri Dubin',
       role: 'Researcher',
-      bio: 'Dr. Dubin is an experienced researcher with expertise in computer vision, robotics, and AI-driven perception for autonomous robotic systems. He is the founder of robotics companies, including RobotAI.',
+      bio: 'Dr. Dubin is the founder of RobotAI and a researcher in computer vision, robotics, and AI-driven perception.',
       image: '/assets/images/team/uri-dubin.jpg'
     },
     {
       name: 'Roni Hillel',
       role: 'PhD Student',
-      bio: 'Roni is passionate about robotics and has a strong academic record in engineering.',
+      bio: 'Roni researches bio-cemented soils, MICP, and robotic fabrication using locally sourced materials.',
       image: '/assets/images/team/roni-hillel.jpg'
     },
     {
       name: 'Nave Segev',
       role: 'MSc Student',
-      bio: 'Nave is an experienced architect with expertise in Building Information Modeling (BIM).',
+      bio: 'Nave researches BIM-to-CAM workflows and digital continuity for automated construction.',
       image: '/assets/images/team/nave-segev.jpg'
     },
     {
       name: 'Ofer Finkelstein',
       role: 'MSc Student',
-      bio: 'Ofer is a civil engineer with a passion for sustainable construction and material innovation.',
+      bio: 'Ofer researches sensor-driven robotic fabrication and adaptive 3D printing of vaulted structures.',
       image: '/assets/images/team/ofer-finkelstein.jpg'
     },
     {
       name: 'Ori Dvir',
       role: 'MSc Student',
-      bio: 'Ori investigates the evolution of architectural expression through the impact of design tools and planning methodologies.',
+      bio: 'Ori researches computational design, visual programming, and architectural software.',
       image: '/assets/images/team/ori-dvir.jpg'
     },
     {
       name: 'Maor Brill',
       role: 'MSc Student',
-      bio: 'Maor is researching 3D printing of sustainable concrete alternatives and is passionate about robotic construction.',
+      bio: 'Maor researches sustainable robotic 3D printing using industrial waste and cement-free materials.',
       image: '/assets/images/team/maor-brill.jpg'
     },
     {
       name: 'Slava Rubtsov',
       role: 'MSc Student',
-      bio: 'Slava is researching planning and control for mobile 3D printing in on-site robotic construction.',
+      bio: 'Slava researches mobile robotic 3D printing and graph-based planning for on-site construction.',
       image: '/assets/images/team/slava-rubtsov.jpg'
     },
     {
       name: 'Shiran Wiessman',
       role: 'Research Assistant',
-      bio: 'Shiran is interested in multi-agent robotic systems and collective robotic construction.',
+      bio: 'Shiran researches robotic autonomy and multi-agent systems for autonomous construction.',
       image: '/assets/images/team/shiran-wiessman.jpg'
     },
     // {
     //   name: 'Simon Fishkin',
     //   role: 'Research Assistant',
-    //   bio: 'Simon is passionate about dynamic architectural systems.',
+    //   bio: 'Simon researches environmental acoustics and robotic earthmoving.',
     //   image: '/assets/images/team/simon-fishkin.jpg'
     // }
   ];
