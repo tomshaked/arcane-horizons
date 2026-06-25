@@ -12,6 +12,12 @@ const TeamSection = () => {
       image: '/assets/images/team/tom-shaked.jpg'
     },
     {
+      name: 'Uri Dubin',
+      role: 'Researcher',
+      bio: 'Dr. Dubin is an experienced researcher with expertise in computer vision, robotics, and AI-driven perception for autonomous robotic systems. He is the founder of robotics companies, including RobotAI.',
+      image: '/assets/images/team/uri-dubin.jpg'
+    },
+    {
       name: 'Roni Hillel',
       role: 'PhD Student',
       bio: 'Roni is passionate about robotics and has a strong academic record in engineering.',
@@ -53,12 +59,12 @@ const TeamSection = () => {
       bio: 'Shiran is interested in multi-agent robotic systems and collective robotic construction.',
       image: '/assets/images/team/shiran-wiessman.jpg'
     },
-    {
-      name: 'Simon Fishkin',
-      role: 'Research Assistant',
-      bio: 'Simon is passionate about dynamic architectural systems.',
-      image: '/assets/images/team/simon-fishkin.jpg'
-    }
+    // {
+    //   name: 'Simon Fishkin',
+    //   role: 'Research Assistant',
+    //   bio: 'Simon is passionate about dynamic architectural systems.',
+    //   image: '/assets/images/team/simon-fishkin.jpg'
+    // }
   ];
 
   return (
