@@ -89,25 +89,72 @@ const TeamSection = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {teamMembers.map((member, index) => (
-          <div
-            key={index}
-            className="glass-panel overflow-hidden transition-all hover:translate-y-[-8px] group animate-fade-in"
-            style={{ animationDelay: `${0.2 + index * 0.15}s` }}
-          >
-            <div className="aspect-square overflow-hidden">
-              <div 
-                className="w-full h-full bg-cover bg-center grayscale transition-all duration-500 group-hover:grayscale-0"
-                style={{ backgroundImage: `url(${getAssetPath(member.image)})` }}
-              />
+        {teamMembers.map((member, index) => {
+          const isJoinCard = index === teamMembers.length - 1;
+
+          const scrollToContact = () => {
+            const element = document.getElementById('contact');
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          };
+
+          const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              scrollToContact();
+            }
+          };
+
+          return (
+            <div
+              key={index}
+              className={`glass-panel overflow-hidden transition-all hover:translate-y-[-8px] group animate-fade-in ${
+                isJoinCard
+                  ? 'cursor-pointer border-dashed border-2 border-border/60 hover:border-foreground/30 hover:shadow-lg hover:bg-accent/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2'
+                  : ''
+              }`}
+              style={{ animationDelay: `${0.2 + index * 0.15}s` }}
+              role={isJoinCard ? 'button' : undefined}
+              tabIndex={isJoinCard ? 0 : undefined}
+              onClick={isJoinCard ? scrollToContact : undefined}
+              onKeyDown={isJoinCard ? handleKeyDown : undefined}
+              aria-label={isJoinCard ? 'Join ARCA Lab - scroll to contact section' : undefined}
+            >
+              <div className="aspect-square overflow-hidden">
+                {isJoinCard ? (
+                  <div className="w-full h-full flex items-center justify-center bg-secondary/60 text-foreground/25 group-hover:text-foreground/45 transition-colors">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="96"
+                      height="96"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-24 h-24"
+                      aria-hidden="true"
+                    >
+                      <path d="M12 5v14M5 12h14" />
+                    </svg>
+                  </div>
+                ) : (
+                  <div
+                    className="w-full h-full bg-cover bg-center grayscale transition-all duration-500 group-hover:grayscale-0"
+                    style={{ backgroundImage: `url(${getAssetPath(member.image)})` }}
+                  />
+                )}
+              </div>
+              <div className="p-6">
+                <h3 className="font-display text-xl font-semibold mb-1 text-primary">{member.name}</h3>
+                <p className="text-foreground/90 font-medium text-sm mb-3">{member.role}</p>
+                <p className="text-foreground/70 text-sm">{member.bio}</p>
+              </div>
             </div>
-            <div className="p-6">
-              <h3 className="font-display text-xl font-semibold mb-1 text-primary">{member.name}</h3>
-              <p className="text-foreground/90 font-medium text-sm mb-3">{member.role}</p>
-              <p className="text-foreground/70 text-sm">{member.bio}</p>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </Section>
   );
