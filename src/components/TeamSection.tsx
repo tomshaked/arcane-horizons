@@ -54,17 +54,23 @@ const TeamSection = () => {
       image: '/assets/images/team/slava-rubtsov.jpg'
     },
     {
+      name: 'Lia Horenfeld',
+      role: 'M.A. Student',
+      bio: 'Lia investigates early-stage decision-making for sustainable robotic 3D printing.',
+      image: '/assets/images/team/lia-horenfeld.jpg'
+    },
+    {
       name: 'Shiran Wiessman',
       role: 'Research Assistant',
       bio: 'Shiran investigates robotic autonomy and multi-agent systems for autonomous construction.',
       image: '/assets/images/team/shiran-wiessman.jpg'
     },
-    // {
-    //   name: 'Simon Fishkin',
-    //   role: 'Research Assistant',
-    //   bio: 'Simon explores environmental acoustics and robotic earthmoving.',
-    //   image: '/assets/images/team/simon-fishkin.jpg'
-    // }
+    {
+      name: 'Simon Fishkin',
+      role: 'Research Assistant',
+      bio: 'Simon explores environmental acoustics and robotic earthmoving.',
+      image: '/assets/images/team/simon-fishkin.jpg'
+    }
   ];
 
   return (
