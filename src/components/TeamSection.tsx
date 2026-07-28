@@ -70,6 +70,12 @@ const TeamSection = () => {
       role: 'Research Assistant',
       bio: 'Simon explores environmental acoustics and robotic earthmoving.',
       image: '/assets/images/team/simon-fishkin.jpg'
+    },
+    {
+      name: 'Maybe You?',
+      role: 'Join ARCA Lab',
+      bio: 'Interested in robotics, AI, computational design, or digital fabrication? Contact us about research opportunities.',
+      // image: '/assets/images/team/simon-fishkin.jpg'
     }
   ];
 
