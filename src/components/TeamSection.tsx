@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Section from './Section';
 import { getAssetPath } from '@/utils/assetPaths';
@@ -75,39 +74,67 @@ const TeamSection = () => {
       name: 'Maybe You?',
       role: 'Join ARCA Lab',
       bio: 'Interested in robotics, AI, computational design, or digital fabrication? Contact us about research opportunities.',
-      image: '/assets/images/team/simon-fishkin.jpg'
+      href: '#contact',
+      isRecruitmentCard: true
     }
   ];
 
   return (
     <Section id="team" className="bg-background">
       <div className="mb-16 text-center">
-        <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 animate-fade-in">Our Team</h2>
+        <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 animate-fade-in">
+          Our Team
+        </h2>
+
         <p className="text-foreground/70 max-w-3xl mx-auto animate-fade-in">
           Bringing together experts in artificial intelligence, robotics, and engineering to push the boundaries of autonomous systems.
         </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {teamMembers.map((member, index) => (
-          <div
-            key={index}
-            className="glass-panel overflow-hidden transition-all hover:translate-y-[-8px] group animate-fade-in"
-            style={{ animationDelay: `${0.2 + index * 0.15}s` }}
-          >
-            <div className="aspect-square overflow-hidden">
-              <div 
-                className="w-full h-full bg-cover bg-center grayscale transition-all duration-500 group-hover:grayscale-0"
-                style={{ backgroundImage: `url(${getAssetPath(member.image)})` }}
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="font-display text-xl font-semibold mb-1 text-primary">{member.name}</h3>
-              <p className="text-foreground/90 font-medium text-sm mb-3">{member.role}</p>
-              <p className="text-foreground/70 text-sm">{member.bio}</p>
-            </div>
-          </div>
-        ))}
+        {teamMembers.map((member, index) => {
+          const Card = member.href ? 'a' : 'div';
+
+          return (
+            <Card
+              key={member.name}
+              href={member.href}
+              className="glass-panel overflow-hidden transition-all hover:translate-y-[-8px] group animate-fade-in"
+              style={{ animationDelay: `${0.2 + index * 0.15}s` }}
+            >
+              <div className="aspect-square overflow-hidden">
+                {member.isRecruitmentCard ? (
+                  <div className="w-full h-full flex items-center justify-center bg-primary/5 transition-colors duration-500 group-hover:bg-primary/10">
+                    <span className="font-display text-7xl font-light text-primary">
+                      +
+                    </span>
+                  </div>
+                ) : (
+                  <div
+                    className="w-full h-full bg-cover bg-center grayscale transition-all duration-500 group-hover:grayscale-0"
+                    style={{
+                      backgroundImage: `url(${getAssetPath(member.image)})`
+                    }}
+                  />
+                )}
+              </div>
+
+              <div className="p-6">
+                <h3 className="font-display text-xl font-semibold mb-1 text-primary">
+                  {member.name}
+                </h3>
+
+                <p className="text-foreground/90 font-medium text-sm mb-3">
+                  {member.role}
+                </p>
+
+                <p className="text-foreground/70 text-sm">
+                  {member.bio}
+                </p>
+              </div>
+            </Card>
+          );
+        })}
       </div>
     </Section>
   );
