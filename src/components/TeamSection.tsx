@@ -25,7 +25,7 @@ const TeamSection = () => {
     },
     {
       name: 'Nave Segev',
-      role: 'MSc Student',
+      role: 'PhD Student',
       bio: 'Nave advances BIM-to-CAM workflows for automated construction.',
       image: '/assets/images/team/nave-segev.jpg'
     },
@@ -55,7 +55,7 @@ const TeamSection = () => {
     },
     {
       name: 'Lia Horenfeld',
-      role: 'M.A. Student',
+      role: 'MSc Student',
       bio: 'Lia investigates early-stage decision-making for sustainable robotic 3D printing.',
       image: '/assets/images/team/lia-horenfeld.jpg'
     },
