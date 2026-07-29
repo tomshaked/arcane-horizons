@@ -129,5 +129,17 @@ export const newsItems: NewsItem[] = [
       'The work demonstrates a digital design workflow for embedding noise reduction capabilities in ground-forming processes.',
       'This interdisciplinary approach combines robotics, acoustics, and landscape architecture for improved urban environments.'
     ]
+  },
+  {
+    id: 'isf-grant-2026',
+    title: 'ISF Research Grant Awarded to ARCA Lab',
+    shortTitle: 'ISF Grant',
+    date: '2026-07-20',
+    summary: 'The Israel Science Foundation has awarded ARCA Lab a 3-year research grant for digital documentation of tacit craft knowledge.',
+    content: [
+      'The Israel Science Foundation (ISF) has awarded ARCA Lab a 3-year research grant supporting our new project in digital documentation of craft knowledge.',
+      'The grant will support interdisciplinary research combining robotics, computer vision, and ethnographic methods to preserve and analyze traditional craft practices.',
+      'Researchers interested in joining this work are invited to view our [open Postdoctoral and PhD positions](#/news/open-research-positions).'
+    ]
   }
 ];
