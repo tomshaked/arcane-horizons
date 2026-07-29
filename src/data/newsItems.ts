@@ -30,9 +30,9 @@ export const newsItems: NewsItem[] = [
     title: 'ISF Research Grant Awarded to ARCA Lab',
     shortTitle: 'ISF Grant',
     date: '2026-07-20',
-    summary: 'The Israel Science Foundation has awarded ARCA Lab a 3-year research grant for digital documentation of tacit craft knowledge.',
+    summary: 'The Israel Science Foundation has awarded Dr. Tom Shaked a 3-year research grant for digital documentation of tacit craft knowledge.',
     content: [
-      'The Israel Science Foundation (ISF) has awarded ARCA Lab a 3-year research grant supporting our new project in digital documentation of craft knowledge.',
+      'The Israel Science Foundation (ISF) has awarded Dr. Tom Shaked a 3-year research grant supporting our new project in digital documentation of craft knowledge.',
       'The grant will support interdisciplinary research combining robotics, computer vision, and ethnographic methods to preserve and analyze traditional craft practices.',
       'Researchers interested in joining this work are invited to view our [open Postdoctoral and PhD positions](#/news/open-research-positions).'
     ],
@@ -41,7 +41,7 @@ export const newsItems: NewsItem[] = [
   {
     id: 'most-grant-2025',
     title: 'ARCA Lab Wins Ministry of Science Grant',
-    shortTitle: 'MOST grant',
+    shortTitle: 'MOST Grant',
     date: '2025-12-07',
     summary: 'ARCA Lab has received a 4-year Ministry of Innovation, Science & Technology research grant.',
     content: [
