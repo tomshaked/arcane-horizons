@@ -5,7 +5,7 @@ import Section from './Section';
 const PublicationsSection = () => {
   const publications = [
     {
-      title: "From Heritage to Robotic Fabrication: Lessons from Guastavino's Thin-THE Tile Vaulting for Non-Planar 3D-Printing",
+      title: "From Heritage to Robotic Fabrication: Lessons from Guastavino's Thin-Tile Vaulting for Non-Planar 3D-Printing",
       authors: "Ofer Finkelstein, Tom Shaked, Pavel Larianovsky, Aaron Sprecher",
       journal: "Humanistic Computation and Intelligence: Proceedings of the 31st International Conference of the Association for Computer-Aided Architectural Design Research in Asia (CAADRIA)",
       year: 2026,
