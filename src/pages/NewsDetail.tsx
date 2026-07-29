@@ -11,7 +11,7 @@ const NewsDetail = () => {
 
   const newsItemIndex = newsItems.findIndex(item => item.id === newsId);
   const newsItem = newsItemIndex !== -1 ? newsItems[newsItemIndex] : undefined;
-  const itemColor = newsItemIndex !== -1 ? newsColors[newsItemIndex % newsColors.length] : undefined;
+  const itemColor = newsItem?.color ?? (newsItemIndex !== -1 ? newsColors[newsItemIndex % newsColors.length] : undefined);
 
   // Always scroll to top when navigating to a news detail page
   useLayoutEffect(() => {
