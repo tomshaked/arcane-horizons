@@ -20,23 +20,10 @@ export const newsColors = [
   'hsl(180, 50%, 35%)',  // Cyan
   'hsl(45, 75%, 40%)',   // Amber
   'hsl(200, 65%, 40%)',  // Sky
+  'hsl(330, 60%, 40%)',  // Raspberry
 ];
 
 export const newsItems: NewsItem[] = [
-  {
-    id: 'isf-grant-2026',
-    title: 'ISF Research Grant Awarded to ARCA Lab',
-    shortTitle: 'ISF Grant',
-    date: '2026-07-20',
-    summary: 'The Israel Science Foundation has awarded Dr. Tom Shaked a 3-year research grant for "From Gesture to Data: Toward a Digital Model for Documenting Tacit Craft Knowledge".',
-    content: [
-      'The Israel Science Foundation (ISF) has awarded ARCA Lab a 3-year research grant for the project "From Gesture to Data: Toward a Digital Model for Documenting Tacit Craft Knowledge", starting October 2026.',
-      'Tacit knowledge embedded in traditional crafts is enacted through gestures, tool use, and material interactions, and is transmitted through apprenticeship rather than explicit description. As many craft traditions decline, this embodied knowledge risks disappearing without ever being systematically documented.',
-      'The project investigates digital methods for documenting, analyzing, and preserving craft practices — including motion capture, robotic reenactment, and computer vision — comparing them with traditional ethnographic documentation. Crafts such as plastering, stone carving, weaving, and clay shaping will be recorded and analyzed to classify what each method captures and omits.',
-      'The expected outcome is a systematic model for documenting tacit craft knowledge, mapping documentation methods to dimensions of practice such as gesture, rhythm, and material response.',
-      'Researchers interested in joining this work are invited to view our [open Postdoctoral and PhD positions](#/news/open-research-positions).'
-    ]
-  },
   {
 
     id: 'most-grant-2025',
@@ -141,6 +128,18 @@ export const newsItems: NewsItem[] = [
       'Our team presented research on integrating acoustic analysis with landscape design at DLA 2023.',
       'The work demonstrates a digital design workflow for embedding noise reduction capabilities in ground-forming processes.',
       'This interdisciplinary approach combines robotics, acoustics, and landscape architecture for improved urban environments.'
+    ]
+  },
+  {
+    id: 'isf-grant-2026',
+    title: 'ISF Research Grant Awarded to ARCA Lab',
+    shortTitle: 'ISF Grant',
+    date: '2026-07-20',
+    summary: 'The Israel Science Foundation has awarded ARCA Lab a 3-year research grant for digital documentation of tacit craft knowledge.',
+    content: [
+      'The Israel Science Foundation (ISF) has awarded ARCA Lab a 3-year research grant supporting our new project in digital documentation of craft knowledge.',
+      'The grant will support interdisciplinary research combining robotics, computer vision, and ethnographic methods to preserve and analyze traditional craft practices.',
+      'Researchers interested in joining this work are invited to view our [open Postdoctoral and PhD positions](#/news/open-research-positions).'
     ]
   }
 ];
