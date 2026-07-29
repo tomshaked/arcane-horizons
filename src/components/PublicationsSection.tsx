@@ -5,6 +5,13 @@ import Section from './Section';
 const PublicationsSection = () => {
   const publications = [
     {
+      title: "From Heritage to Robotic Fabrication: Lessons from Guastavino's Thin-Tile Vaulting for Non-Planar 3D-Printing",
+      authors: "Ofer Finkelstein, Tom Shaked, Pavel Larianovsky, Aaron Sprecher",
+      journal: "Humanistic Computation and Intelligence: Proceedings of the 31st International Conference of the Association for Computer-Aided Architectural Design Research in Asia (CAADRIA)",
+      year: 2026,
+      link: "https://papers.cumincad.org/cgi-bin/works/Show?caadria2026_568"
+    },
+    {
       title: "Trajectory-Based Observer Design: A Framework for Lightweight Sensor Fusion",
       authors: "Federico Oliva, Tom Shaked, Daniele Carnevale, Amir Degani",
       journal: "Control Engineering Practice, Elsevier",
