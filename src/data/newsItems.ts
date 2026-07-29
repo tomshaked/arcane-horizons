@@ -8,9 +8,10 @@ export interface NewsItem {
   content: string[];
   image?: string;
   link?: string;
+  color?: string; // Optional explicit color for the news item
 }
 
-// Color palette for news items (cycles through)
+// Default color palette for news items without an explicit color
 export const newsColors = [
   'hsl(220, 70%, 45%)',  // Blue
   'hsl(160, 60%, 35%)',  // Teal
@@ -25,7 +26,19 @@ export const newsColors = [
 
 export const newsItems: NewsItem[] = [
   {
-
+    id: 'isf-grant-2026',
+    title: 'ISF Research Grant Awarded to ARCA Lab',
+    shortTitle: 'ISF Grant',
+    date: '2026-07-20',
+    summary: 'The Israel Science Foundation has awarded ARCA Lab a 3-year research grant for digital documentation of tacit craft knowledge.',
+    content: [
+      'The Israel Science Foundation (ISF) has awarded ARCA Lab a 3-year research grant supporting our new project in digital documentation of craft knowledge.',
+      'The grant will support interdisciplinary research combining robotics, computer vision, and ethnographic methods to preserve and analyze traditional craft practices.',
+      'Researchers interested in joining this work are invited to view our [open Postdoctoral and PhD positions](#/news/open-research-positions).'
+    ],
+    color: 'hsl(330, 60%, 40%)' // Raspberry
+  },
+  {
     id: 'most-grant-2025',
     title: 'ARCA Lab Wins Ministry of Science Grant',
     shortTitle: 'MOST grant',
@@ -35,7 +48,8 @@ export const newsItems: NewsItem[] = [
       'The Ministry of Innovation, Science & Technology has granted ARCA Lab a 4-year research grant supporting our new project in autonomous multi-robot construction systems.',
       'The grant is part of the Ministry’s ERC Starting parallel program, supporting high-risk, high-gain research with international collaboration.',
       'Candidates interested in contributing to this research are encouraged to apply to our [open Postdoctoral and PhD positions](#/news/open-research-positions).'
-    ]
+    ],
+    color: 'hsl(220, 70%, 45%)' // Blue
   },
   {
     id: 'kkl-grant-2025',
@@ -47,7 +61,8 @@ export const newsItems: NewsItem[] = [
       'ARCA Lab has been awarded a competitive KKL–JNF grant to advance new robotic and environmentally oriented methods for stabilizing forest roads and hiking trails.',
       'The project includes laboratory development and field testing in KKL forest areas.',
       'Researchers interested in joining the team are invited to view our [open Postdoctoral and PhD positions](#/news/open-research-positions).'
-    ]
+    ],
+    color: 'hsl(160, 60%, 35%)' // Teal
   },
   {
     id: 'open-research-positions',
@@ -68,7 +83,8 @@ export const newsItems: NewsItem[] = [
       '- A Cover Letter explaining your research interests\n- A CV with a list of publications (if applicable)\n- Contact information of 2-3 potential referees\n- Academic transcripts',
       'Positions are open until filled. For more information [contact us](#contact).'
     ],
-    image: '/assets/images/news/Lab_Presentation.jpg'
+    image: '/assets/images/news/Lab_Presentation.jpg',
+    color: 'hsl(350, 65%, 45%)' // Rose
   },
   {
     id: 'clawar-2024-presentation',
@@ -80,7 +96,8 @@ export const newsItems: NewsItem[] = [
       'Our research team presented groundbreaking work on heterogeneous robotic teams for earth-shaping applications at CLAWAR 2024.',
       'The presentation showcased our simulation-to-reality pipeline for autonomous ground manipulation using coordinated UAV and UGV systems.',
       'This work demonstrates practical applications of multi-robot collaboration in construction and landscape modification scenarios.'
-    ]
+    ],
+    color: 'hsl(30, 70%, 45%)' // Orange
   },
   {
     id: 'iass-2024-soil-structures',
@@ -92,7 +109,8 @@ export const newsItems: NewsItem[] = [
       'Our latest research on using stimulated soil for continuous shell structures was presented at IASS 2024.',
       'This work explores innovative approaches to robotic fabrication using locally sourced soil materials.',
       'The research demonstrates potential applications for sustainable construction in resource-limited environments.'
-    ]
+    ],
+    color: 'hsl(270, 55%, 45%)' // Purple
   },
   {
     id: 'ecaade-2024-robotic-fabrication',
@@ -104,7 +122,8 @@ export const newsItems: NewsItem[] = [
       'At eCAADe 2024, we presented our research on robotic fabrication techniques using stimulated soil materials.',
       'The paper explores novel approaches to additive manufacturing with natural materials.',
       'This research contributes to the growing field of sustainable and site-adaptive construction methods.'
-    ]
+    ],
+    color: 'hsl(180, 50%, 35%)' // Cyan
   },
   {
     id: 'sensors-2024-oil-spills',
@@ -116,7 +135,8 @@ export const newsItems: NewsItem[] = [
       'Our OS-BREEZE research has been published in the Sensors journal.',
       'This work presents a novel approach to oil spill boundary estimation using unmanned surface vehicles equipped with red emission zone detection.',
       'The research has applications in environmental monitoring and disaster response scenarios.'
-    ]
+    ],
+    color: 'hsl(45, 75%, 40%)' // Amber
   },
   {
     id: 'dla-2023-acoustic-landscapes',
@@ -128,18 +148,7 @@ export const newsItems: NewsItem[] = [
       'Our team presented research on integrating acoustic analysis with landscape design at DLA 2023.',
       'The work demonstrates a digital design workflow for embedding noise reduction capabilities in ground-forming processes.',
       'This interdisciplinary approach combines robotics, acoustics, and landscape architecture for improved urban environments.'
-    ]
-  },
-  {
-    id: 'isf-grant-2026',
-    title: 'ISF Research Grant Awarded to ARCA Lab',
-    shortTitle: 'ISF Grant',
-    date: '2026-07-20',
-    summary: 'The Israel Science Foundation has awarded ARCA Lab a 3-year research grant for digital documentation of tacit craft knowledge.',
-    content: [
-      'The Israel Science Foundation (ISF) has awarded ARCA Lab a 3-year research grant supporting our new project in digital documentation of craft knowledge.',
-      'The grant will support interdisciplinary research combining robotics, computer vision, and ethnographic methods to preserve and analyze traditional craft practices.',
-      'Researchers interested in joining this work are invited to view our [open Postdoctoral and PhD positions](#/news/open-research-positions).'
-    ]
+    ],
+    color: 'hsl(200, 65%, 40%)' // Sky
   }
 ];

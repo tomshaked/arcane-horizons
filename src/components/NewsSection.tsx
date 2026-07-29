@@ -44,7 +44,7 @@ const NewsSection = () => {
                 ) : (
                   <div 
                     className="w-full h-full relative overflow-hidden"
-                    style={{ backgroundColor: newsColors[index % newsColors.length] }}
+                    style={{ backgroundColor: item.color ?? newsColors[index % newsColors.length] }}
                   >
                     <span className="absolute bottom-0 left-0 text-white/90 font-sans font-bold text-5xl md:text-6xl lg:text-7xl leading-[0.85] tracking-tight p-3 translate-y-[10%]">
                       {item.shortTitle}
