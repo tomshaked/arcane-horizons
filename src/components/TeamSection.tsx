@@ -54,7 +54,7 @@ const TeamSection = () => {
       image: '/assets/images/team/slava-rubtsov.jpg'
     },
     {
-      name: 'Lia Horenfeld',
+      name: 'Lia Hornfeld',
       role: 'MSc Student',
       bio: 'Lia investigates early-stage decision-making for sustainable robotic 3D printing.',
       image: '/assets/images/team/lia-horenfeld.jpg'
