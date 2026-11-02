@@ -26,6 +26,20 @@ export const newsColors = [
 
 export const newsItems: NewsItem[] = [
   {
+    id: 'azrieli-2026-celebration',
+    title: 'ARCA Lab at the Azrieli Fellows Opening Celebration 2026-2027',
+    shortTitle: 'Azrieli 2026',
+    date: '2026-11-01',
+    summary: 'Tom Shaked presented "Reconstructing Construction: Building with Robots" at the Azrieli Fellows Program Opening Celebration for the 2026-2027 academic year.',
+    content: [
+      'ARCA Lab Director Tom Shaked was invited to present "Reconstructing Construction: Building with Robots" at the Azrieli Fellows Program Opening Celebration for the 2026-2027 academic year.',
+      'The talk explores how robotics is reshaping construction, from automating physically demanding tasks to opening new possibilities for architectural design and building processes.',
+      'The event, organized by the Azrieli Foundation, brings together researchers and fellows from across academic disciplines to celebrate the new cohort of Azrieli Fellows.'
+    ],
+    link: 'https://www.youtube.com/watch?v=aMLoGfbJMNU',
+    color: 'hsl(100, 55%, 35%)' // Green
+  },
+  {
     id: 'isf-grant-2026',
     title: 'ISF Research Grant Awarded to ARCA Lab',
     shortTitle: 'ISF Grant',
