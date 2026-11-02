@@ -8,6 +8,7 @@ export interface NewsItem {
   content: string[];
   image?: string;
   link?: string;
+  linkLabel?: string; // Custom label for the external link (default: "Read more")
   color?: string; // Optional explicit color for the news item
 }
 
@@ -30,13 +31,14 @@ export const newsItems: NewsItem[] = [
     title: 'ARCA Lab at the Azrieli Fellows Opening Celebration 2026-2027',
     shortTitle: 'Azrieli 2026',
     date: '2026-11-01',
-    summary: 'Tom Shaked presented "Reconstructing Construction: Building with Robots" at the Azrieli Fellows Program Opening Celebration for the 2026-2027 academic year.',
+    summary: 'ARCA Lab Director Tom Shaked presented "Reconstructing Construction: Building with Robots" at the Azrieli Fellows Program Opening Celebration for the 2026-2027 academic year.',
     content: [
-      'ARCA Lab Director Tom Shaked was invited to present "Reconstructing Construction: Building with Robots" at the Azrieli Fellows Program Opening Celebration for the 2026-2027 academic year.',
       'The talk explores how robotics is reshaping construction, from automating physically demanding tasks to opening new possibilities for architectural design and building processes.',
       'The event, organized by the Azrieli Foundation, brings together researchers and fellows from across academic disciplines to celebrate the new cohort of Azrieli Fellows.'
     ],
+    image: '/assets/images/news/Azrieli_Celebration_2026.jpg',
     link: 'https://www.youtube.com/watch?v=aMLoGfbJMNU',
+    linkLabel: 'Watch the talk',
     color: 'hsl(100, 55%, 35%)' // Green
   },
   {
