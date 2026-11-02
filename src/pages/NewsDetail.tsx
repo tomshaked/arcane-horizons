@@ -231,7 +231,7 @@ const NewsDetail = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-8 text-primary hover:underline"
             >
-              Read more
+              {newsItem.linkLabel ?? 'Read more'}
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M7 7l10 10M7 17V7h10" />
               </svg>
